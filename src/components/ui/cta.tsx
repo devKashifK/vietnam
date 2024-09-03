@@ -13,9 +13,7 @@ export default function CTA() {
       <Container effect="slide-left" className="hidden md:flex">
         <Title
           title={
-            <p className="text-5xl text-black/50 w-full text-left">
-              Comprehensive solutions for <br /> all your needs!
-            </p>
+            <p className="text-5xl text-black/50 w-full text-left">ancl;</p>
           }
           to={""}
           subtitle={"WHAT ARE YOU LOOKING FOR?"}
