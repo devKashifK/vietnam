@@ -57,8 +57,12 @@ export default function Hero() {
           <div className="px-20 py-10 flex-1 flex gap-8 flex-col justify-center items-center">
             <div className="flex gap-1 flex-col justify-center items-center w-full relative">
               <p className="text-4xl text-center text-black/50">
-                Achieve your family Canada
-                <strong className="text-black/70 ml-4">dreams with us</strong>
+                {/* Achieve your family Canada */}
+                Đạt được gia đình của bạn Canada
+                <strong className="text-black/70 ml-4">
+                  {/* dreams with us */}
+                  ước mơ cùng chúng tôi
+                </strong>
                 <br />
               </p>
 
@@ -81,16 +85,19 @@ export default function Hero() {
             </div>
 
             <p className="text-center w-full">
-              We support companies in their digital transformation by <br />
+              {/* We support companies in their digital transformation by <br />
               creating internal tools and providing software <br /> development
-              consulting.
+              consulting. */}
+              Chúng tôi hỗ trợ các công ty trong quá trình chuyển đổi kỹ thuật{" "}
+              <br /> số bằng cách tạo ra các công cụ nội bộ và cung cấp tư vấn{" "}
+              <br /> phát triển phần mềm.
             </p>
             <Button
               className="py-3 w-[190px]"
               icon={
                 <div className="flex gap-2 text-[10px] justify-center items-center">
                   <Icon icon={"mdi:phone"} />
-                  <span>+1855 477 9797</span>
+                  <span>+84 869967809</span>
                 </div>
               }
             >
@@ -99,7 +106,8 @@ export default function Hero() {
                   icon={"teenyicons:appointments-outline"}
                   className="-mt-0.5"
                 />
-                BOOK AN APPOINTMENT
+                {/* BOOK AN APPOINTMENT */}
+                Đặt một cuộc hẹn
               </span>
             </Button>
           </div>

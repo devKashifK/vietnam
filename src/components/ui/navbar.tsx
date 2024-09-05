@@ -39,57 +39,62 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div className="w-full flex gap-10 py-2 justify-end items-center px-6">
             <Link
-              to={"/news"}
+              to={""}
               className="bg-transparent text-xs font-bold flex flex-col gap-0.5 group"
             >
               <span
                 className={cn(type === "default" ? "text-white" : "text-black")}
               >
-                News
+                Job
+                {/* Việc Làm */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={"/visitor"}
+              to={""}
               className="text-xs font-bold flex flex-col gap-0.5 group"
             >
               <span
                 className={cn(type === "default" ? "text-white" : "text-black")}
               >
-                Visitor
+                Study Abroad
+                {/* Du Học */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={"/family-sponsorship"}
+              to={""}
               className="text-xs flex font-bold flex-col gap-0.5 group"
             >
               <span
                 className={cn(type === "default" ? "text-white" : "text-black")}
               >
-                Family Sponsorship
+                Business
+                {/* Doanh Nghiệp */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={"/price"}
+              to={""}
               className="text-xs font-bold flex flex-col gap-0.5 group"
             >
               <span
                 className={cn(type === "default" ? "text-white" : "text-black")}
               >
-                Price Policy
+                Guarantee
+                {/* Bảo lãnh */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={"/contact"}
+              to={""}
               className="text-xs font-bold flex flex-col gap-0.5 group"
             >
               <span
                 className={cn(type === "default" ? "text-white" : "text-black")}
               >
-                Contact Us
+                News
+                {/* Tin tức */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
@@ -112,11 +117,17 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               icon={
                 <div className="flex gap-2 justify-center items-center text-xs">
                   <Icon icon={"mdi:phone"} />
-                  <span>+1855 477 9797</span>
+                  <span>
+                    {/* +1855 477 9797 */}
+                    +84 869967809
+                  </span>
                 </div>
               }
             >
-              <span className="text-xs">Free Consultation</span>
+              <span className="text-xs">
+                {/* Free Consultation */}
+                Theo dõi chúng tôi
+              </span>
             </Button>
           </div>
 
@@ -252,6 +263,7 @@ const renderSubmenus = (submenus) => {
 export const mobileConfig = [
   {
     name: "Home",
+    // name: "Trang chủ",
     icon: "mdi:home",
     heading: "font-semibold text-green-800",
     pointer: "bg-green-700",
@@ -262,6 +274,8 @@ export const mobileConfig = [
       {
         provider: "internal",
         name: "Home",
+        // name: "Trang chủ",
+
         path: "/",
       },
     ],
@@ -529,6 +543,47 @@ export const mobileConfig = [
     ],
   },
   {
+    name: "Work 2",
+    icon: "mdi:briefcase-check-outline",
+    heading: "font-semibold text-orange-800",
+    pointer: "bg-orange-700",
+    active: "bg-orange-300 border-orange-600 text-orange-800",
+    activeIcon: "text-orange-800",
+    iconBg: "bg-orange-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Work Permit",
+        path: "/work-and-jobs/work-permit",
+      },
+      {
+        provider: "internal",
+        name: "International Mobility Program (IMP)",
+        path: "/work-and-jobs/international-mobility-program",
+      },
+      {
+        provider: "internal",
+        name: "In Demand Jobs",
+        path: "/work-and-jobs/in-demand-jobs",
+      },
+      {
+        provider: "internal",
+        name: "Support For Employers",
+        path: "/work-and-jobs/support-for-employers",
+      },
+      {
+        provider: "internal",
+        name: "LMIA",
+        path: "/work-and-jobs/lmia",
+      },
+      {
+        provider: "internal",
+        name: "TEER Categories & NOC Codes",
+        path: "/work-and-jobs/teer-categories-and-noc",
+      },
+    ],
+  },
+  {
     name: "Study",
     icon: "mdi:school-outline",
     heading: "font-semibold text-yellow-800",
@@ -629,226 +684,299 @@ const router = [
   {
     path: "/",
     element: "Home",
+    // element: "Trang chủ",
   },
   {
-    path: "About",
+    path: "ICANPR",
     children: [
       {
-        path: "/about",
-        element: "About",
+        path: "/ve-icanpr",
+        element: "Về iCanPR",
+        // elemtnt: "About iCanPR",
       },
       {
-        path: "/our-service",
-        element: "Our Service",
+        path: "/doi-tac-icanpr",
+        element: "Đối tác iCanPR",
+        // element: "iCanPR Partners",
       },
       {
-        path: "/certificate-membership",
-        element: "Certificate Membership",
-      },
-      {
-        path: "/customer-testimonials",
-        element: "Customer Testimonials",
-      },
-      {
-        path: "/book-appointment",
-        element: "Book Appointment",
-      },
-      {
-        path: "/why-choose-us",
-        element: "Why Choose Us",
+        path: "/lien-he",
+        element: "Liên hệ",
+        // element: "Contact",
       },
     ],
   },
 
   {
-    path: "Immigration",
+    path: "Canada Immigration",
+    // path: "Định cư Canada",
     children: [
       {
         path: "Express Entry",
         element: `Express Entry`,
         children: [
           {
-            path: "/immigration/express-entry/federal-skilled-worker",
-            element: "Fedral Skilled Worker",
+            path: "/canada-immigration/express-entry/federal-skilled-worker",
+            element: "Fedral Skilled Worker (FSW)",
           },
           {
-            path: "/immigration/express-entry/federal-skilled-trade",
-            element: "Fedral Skilled Trade",
+            path: "/canada-immigration/express-entry/federal-skilled-trade",
+            element: "Fedral Skilled Trade (FST)",
           },
           {
-            path: "/immigration/express-entry/canadian-experience-class",
-            element: "Canadian Experience Class",
+            path: "/canada-immigration/express-entry/canadian-experience-class",
+            element: "Canadian Experience Class (CEC)",
+          },
+          {
+            path: "/canada-immigration/express-entry/crs-score-calculation",
+            element: "CRS Score Calculation",
           },
         ],
       },
+
       {
-        path: "Provincial Nominee Programs",
+        path: "/immigration/việc-làm-định-cư",
+        // element: "Việc làm định cư",
+        element: "Immigration work",
+      },
+      {
+        path: "/immigration/du-hoc-dinh-cu",
+        // element: "Du học – định cư",
+        element: "Study abroad - settlement",
+      },
+      {
+        path: "/immigration/doanh-nghiệp-C11-visa",
+        // element: "Doanh nghiệp C11 Visa",
+        element: "C11 Visa Business",
+      },
+      {
+        path: "/immigration/start-up-visa",
+        element: "Start Up Visa",
+      },
+      {
+        path: "/immigration/bảo-lãnh-gia-đình",
+        // element: "Bảo lãnh gia đình",
+        element: "Family sponsorship",
+      },
+      {
+        path: "/immigration/khách-hàng-thành-công",
+        // element: "Khách hàng thành công",
+        element: "Customer Success",
+      },
+    ],
+  },
+  {
+    path: "Provincial Nominee Programs",
+    // path: "Đề cử tỉnh bang PNP"
+    children: [
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/alberta-immigration-aaip",
+        element: "Alberta (AAIP)",
+      },
+
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/british-columbia-bcpnp",
+        element: "British Colombia (BC PNP)",
+      },
+
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/manitoba-mpnp",
+        element: "Manitoba (MPNP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/new-brunswick-nbpnp",
+        element: "New Brunswick (NBPNP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/newfoundland-and-labrador",
+        element: "Newfoundland and Labrador",
+      },
+
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/northwest-territories",
+        element: "Northwest Territories",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/nova-scotia-nsnp",
+        element: "Nova Scotia (NSNP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/nanuvut",
+        element: "Nanuvut",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/ontario-oinp",
+        element: "Ontario (OINP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/prince-edward-island-peipnp",
+        element: "Prince Edward Island (PEI PNP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/quebec",
+        element: "Quebec",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/saskatchewan-sinp",
+        element: "Saskatchewan (SINP)",
+      },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/yukon-ynp",
+        element: "Yukon (YNP)",
+      },
+    ],
+  },
+  {
+    path: "Canadian Life",
+    // path: "Cuộc sống Canada",
+    children: [
+      {
+        path: "Canadian Provinces",
+        // path: "Các tỉnh bang Canada",
         children: [
           {
-            path: "/immigration/provincial-nominee-programs/alberta-immigration-aaip",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/alberta-immigration-aaip",
             element: "Alberta (AAIP)",
           },
-          {
-            path: "/immigration/provincial-nominee-programs/atlantic-immigration-aipp",
-            element: "Atlantic Immigration (AIPP)",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/british-columbia-bcpnp",
 
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/british-columbia-bcpnp",
             element: "British Colombia (BC PNP)",
           },
+
           {
-            path: "/immigration/provincial-nominee-programs/ontario-oinp",
-            element: "Ontario (OINP)",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/manitoba-mpnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/manitoba-mpnp",
             element: "Manitoba (MPNP)",
           },
           {
-            path: "/immigration/provincial-nominee-programs/new-brunswick-nbpnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/new-brunswick-nbpnp",
             element: "New Brunswick (NBPNP)",
           },
           {
-            path: "/immigration/provincial-nominee-programs/newfoundland-and-labrador",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/newfoundland-and-labrador",
             element: "Newfoundland and Labrador",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/saskatchewan-sinp",
-            element: "Saskatchewan (SINP)",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/northwest-territories",
-            element: "Northwest Territories",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/nova-scotia-nsnp",
-            element: "Nova Scotia (NSNP)",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/prince-edward-island-peipnp",
-            element: "Prince Edward Island (PEI PNP)",
-          },
-          {
-            path: "/immigration/provincial-nominee-programs/rural-and-northern-immigration-pilot-rnip",
-            element: "Rural & Northern Immigration Pilot (RNIP)",
           },
 
           {
-            path: "/immigration/provincial-nominee-programs/yukon-ynp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/northwest-territories",
+            element: "Northwest Territories",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nova-scotia-nsnp",
+            element: "Nova Scotia (NSNP)",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nanuvut",
+            element: "Nanuvut",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/ontario-oinp",
+            element: "Ontario (OINP)",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/prince-edward-island-peipnp",
+            element: "Prince Edward Island (PEI PNP)",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/quebec",
+            element: "Quebec",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/saskatchewan-sinp",
+            element: "Saskatchewan (SINP)",
+          },
+          {
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/yukon-ynp",
             element: "Yukon (YNP)",
           },
         ],
       },
       {
-        path: "/immigration/immigration-challenges",
-        element: "Immigration Challenges",
-      },
-    ],
-  },
-  {
-    path: "Business",
-    children: [
-      {
-        path: "Quebec",
-        children: [
-          {
-            path: "/business/quebec/quebec-investor",
-            element: "Quebec Investor",
-          },
-          {
-            path: "/business/quebec/quebec-entrepreneur",
-            element: "Quebec Entrepreneur",
-          },
-          {
-            path: "/business/quebec/quebec-self-employed",
-            element: "Self Employed",
-          },
-        ],
+        path: "/cuộc-sống-canada/môi-trường-canada",
+        element: "Environment Canada",
+        // element:"Môi Trường Canada",
       },
       {
-        path: "Federal Programs",
-        children: [
-          {
-            path: "/business/federal-programs/start-up-visa",
-            element: " Start-Up Visa (SUV)",
-          },
-          {
-            path: "/business/federal-programs/intra-company-transfer",
-            element: "Intra-company transfer (ICT)",
-          },
-          {
-            path: "/business/federal-programs/benefit-to-canada",
-            element: "Significant Benefit to Canada (C10)",
-          },
-          {
-            path: "/business/federal-programs/owner-operator",
-            element: "Owner Operator LMIA",
-          },
-          {
-            path: "/business/federal-programs/self-employed-person",
-            element: "Self-Employed Persons (C11)",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    path: "Work And Jobs",
-    children: [
-      {
-        path: "/work-and-jobs/work-permit",
-        element: "Work Permit",
+        path: "/cuộc-sống-canada/văn-hóa-tôn-giáo",
+        element: "Culture & Education",
+        // element:"Văn hóa & tôn giáo"
       },
       {
-        path: "/work-and-jobs/international-mobility-program",
-        element: "International Mobility Program (IMP)",
+        path: "/cuộc-sống-canada/y-tế",
+        element: "Medical",
+        // element:"Y Tế",
       },
       {
-        path: "/work-and-jobs/in-demand-jobs",
-        element: "In Demand Jobs",
+        path: "/cuộc-sống-canada/giáo-dục-canada",
+        element: "Canadian Education",
+        // element : "Giáo dục Canada",
       },
       {
-        path: "/work-and-jobs/support-for-employers",
-        element: "Support For Employers",
+        path: "/cuộc-sống-canada/tỷ-giá-đô-canada",
+        element: "Canadian Dollar Exchange Rate",
+        // element: " Tỷ giá đô Canada",
       },
 
       {
-        path: "/work-and-jobs/lmia",
-        element: "LMIA",
+        path: "/cuộc-sống-canada/chính-sách-thuế",
+        element: "Tax Policy",
+        // element: "Chính sách thuế",
       },
-      // {
-      //   path: "/work-and-jobs/caregiver-program",
-      //   element: "Caregiver Program",
-      // },
+    ],
+  },
+
+  {
+    path: "Useful Information",
+    // path: "Thông tin hữu ích",
+    children: [
       {
-        path: "/work-and-jobs/teer-categories-and-noc",
-        element: "TEER Categories & NOC Codes",
+        path: "/thông-tin-hữu-ích/câu-hỏi-thường-gặp",
+        // element:"Câu hỏi thường gặp",
+        element: "FAQ",
+      },
+
+      {
+        path: "/thông-tin-hữu-ích/trang-web-hữu-ích",
+        // element: "Trang web hữu ích",
+        element: "Useful Website",
+      },
+
+      {
+        path: "/thông-tin-hữu-ích/thuật-ngữ-trong-di-trú",
+        // element: "Thuật ngữ trong di trú",
+        element: "Immigration terminology",
+      },
+
+      {
+        path: "/thông-tin-hữu-ích/CLB-là-gì",
+        // element:"CLB là gì? Cách quy đổi điểm đương đương?",
+        element: "What is CLB? How to convert equivalent points?",
       },
     ],
   },
   {
-    path: "Study",
+    path: "Recriutment",
+    // path:"Tuyển dụng",
     children: [
       {
-        path: "/study/post-graduate-work-permit",
-        element: "Post Graduate Work Permit (PGWP)",
+        path: "/tuyển-dụng/làm-việc-cho-icanpr",
+        // element: " Làm việc cho iCanPR",
+        element: "Work for ICanPR",
       },
       {
-        path: "/study/study-in-canada",
-        element: "Study In Canada",
+        path: "/tuyển-dụng/tổng-hợp-việc-làm-canada",
+        // element: "Tổng hợp việc làm Canada",
+        element: "Canada Jobs Summary",
       },
       {
-        path: "/study/pathway-from-study-to-pr",
-        element: "Pathway From Study To PR",
+        path: "/tuyển-dụng/công-nhân-trại-gà",
+        // element: "Công nhân trại gà",
+        element: "Chicken farm Worker",
       },
       {
-        path: "/study/designated-learning-institution",
-        element: "Designated Learning Institution (DLI)",
-      },
-      {
-        path: "/study/student-direct-stream",
-        element: "Student Direct Stream (SDS)",
+        path: "/tuyển-dụng/dầu-bếp-món-au",
+        // element: "Đầu bếp Món Âu",
+        element: "European Chef",
       },
     ],
   },

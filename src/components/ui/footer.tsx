@@ -12,73 +12,95 @@ export default function Footer() {
 
           <div className="flex flex-col gap-2 text-white font-normal justify-start items-start w-full cursor-pointer pl-0 md:pl-10 text-sm">
             <Link
-              to={"/about"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
-              About us
+              {/* About iCanPR company */}
+              Giới thiệu về công ty iCanPR
             </Link>
             <Link
-              to={"/our-service"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
-              Our Services
+              {/* Contact */}
+              Liên hệ
             </Link>
             <Link
-              to={"/why-choose-us"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
-              Why Choose Us
+              {/* iCanPR Partner */}
+              Đối tác iCanPR
             </Link>
             <Link
-              to={"/study/study-in-canada"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
-              Study
+              {/* Service */}
+              Dịch vụ
             </Link>
             <Link
-              to={"/customer-testimonials"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
-              Visa Success Stories
+              {/* Provincial Program */}
+              Chương trình tỉnh bang
             </Link>
 
-            <Link
-              to={"/book-appointment"}
+            {/* <Link
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
               Make Appointment
             </Link>
             <Link
-              to={"/work-and-jobs/work-permit"}
+              to={""}
               className="border-b w-[80%] text-left border-white/25 px-0 md:px-8 block"
             >
               Work and Jobs
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col gap-6 md:gap-2 md:flex-row  text-sm font-normal text-white pb-12 md:px-10">
             <div className="w-[40%] text-left">
-              2124 Broad St, Regina, Saskatchewan,Canada S4P 1Y5 (Registered
-              office)
+              {/* 2124 Broad St, Regina, Saskatchewan,Canada S4P 1Y5 (Registered
+              office) */}
+              Địa chỉ : Tầng 2, tòa nhà Rosana, 60 Nguyễn Đình Chiểu, Quận 1, Hồ
+              Chí Minh, Việt Nam
             </div>
             <div className="flex w-[60%] flex-col gap-1">
               <div className="flex gap-2 text-left">
                 <p className="flex-1">Email</p>
-                <p className="flex-1 -ml-20">info@gtrworldwide.com</p>
+                <p className="flex-1 -ml-20">tuvan@icanpr.vn</p>
               </div>
               <div className="flex gap-2 text-left">
-                <p className="flex-1">Phone</p>
-                <p className="flex-1 -ml-20">+1-855-477-9797</p>
+                <p className="flex-1">
+                  {/* Phone */}
+                  Điện thoại
+                </p>
+                <p className="flex-1 -ml-20">
+                  {/* +1-855-477-9797 */}
+                  +84 869967809
+                </p>
               </div>
               <div className="flex gap-2 text-left">
-                <p className="flex-1">Timings</p>
-                <p className="flex-1 -ml-20">9AM to 5PM (GMT-6)</p>
+                <p className="flex-1">
+                  {/* Timings */}
+                  Giờ làm việc
+                </p>
+                <p className="flex-1 -ml-20">
+                  {/* 9AM to 5PM (GMT-6) */}
+                  9:00 - 5:00, Thứ 2- Thứ 6, 9-12:00 sáng Thứ 7
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-3 flex-1 h-full text-white font-normal  justify-start items-start md:px-5">
           <div className="flex flex-col gap-5">
-            <p className="text-sm text-left">Follow us</p>
+            <p className="text-sm text-left">
+              {/* Follow us */}
+              Theo dõi chúng tôi
+            </p>
             <div className="h-10  border-gray-400 flex flex-row">
               <span className="w-14 h-14">
                 <Icon
@@ -112,8 +134,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-left w-[50%] pb-3">
-              Receive resources & tools that can help you prepare for the
-              future. You can cancel anytime.
+              {/* Receive resources & tools that can help you prepare for the
+              future. You can cancel anytime. */}
+              Nhận các nguồn lực và công cụ có thể giúp bạn chuẩn bị cho tương
+              lai. Bạn có thể hủy bất cứ lúc nào.
             </p>
 
             <input
@@ -127,11 +151,14 @@ export default function Footer() {
                 icon={
                   <div className="flex gap-2 justify-center items-center text-xs">
                     <Icon icon={"mdi:phone"} />
-                    <span>+1855 477 9797</span>
+                    <span>+84 869967809</span>
                   </div>
                 }
               >
-                <span className="text-xs">Free Consultation</span>
+                <span className="text-xs">
+                  {/* Free Consultation */}
+                  Tư vấn miễn phí
+                </span>
               </Button>
             </div>
           </div>
