@@ -51,7 +51,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={""}
+              to={"/du-học"}
               className="text-xs font-bold flex flex-col gap-0.5 group"
             >
               <span
@@ -63,7 +63,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={""}
+              to={"/doanh-nghiệp"}
               className="text-xs flex font-bold flex-col gap-0.5 group"
             >
               <span

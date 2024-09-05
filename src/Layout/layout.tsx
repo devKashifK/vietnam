@@ -6,7 +6,7 @@ import { Outlet, useLocation } from "react-router-dom";
 const Layout = () => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
-  const path = pathSegments[pathSegments.length - 1];
+  const path = decodeURIComponent(pathSegments[pathSegments.length - 1]);
 
   const text = {
     "/": "We are a team of professionals who are passionate about helping you achieve",
@@ -48,6 +48,10 @@ const Layout = () => {
     },
     "express-entry": {
       text: "Express Entry",
+      image: "/expressEntry.png",
+    },
+    "du-học": {
+      text: "Du Học",
       image: "/expressEntry.png",
     },
     "federal-skilled-trade": {

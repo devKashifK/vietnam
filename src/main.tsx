@@ -56,6 +56,8 @@ import News from "./pages/news/news.tsx";
 import Post from "./pages/news/post.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Contact from "./pages/contact/contact.tsx";
+import Business from "./pages/business/business.tsx";
+import StudyAbraod from "./pages/study-abroad/study-abroad.tsx";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -183,53 +185,60 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "business",
+    path: "doanh-nghiệp",
     element: <Layout />,
     children: [
       {
-        path: "quebec",
-        children: [
-          {
-            path: "quebec-investor",
-            element: <QuebecInvestor />,
-          },
-          {
-            path: "quebec-entrepreneur",
-            element: <QuebecEntrepreneur />,
-          },
-          {
-            path: "quebec-self-employed",
-            element: <SelfEmployed />,
-          },
-        ],
-      },
-      {
-        path: "federal-programs",
-        children: [
-          {
-            path: "start-up-visa",
-            element: <StartUpVisa />,
-          },
-          {
-            path: "intra-company-transfer",
-            element: <IntraCompanyTransfer />,
-          },
-          {
-            path: "benefit-to-canada",
-            element: <BenefitToCanada />,
-          },
-          {
-            path: "owner-operator",
-            element: <OwnerOperator />,
-          },
-          {
-            path: "self-employed-person",
-            element: <SelfEmployedPersons />,
-          },
-        ],
+        index: true,
+        element: <Business />,
       },
     ],
+    // children: [
+    //   {
+    //     path: "quebec",
+    //     children: [
+    //       {
+    //         path: "quebec-investor",
+    //         element: <QuebecInvestor />,
+    //       },
+    //       {
+    //         path: "quebec-entrepreneur",
+    //         element: <QuebecEntrepreneur />,
+    //       },
+    //       {
+    //         path: "quebec-self-employed",
+    //         element: <SelfEmployed />,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     path: "federal-programs",
+    //     children: [
+    //       {
+    //         path: "start-up-visa",
+    //         element: <StartUpVisa />,
+    //       },
+    //       {
+    //         path: "intra-company-transfer",
+    //         element: <IntraCompanyTransfer />,
+    //       },
+    //       {
+    //         path: "benefit-to-canada",
+    //         element: <BenefitToCanada />,
+    //       },
+    //       {
+    //         path: "owner-operator",
+    //         element: <OwnerOperator />,
+    //       },
+    //       {
+    //         path: "self-employed-person",
+    //         element: <SelfEmployedPersons />,
+    //       },
+    //     ],
+    //   },
+    // ],
   },
+
   {
     path: "work-and-jobs",
     element: <Layout />,
@@ -298,6 +307,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <FamilySponsorship />,
+      },
+    ],
+  },
+  {
+    path: "du-học",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <StudyAbraod />,
       },
     ],
   },
