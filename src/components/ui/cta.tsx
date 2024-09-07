@@ -6,11 +6,15 @@ import { cn } from "@/lib/utils";
 import Title from "./Title";
 import Container from "./container";
 import Glass from "@/lib/helpers";
+import TitleWithBottomBorder from "./title-with-bottom-border";
 
 export default function CTA() {
   return (
     <>
-      <Container effect="slide-left" className="hidden md:flex">
+      <Container
+        effect="slide-left"
+        className="hidden md:flex relative z-[10000]"
+      >
         {/* <Title
           title={
             <p className="text-5xl text-black/50 w-full text-left">ancl;</p>
@@ -251,6 +255,52 @@ export const CTADefault = ({
           </Button>
         </div>
       </Glass>
+    </Container>
+  );
+};
+
+export const CTAWithImage = ({}) => {
+  return (
+    <Container className="flex bg-content py-0 shadow-2xl  flex-row">
+      <div
+        className="flex-1 relative h-[550px]"
+        // style={{
+        //   backgroundImage: `url(/hero-3.jpg)`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
+      >
+        <div className="bg-background/60 absolute top-0 left-0 z-10 w-full bg-opacity-80 h-[550px]"></div>
+        <img
+          src="/hero-3.jpg"
+          className="relative w-full object-cover h-full"
+          alt=""
+        />
+      </div>
+      <div className="flex-1 flex flex-col gap-6 py-10 px-4">
+        <TitleWithBottomBorder titleClass="">
+          Trust Our Company
+        </TitleWithBottomBorder>
+        <h2 className="text-4xl text-left">
+          We are always ready to make your immigration dream come true.
+        </h2>
+
+        <p className="text-left">
+          With ICanPR, your family's journey to immigrate to Canada will become
+          easier.
+        </p>
+        <p className="text-left">
+          Our team of experienced professionals is committed to your success. We
+          provide case-by-case guidance, information updates and ongoing support
+          throughout your immigration process. With our extensive experience, we
+          ensure a fast, smooth and successful immigration journey to your new
+          life in Canada.
+        </p>
+        <button className="flex gap-2 bg-highlight text-white w-max justify-center items-center rounded-none">
+          Let's Start
+          <Icon icon={"simple-icons:aircanada"} className="" />
+        </button>
+      </div>
     </Container>
   );
 };

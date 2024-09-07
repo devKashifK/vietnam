@@ -25,7 +25,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        primary: ["Yanone Kaffeesatz", "sans-serif"],
+        primary: ["Reddit Sans Condensed", "sans-serif"],
         secondary: ["Roboto", "sans-serif"],
       },
       colors: {

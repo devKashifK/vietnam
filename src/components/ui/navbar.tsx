@@ -45,7 +45,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                 About Us
                 {/* Việc Làm */}
               </span>
-              <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
+              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={"/du-học"}
@@ -55,7 +55,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                 Contact Us
                 {/* Du Học */}
               </span>
-              <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
+              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={"/doanh-nghiệp"}
@@ -65,7 +65,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                 Free phone consultation +84 869967809
                 {/* Doanh Nghiệp */}
               </span>
-              <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
+              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={""}
@@ -75,7 +75,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                 Guarantee
                 {/* Bảo lãnh */}
               </span>
-              <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
+              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
 
             <a
@@ -123,7 +123,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                       </NavigationMenuTrigger>
                     )}
                     {navItem.children && (
-                      <NavigationMenuContent className="absolute bg-white border-gray-100 rounded-md overflow-visible left-0 px-0 z-[10000000]">
+                      <NavigationMenuContent className="absolute bg-background border-none  rounded-none  left-0 px-0 z-[10000000] h-56 overflow-y-scroll pretty-scroll">
                         <div className="w-[200px] py-2">
                           {renderSubmenus(navItem.children)}
                         </div>
@@ -149,7 +149,7 @@ const renderSubmenus = (submenus) => {
       {submenus.map((subPage) => (
         <li
           key={subPage.path}
-          className="flex text-left w-full px-3 py-1 border-b last:border-b-0 relative "
+          className="flex text-left w-full px-3 py-1 border-white/10 border-b last:border-b-0 relative "
           onMouseEnter={() => setHoveredPath(subPage.path)}
           onMouseLeave={() => setHoveredPath(null)}
         >
@@ -157,15 +157,14 @@ const renderSubmenus = (submenus) => {
             <div className="relative w-full">
               <div
                 className={cn(
-                  "flex justify-between cursor-pointer items-center text-left text-sm px-2 w-full rounded-md py-1",
-                  hoveredPath === subPage.path ? "bg-[#b33d3d] text-white" : ""
+                  "flex justify-between cursor-pointer items-center text-left text-sm px-2 w-full text-white rounded-md py-1"
                 )}
               >
-                <span>{subPage.path}</span>
+                <span className="text-white">{subPage.path}</span>
                 <Icon icon={"zondicons:cheveron-right"} />
               </div>
               <div
-                className={`absolute top-0 left-[188px] w-[300px] bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-80 border-gray-100 rounded-md overflow-visible text-left py-0.5 flex flex-col z-10 
+                className={`absolute top-0 left-[188px] w-[300px] bg-background overflow-visible text-left py-0.5 flex flex-col z-10 
                   transition-all duration-300 transform ease-out ${
                     hoveredPath === subPage.path
                       ? "opacity-100 translate-x-0"
@@ -175,7 +174,7 @@ const renderSubmenus = (submenus) => {
                 {subPage.children.map((item) => (
                   <Link
                     key={item.path}
-                    className="group rounded-md text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full"
+                    className="group border-white/10 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
                     to={item.path}
                     unstable_viewTransition
                   >
@@ -186,7 +185,7 @@ const renderSubmenus = (submenus) => {
                         color: "#fff",
                       }}
                       transition={{ type: "spring", stiffness: 200 }}
-                      className="px-3 py-1 rounded-md"
+                      className="px-3 py-1 "
                     >
                       {item.element}
                     </motion.div>
@@ -196,7 +195,7 @@ const renderSubmenus = (submenus) => {
             </div>
           ) : (
             <Link
-              className="text-left hover:bg-[#b33d3d] hover:text-white py-1 rounded-md text-sm border-b last:border-b-0 px-2 w-full"
+              className="text-left hover:bg-[#b33d3d] text-white py-1  text-sm border-b last:border-b-0 px-2 w-full"
               to={subPage.path}
               unstable_viewTransition
             >

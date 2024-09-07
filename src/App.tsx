@@ -1,6 +1,6 @@
 import "./App.css";
 import Container from "./components/ui/container";
-import CTA, { CTADefault } from "./components/ui/cta";
+import CTA, { CTADefault, CTAWithImage } from "./components/ui/cta";
 import Jobs from "./components/ui/jobs";
 import { InfiniteMovingCardsDemo } from "./components/ui/testimonial";
 import Title from "./components/ui/Title";
@@ -110,6 +110,8 @@ function App() {
       />
 
       <InfiniteMovingCardsDemo />
+
+      <CTAWithImage />
       {/* <Jobs /> */}
     </div>
   );
