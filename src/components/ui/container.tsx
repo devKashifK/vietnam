@@ -18,7 +18,10 @@ export default function Container({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -31,7 +34,10 @@ export default function Container({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -43,7 +49,10 @@ export default function Container({
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -56,7 +65,10 @@ export default function Container({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -69,7 +81,10 @@ export default function Container({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -82,7 +97,10 @@ export default function Container({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ amount: 0.1 }}
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}
@@ -91,7 +109,10 @@ export default function Container({
   } else if (effect === "none") {
     return (
       <div
-        className={cn("flex flex-col gap-4 py-6 w-[90%] mx-auto", className)}
+        className={cn(
+          "flex flex-col gap-4 py-6 w-[80%]  mr-auto ml-24",
+          className
+        )}
         {...props}
       >
         {children}

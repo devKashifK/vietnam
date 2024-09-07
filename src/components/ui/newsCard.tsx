@@ -25,11 +25,11 @@ export const NewsFeedCard = ({
 }) => {
   return (
     <div className="">
-      <div className="flex flex-col gap-10 rounded-xl hover:shadow-xl transition-all duration-150 ease-in-out border border-slate-400 cursor-pointer">
+      <div className="flex flex-col hover:shadow-xl transition-all duration-150 ease-in-out border border-slate-400 cursor-pointer">
         <div className="relative ">
           <img
             src={image ? image : getRandomImage()}
-            className="object-cover w-full h-52 rounded-t-xl"
+            className="object-cover w-full h-52"
           />
 
           <span className="bg-red-600 text-slate-50 h-14 w-14 flex flex-col justify-center items-center rounded-full text-wrap absolute right-4 top-4 text-sm font-bold">
@@ -37,7 +37,7 @@ export const NewsFeedCard = ({
             <span className="">AUG</span>
           </span>
         </div>
-        <div className="px-10 h-[220px] bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-slate-400 rounded-b-2xl ">
+        <div className="px-10 h-[280px] py-8 bg-content  ">
           <p className="text-2xl text-black/60 font-semibold text-left">
             {truncateTextHeading(title)}
           </p>
@@ -70,7 +70,7 @@ export const NewsFeedCard = ({
           <div className="pb-6">
             <Link
               to={`/news/${id}`}
-              className="bg-highlight flex justify-center items-center text-slate-50 px-3 py-1 text-sm text-left w-[50%] rounded-lg "
+              className="bg-highlight flex justify-center items-center text-slate-50 px-3 py-1 text-sm text-left w-[50%]"
             >
               Read More
             </Link>

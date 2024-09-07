@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full md:w-[97%] mx-auto rounded-t-2xl md:rounded-2xl shadow-2xl">
+    <div className="flex flex-col w-full  mx-auto bg-background shadow-2xl">
       <div className="bg-secondary/20 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-t-2xl h-max md:h-[500px] flex  flex-col md:flex-row gap-10 px-12 py-16 items-center justify-center text-white">
         <div className="flex flex-col gap-10 flex-1 text-white/50 pt-10  justify-start items-start">
           <img src="/gt-removebg.png" alt="" className="w-[70%]  md:pl-10" />
@@ -164,7 +164,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex  py-5  px-12 bg-destructive bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-b-2xl w-full text-white/65 text-xs">
+      <div className="flex  py-5  px-12 bg-highlight  w-full text-white text-xs">
         <span className="">
           © Green Tech Resources Worldwide Canada - All rights reserved
         </span>

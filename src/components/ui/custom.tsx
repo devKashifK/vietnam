@@ -20,7 +20,7 @@ export const Button = ({
   return (
     <button
       className={cn(
-        "relative bg-highlight text-white flex justify-center group/modal-btn",
+        "relative bg-highlight rounded-none py-2 text-white flex justify-center group/modal-btn",
         className
       )}
       {...props}

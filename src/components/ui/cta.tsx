@@ -11,42 +11,19 @@ export default function CTA() {
   return (
     <>
       <Container effect="slide-left" className="hidden md:flex">
-        <Title
+        {/* <Title
           title={
             <p className="text-5xl text-black/50 w-full text-left">ancl;</p>
           }
           to={""}
           subtitle={"WHAT ARE YOU LOOKING FOR?"}
           cta={"All Solutions"}
-        />
-        <div className="flex gap-4 min-h-screen w-[80%] mx-auto">
-          <div className="flex-1 items-center flex justify-start">
-            <CtaCard item={CtaDetails[0]} />
-          </div>
-          <div className="flex-1 items-center justify-center flex flex-col gap-12">
-            {CtaDetails.slice(3, CtaDetails.length - 1).map((item, index) =>
-              index === 0 ? (
-                <CtaCard2 item={item} key={item.id} flip={false} />
-              ) : (
-                <CtaCard2 item={item} key={item.id} flip={true} />
-              )
-            )}
-          </div>
-        </div>
-
-        <div className="flex gap-4 min-h-screen w-[80%] mx-auto">
-          <div className="flex-1 items-center justify-center flex flex-col gap-12">
-            {CtaDetails.slice(1, 3).map((item, index) =>
-              index === 0 ? (
-                <CtaCard2 item={item} key={item.id} flip={false} />
-              ) : (
-                <CtaCard2 item={item} key={item.id} flip={true} />
-              )
-            )}
-          </div>
-
-          <div className="flex-1 items-center flex justify-end">
-            <CtaCard item={CtaDetails[5]} />
+        /> */}
+        <div className="flex gap-4 min-h-screen  mx-auto">
+          <div className="flex-1 items-center justify-center grid grid-cols-2 gap-10 -mt-24 relative z-50">
+            {CtaDetails.map((item, index) => (
+              <CtaCard item={item} key={item.id} />
+            ))}
           </div>
         </div>
       </Container>
@@ -75,9 +52,9 @@ export default function CTA() {
 
 export const CtaCard = ({ item }) => {
   return (
-    <div className="rounded-2xl bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 h-max shadow-2xl w-[320px] justify-start items-center">
+    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] h-[517px] justify-start items-center transition-all duration-100 ease-in-out">
       <div className="">
-        <img src={item.image} alt="" className="rounded-t-2xl" />
+        <img src={item.image} alt="" className="" />
       </div>
       <div className="px-8 flex flex-col gap-2 py-5">
         <div className="flex flex-col gap-0">
@@ -86,14 +63,14 @@ export const CtaCard = ({ item }) => {
             {truncateTextHeading(item.subtitle)}
           </p> */}
         </div>
-        <p className="text-xs text-left text-black/80">
+        <p className="text-xs text-left text-black/80 group-hover:text-white">
           {truncateText(item.description)}...{" "}
-          <span className="text-black">Read More</span>
+          <span className="text-black group-hover:text-white">Read More</span>
         </p>
         <div className="w-full flex justify-end items-end mt-4">
           <Link
             to={item.href}
-            className="bg-highlight text-white py-1 shadow-xl px-4 rounded-md text-sm w-max"
+            className="bg-highlight text-white  py-1 shadow-xl px-4  text-sm w-max"
           >
             Know More
           </Link>
@@ -246,8 +223,7 @@ export const CTADefault = ({
         className="flex-col  gap-8 py-20 justify-center items-center bg-cover bg-center relative"
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className="bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 rounded-2xl border-gray-100  h-full absolute top-0 left-0 w-full"></div>
-        <div className="flex flex-col gap-8 md:gap-3 relative z-10">
+        <div className="flex flex-col gap-8 md:gap-3 relative z-10  bg-clip-padding justify-center items-center py-10 backdrop-filter backdrop-blur-md bg-opacity-20 px-8">
           <h4 className="text-4xl tracking-wider text-center text-white">
             {title}
           </h4>
@@ -256,24 +232,24 @@ export const CTADefault = ({
           ) : (
             subtitle
           )}
+          <Button
+            className="py-3 w-[190px]"
+            icon={
+              <div className="flex gap-2 text-[10px] justify-center items-center">
+                <Icon icon={"mdi:phone"} />
+                <span>+1855 477 9797</span>
+              </div>
+            }
+          >
+            <span className="text-[10px] relative flex gap-1 justify-start items-center">
+              <Icon
+                icon={"teenyicons:appointments-outline"}
+                className="-mt-0.5"
+              />
+              BOOK AN APPOINTMENT
+            </span>
+          </Button>
         </div>
-        <Button
-          className="py-3 w-[190px]"
-          icon={
-            <div className="flex gap-2 text-[10px] justify-center items-center">
-              <Icon icon={"mdi:phone"} />
-              <span>+1855 477 9797</span>
-            </div>
-          }
-        >
-          <span className="text-[10px] relative flex gap-1 justify-start items-center">
-            <Icon
-              icon={"teenyicons:appointments-outline"}
-              className="-mt-0.5"
-            />
-            BOOK AN APPOINTMENT
-          </span>
-        </Button>
       </Glass>
     </Container>
   );

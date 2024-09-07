@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="w-[97%] mx-auto  h-[600px] md:h-[500px] shadow-2xl rounded-2xl flex justify-start items-start flex-col overflow-hidden relative">
+      <div className="w-full mx-auto  h-[600px] md:h-[500px] shadow-2xl flex justify-start items-start flex-col overflow-hidden relative">
         {/* Current Image */}
         <div
           className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out ${
@@ -50,16 +50,16 @@ export default function Hero() {
           }}
         ></div>
 
-        <div className="absolute top-0 left-0 w-full h-full bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 rounded-xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black  bg-opacity-60"></div>
 
         <div className="flex flex-col w-full h-full relative z-[10000]">
           <Navbar type={"hero"} />
           <div className="px-20 py-10 flex-1 flex gap-8 flex-col justify-center items-center">
-            <div className="flex gap-1 flex-col justify-center items-center w-full relative">
-              <p className="text-4xl text-center text-black/50">
+            <div className="flex gap-1 flex-col justify-center items-center w-full relative z-10">
+              <p className="text-4xl text-center text-white">
                 {/* Achieve your family Canada */}
                 Đạt được gia đình của bạn Canada
-                <strong className="text-black/70 ml-4">
+                <strong className="text-white ml-4">
                   {/* dreams with us */}
                   ước mơ cùng chúng tôi
                 </strong>
@@ -76,7 +76,7 @@ export default function Hero() {
                 >
                   <path
                     d="M1.3606 6.99989C21.2036 4.49991 189.869 -0.362312 249.002 6.99999C218.307 6.99999 178.315 5.24446 152.565 13"
-                    stroke="#0000008c"
+                    stroke="#F7F7F7"
                     stroke-width="6"
                     stroke-linejoin="round"
                   ></path>
@@ -84,7 +84,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="text-center w-full">
+            <p className="text-center w-full text-white">
               {/* We support companies in their digital transformation by <br />
               creating internal tools and providing software <br /> development
               consulting. */}

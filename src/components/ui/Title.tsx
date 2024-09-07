@@ -22,16 +22,19 @@ export default function Title({
     <div className="flex w-full justify-between ">
       <div
         className={cn(
-          "flex flex-col gap-1 justify-start items-start",
+          "flex flex-col w-full gap-1 justify-center items-center",
           className
         )}
       >
         <h4 className="text-highlight text-2xl">{subtitle}</h4>
         <div className="flex flex-col gap-3 w-full">
           {typeof title === "string" ? (
-            <h2 className="text-2xl md:text-4xl tracking-wider text-black/50 w-full text-left">
-              {title}
-            </h2>
+            <div className="relative flex flex-col justify-center items-center gap-1">
+              <h2 className="text-2xl md:text-4xl tracking-wider text-black/50">
+                {title}
+                <span className="block h-0.5 bg-highlight mt-2"></span>
+              </h2>
+            </div>
           ) : (
             title
           )}
@@ -45,7 +48,7 @@ export default function Title({
             description
           ))}
       </div>
-      {cta && (
+      {/* {cta && (
         <div className="flex group justify-center flex-col text-black/50 border-b-highlight items-center  transition-all duration-150 cursor-pointer">
           <Link
             to={to}
@@ -56,7 +59,7 @@ export default function Title({
           </Link>
           <div className="h-0.5 w-28 group-hover:visible invisible bg-highlight"></div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

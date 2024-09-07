@@ -12,7 +12,6 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Item } from "@radix-ui/react-navigation-menu";
 import { motion } from "framer-motion";
 import MobileNavbar from "./mobile-navbar";
 
@@ -20,7 +19,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="md:hidden flex py-2 z-50 relative bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 rounded-t-2xl  px-8">
+      <div className="md:hidden flex py-2 z-50 relative bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 rounded-t-2xl px-8">
         <MobileNavbar
           config={mobileConfig}
           isOpen={isOpen}
@@ -29,115 +28,73 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
       </div>
       <div
         className={cn(
-          "hidden md:flex rounded-t-2xl shadow-lg h-24 justify-start items-center",
-          type === "hero" ? "bg-gray-10" : "bg-black/40"
+          "hidden md:flex shadow-lg h-24 justify-start items-center",
+          "bg-background text-white"
         )}
       >
-        <div className="h-full flex justify-center items-center px-8">
-          <img src="/gt-removebg.png" alt="" className="" />
+        <div className="h-full flex justify-center w-[400px] items-center px-8 border-r border-white/10">
+          <img src="/logo-white.png" alt="" className="" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
-          <div className="w-full flex gap-10 py-2 justify-end items-center px-6">
+          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/10 px-16">
             <Link
               to={""}
-              className="bg-transparent text-xs font-bold flex flex-col gap-0.5 group"
+              className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span
-                className={cn(type === "default" ? "text-white" : "text-black")}
-              >
-                Job
+              <span className={"text-white"}>
+                About Us
                 {/* Việc Làm */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={"/du-học"}
-              className="text-xs font-bold flex flex-col gap-0.5 group"
+              className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span
-                className={cn(type === "default" ? "text-white" : "text-black")}
-              >
-                Study Abroad
+              <span className={"text-white"}>
+                Contact Us
                 {/* Du Học */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={"/doanh-nghiệp"}
-              className="text-xs flex font-bold flex-col gap-0.5 group"
+              className="text-xs flex font-light flex-col gap-0.5 group"
             >
-              <span
-                className={cn(type === "default" ? "text-white" : "text-black")}
-              >
-                Business
+              <span className={"text-white"}>
+                Free phone consultation +84 869967809
                 {/* Doanh Nghiệp */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={""}
-              className="text-xs font-bold flex flex-col gap-0.5 group"
+              className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span
-                className={cn(type === "default" ? "text-white" : "text-black")}
-              >
+              <span className={"text-white"}>
                 Guarantee
                 {/* Bảo lãnh */}
               </span>
               <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
             </Link>
-            <Link
-              to={""}
-              className="text-xs font-bold flex flex-col gap-0.5 group"
-            >
-              <span
-                className={cn(type === "default" ? "text-white" : "text-black")}
-              >
-                News
-                {/* Tin tức */}
-              </span>
-              <div className="group-hover:bg-white w-full border border-transparent ease-out duration-150"></div>
-            </Link>
+
             <a
               href="https://api.whatsapp.com/send?phone=16476197975"
               target="_blank"
               className="text-xs bg-green-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
             >
-              {/* <span
-              className={cn(
-                "group-hover:text-slate-900 duration-150 ease-out flex gap-1 justify-center items-center",
-                defaultStyle && "text-white/60"
-              )}
-            > */}
               <Icon icon={"mdi:whatsapp"} className="text-xl" />
               {/* </span> */}
             </a>
-            <Button
-              className="py-0.5"
-              icon={
-                <div className="flex gap-2 justify-center items-center text-xs">
-                  <Icon icon={"mdi:phone"} />
-                  <span>
-                    {/* +1855 477 9797 */}
-                    +84 869967809
-                  </span>
-                </div>
-              }
-            >
-              <span className="text-xs">
-                {/* Free Consultation */}
-                Theo dõi chúng tôi
-              </span>
-            </Button>
           </div>
 
-          <div className="flex justify-start gap-4 items-center px-4 w-full h-16">
+          <div className="flex justify-start gap-4 items-center px-0 w-full h-20">
             <NavigationMenu>
-              <NavigationMenuList className="flex gap-4">
+              <NavigationMenuList className="flex gap-0 py-0">
                 {router.map((navItem) => (
                   <NavigationMenuItem
                     key={navItem.path}
-                    className="relative min-w-12"
+                    className="relative min-w-12 !px-0"
                   >
                     {navItem.element ? (
                       <NavigationMenuLink
@@ -159,15 +116,14 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                     ) : (
                       <NavigationMenuTrigger
                         className={cn(
-                          "bg-transparent data-[state=open]:text-white data-[state=open]:bg-[#b33d3d] py-1 focus:bg-[#b33d3d] hover:bg-[#b33d3d] ",
-                          defaultStyle && "text-white/90"
+                          "bg-transparent text-xs font-light data-[state=open]:text-white data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/10  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 "
                         )}
                       >
                         {navItem.path}
                       </NavigationMenuTrigger>
                     )}
                     {navItem.children && (
-                      <NavigationMenuContent className="absolute bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-80 border-gray-100 rounded-md overflow-visible left-0 px-0">
+                      <NavigationMenuContent className="absolute bg-white border-gray-100 rounded-md overflow-visible left-0 px-0 z-[10000000]">
                         <div className="w-[200px] py-2">
                           {renderSubmenus(navItem.children)}
                         </div>
@@ -177,16 +133,9 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            {/* <button className="flex gap-1 justify-center items-center w-max px-4 hover:bg-accent hover:text-accent-foreground py-2">
-            <Icon icon={"emojione:flag-for-liberia"} />
-            EN
-          </button>
-          <button className="flex gap-1 justify-center items-center w-max px-4 py-2 hover:bg-accent hover:text-accent-foreground">
-            <Icon icon={"twemoji:flag-vietnam"} />
-            VN
-          </button> */}
           </div>
         </div>
+        <div className="w-[110px]"></div>
       </div>
     </>
   );
@@ -196,11 +145,11 @@ const renderSubmenus = (submenus) => {
   const [hoveredPath, setHoveredPath] = useState(null);
 
   return (
-    <ul>
+    <ul className="relative z-[10000]">
       {submenus.map((subPage) => (
         <li
           key={subPage.path}
-          className="flex text-left w-full px-3 py-1 border-b last:border-b-0 relative"
+          className="flex text-left w-full px-3 py-1 border-b last:border-b-0 relative "
           onMouseEnter={() => setHoveredPath(subPage.path)}
           onMouseLeave={() => setHoveredPath(null)}
         >
@@ -681,11 +630,6 @@ export const mobileConfig = [
 ];
 
 const router = [
-  {
-    path: "/",
-    element: "Home",
-    // element: "Trang chủ",
-  },
   {
     path: "ICANPR",
     children: [

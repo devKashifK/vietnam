@@ -43,7 +43,7 @@ export default function NewsShowcase() {
             }
           );
           return (
-            <SwiperSlide key={index} className="w-full md:flex-[350px]">
+            <SwiperSlide key={index} className="w-full md:flex-[480px]">
               <NewsFeedCard
                 title={item.title}
                 subTitle={item.subTitle}

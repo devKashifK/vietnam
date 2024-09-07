@@ -2,6 +2,7 @@ import Footer from "@/components/ui/footer";
 import Hero from "@/components/ui/hero";
 import HeroDefault from "@/components/ui/hero-all";
 import { Outlet, useLocation } from "react-router-dom";
+import Sidebar from "./sidebar";
 
 const Layout = () => {
   const location = useLocation();
@@ -227,36 +228,38 @@ const Layout = () => {
     },
   };
   return (
-    <div
-      className="layout relative mx-auto flex justify-center items-center flex-col py-4 w-full bg-cover
-     bg-gradient-to-r from-neutral-300 to-teal-200
+    <>
+      <Sidebar />
+      <div
+        className="layout relative mx-auto flex justify-center items-center flex-col  w-full bg-cover bg-gray-100
       "
-      // bg-gradient-to-r from-neutral-300 to-stone-400
-      // bg-gradient-to-r from-rose-100 to-teal-100
-      // bg-gradient-to-r from-blue-100 to-cyan-300
-      // bg-gradient-to-r
-      // from-yellow-200
-      // to-orange-300
-      // bg-gradient-to-r from-blue-100 to-cyan-300
+        // bg-gradient-to-r from-neutral-300 to-stone-400
+        // bg-gradient-to-r from-rose-100 to-teal-100
+        // bg-gradient-to-r from-blue-100 to-cyan-300
+        // bg-gradient-to-r
+        // from-yellow-200
+        // to-orange-300
+        // bg-gradient-to-r from-blue-100 to-cyan-300
 
-      // bg-gradient-to-r from-[#7AB1BA] to-[#777474]
-    >
-      <div className="flex flex-col w-[100%] relative z-10">
-        {location.pathname === "/" ? (
-          <Hero />
-        ) : (
-          <HeroDefault
-            path={path}
-            text={text[path] && text[path].text}
-            img={text[path] && text[path].image}
-          />
-        )}
-        <main className="py-8">
-          <Outlet />
-        </main>
-        <Footer />
+        // bg-gradient-to-r from-[#7AB1BA] to-[#777474]
+      >
+        <div className="flex flex-col w-[100%] relative z-10">
+          {location.pathname === "/" ? (
+            <Hero />
+          ) : (
+            <HeroDefault
+              path={path}
+              text={text[path] && text[path].text}
+              img={text[path] && text[path].image}
+            />
+          )}
+          <main className="">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
