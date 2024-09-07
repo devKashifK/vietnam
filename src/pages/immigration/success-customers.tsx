@@ -5,7 +5,7 @@ import { url } from "inspector";
 
 import React from "react";
 
-export default function OurSuccessCustomers() {
+export default function SuccessCustomers() {
   return (
     <>
       <Container className="flex flex-col py-10 gap-10">

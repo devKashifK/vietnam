@@ -3,6 +3,7 @@ import Hero from "@/components/ui/hero";
 import HeroDefault from "@/components/ui/hero-all";
 import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./sidebar";
+import { text } from "stream/consumers";
 
 const Layout = () => {
   const location = useLocation();
@@ -15,46 +16,87 @@ const Layout = () => {
       text: "GreenTech Resources Worldwide <br /> Canada",
       image: "/about.png",
     },
-    news: {
-      text: "Latest News and Updates",
+    ["tin-tức"]: {
+      text: "Tin tức",
       image: "/news.jpg",
     },
-    contact: {
-      text: "Contact Us",
+    ["việc-làm"]: {
+      text: "Việc làm",
       image: "/hero-2.jpg",
     },
-    "our-success-customers": {
-      text: "Our Success Stories",
-      image: "/successcustomers.png",
-    },
-    "book-appointment": {
-      text: "Book an Appointment",
-      image: "/service.jpg",
-    },
-    "why-choose-us": {
-      text: "Why Choose Us",
+    ["bảo-lãnh"]: {
+      text: "Bảo lãnh",
       image: "/about.png",
     },
-    "our-service": {
-      text: "Our <br /> Services",
+
+    ["doanh-nghiệp"]: {
+      text: "Doanh Nghiệp",
       image: "/service.jpg",
     },
-    "certificate-membership": {
-      text: "Certification and Membership",
-      image: "/about.png",
+
+    ["tư-vấn"]: {
+      text: "Tư vấn",
+      image: "/service.jpg",
     },
-    "customer-testimonials": {
-      text: "Please Rate Our Quality",
-      image: "/testimonial.jpg",
+    ["dịch-vụ"]: {
+      text: "Dịch vụ",
+      image: "/service.jpg",
     },
-    "express-entry": {
-      text: "Express Entry",
-      image: "/expressEntry.png",
+    ["học-tập"]: {
+      text: "Học tập",
+      image: "/study.jpg",
     },
     "du-học": {
       text: "Du Học",
       image: "/expressEntry.png",
     },
+    ["lao-động"]: {
+      text: "Lao động",
+      image: "/canada.jpg",
+    },
+    ["ve-icanpr"]: {
+      text: "Về iCanPR",
+      image: "/about.png",
+    },
+    ["doi-tac-icanpr"]: {
+      text: "Đối tác iCanPR",
+      image: "/service.jpg",
+    },
+    ["lien-he"]: {
+      text: "Liên hệ",
+      image: "/successcustomers.png",
+    },
+
+    // "our-success-customers": {
+    //   text: "Our Success Stories",
+    //   image: "/successcustomers.png",
+    // },
+
+    // "book-appointment": {
+    //   text: "Book an Appointment",
+    //   image: "/service.jpg",
+    // },
+    // "why-choose-us": {
+    //   text: "Why Choose Us",
+    //   image: "/about.png",
+    // },
+    // "our-service": {
+    //   text: "Our <br /> Services",
+    //   image: "/service.jpg",
+    // },
+    // "certificate-membership": {
+    //   text: "Certification and Membership",
+    //   image: "/about.png",
+    // },
+    // "customer-testimonials": {
+    //   text: "Please Rate Our Quality",
+    //   image: "/testimonial.jpg",
+    // },
+    "express-entry": {
+      text: "Express Entry",
+      image: "/expressEntry.png",
+    },
+
     "federal-skilled-trade": {
       text: "Federal Skilled Trades Program",
       image: "/federalSkill.png",
@@ -67,7 +109,36 @@ const Layout = () => {
       text: "Canadian Experience Class",
       image: "/federalSkill.png",
     },
-    "provincial-nominee-programs": {
+    "crs-score-calculation": {
+      text: "CRS Score Calculation",
+      image: "/federalSkill.png",
+    },
+    ["việc-làm-định-cư"]: {
+      text: "Việc làm định cư",
+      image: "/federalSkill.png",
+    },
+    ["du-hoc-dinh-cu"]: {
+      text: "Du học - định cư",
+      image: "/federalSkill.png",
+    },
+    ["doanh-nghiệp-C11-visa"]: {
+      text: "Doanh nghiệp C11 Visa",
+      image: "/federalSkill.png",
+    },
+    "start-up-visa": {
+      text: "Start Up Visa",
+      image: "/federalSkill.png",
+    },
+    ["bảo-lãnh-gia-đình"]: {
+      text: "Bảo lãnh gia đình",
+      image: "/federalSkill.png",
+    },
+    ["khách-hàng-thành-công"]: {
+      text: "Khách hàng thành công",
+      image: "/federalSkill.png",
+    },
+
+    "dề-cử-tỉnh-bang-pnp": {
       text: "Provincial Nominee Programs",
       image: "/immigrationProvincial.png",
     },
@@ -75,10 +146,7 @@ const Layout = () => {
       text: "Alberta Immigration (AAIP)",
       image: "/alberta.png",
     },
-    "atlantic-immigration-aipp": {
-      text: "Atlantic Immigration (AAIP)",
-      image: "/atlantic.png",
-    },
+
     "british-columbia-bcpnp": {
       text: "British Columbia (BC PNP)",
       image: "/british.jpg",
@@ -95,18 +163,15 @@ const Layout = () => {
       text: "New Brunswick (NB PNP)",
       image: "/newbrunswick.png",
     },
-    "newfoundland-and-labrador": {
-      text: "Newfoundland and Labrador",
-      image: "/newbrunswick.png",
-    },
-    "saskatchewan-sinp": {
-      text: "Saskatchewan (SINP)",
-      image: "/saskatchewan.jpg",
-    },
-    "northwest-territories": {
-      text: "Northwest Territories",
-      image: "/northwestterritories.png",
-    },
+    // "newfoundland-and-labrador": {
+    //   text: "Newfoundland and Labrador",
+    //   image: "/newbrunswick.png",
+    // },
+
+    // "northwest-territories": {
+    //   text: "Northwest Territories",
+    //   image: "/northwestterritories.png",
+    // },
     "nova-scotia-nsnp": {
       text: "Nova Scotia (NSNP)",
       image: "/novaScotia.jpg",
@@ -115,116 +180,128 @@ const Layout = () => {
       text: "Prince Edward Island (PEI PNP)",
       image: "/novaScotia.jpg",
     },
-    "rural-and-northern-immigration-pilot-rnip": {
-      text: "Rural and Northern Immigration Pilot (RNIP)",
+    "saskatchewan-sinp": {
+      text: "Saskatchewan (SINP)",
+      image: "/saskatchewan.jpg",
+    },
+
+    quebec: {
+      text: "Quebec (PNP)",
       image: "/northwestterritories.png",
     },
+    path: "các-tỉnh-bang-canada",
 
     "yukon-ynp": {
       text: "Yukon (YNP)",
       image: "/yukon.jpg",
     },
-    "immigration-challenges": {
-      text: "Please Rate Our Quality",
-      image: "/federalSkill.png",
+    albertaP: {
+      text: "Alberta Province",
+      image: "/alberta.png",
     },
-    "quebec-investor": {
-      text: "Quebec Investor Program",
-      image: "/federalSkill.png",
+    brcolumbiaP: {
+      text: "British Colombia (BC PNP)",
+      image: "/british.jpg",
     },
-    "quebec-entrepreneur": {
-      text: "Quebec Entrepreneur Program",
-      image: "/about.png",
-    },
-    "quebec-self-employed": {
-      text: "Quebec Self-Employed Program",
-      image: "/experince.jpg",
-    },
-    "start-up-visa": {
-      text: "Start Up Visa",
-      image: "/study.jpg",
-    },
-    "intra-company-transfer": {
-      text: "Intra Company Transfer",
-      image: "/experince.jpg",
-    },
-    "benefit-to-canada": {
-      text: "Benefits",
-      image: "/about.png",
-    },
-    "owner-operator": {
-      text: "Owner Operator",
-      image: "/experince.jpg",
-    },
-    "self-employed-person": {
-      text: "Self Employed Person",
-      image: "/federalSkill.png",
-    },
-    visitor: {
-      text: "Visitor Visa",
-      image: "/federalSkill.png",
-    },
-    "family-sponsorship": {
-      text: "Family Sponsorship",
-      image: "/about.png",
-    },
-    price: {
-      text: "Our Price Policy",
-      image: "/cost.jpg",
-    },
-
-    "work-and-jobs": {
-      text: "Work in Canada",
-      image: "/immigration.png",
-    },
-    "work-permit": {
-      text: "Work Permit (WP)",
-      image: "/experince.jpg",
-    },
-    "international-mobility-program": {
-      text: "International Mobility Program (IMP)",
-      image: "/success.jpg",
-    },
-    "in-demand-jobs": {
-      text: "In-Demand Jobs",
-      image: "/success.jpg",
-    },
-    "support-for-employers": {
-      text: "Support for Employers",
+    manitobaP: {
+      text: "Manitoba Province",
       image: "/manitoba.png",
     },
-    lmia: {
-      text: "Labour Market Impact Assessment (LMIA)",
-      image: "/experince.jpg",
+    "new-brunswickP": {
+      text: "New Brunswick Province",
+      image: "/newbrunswick.png",
     },
-    "caregiver-program": {
-      text: "Caregiver Program",
-      image: "/immigration.png",
+    "newfoundland-labradorP": {
+      text: "Newfoundland and Labrador Province",
+      image: "/newbrunswick.png",
     },
-    "teer-categories-and-noc": {
-      text: "TEER Categories and NOC",
-      image: "/manitoba.png",
+    "northwest-territoriesP": {
+      text: "Northwest Territories Province",
+      image: "/northwestterritories.png",
     },
-    "study-in-canada": {
-      text: "Studying in Canada",
-      image: "/study.jpg",
+    "nova-scotiaP": {
+      text: "Nova Scotia Province",
+      image: "/novaScotia.jpg",
     },
-    "post-graduate-work-permit": {
-      text: "Post Graduate Work Permit (PGWP)",
-      image: "/study.jpg",
+    nunavutP: {
+      text: "Nunavut Province",
+      image: "/novaScotia.jpg",
     },
-    "pathway-from-study-to-pr": {
-      text: "Pathway from Study to PR",
-      image: "/study.jpg",
+    ontarioP: {
+      text: "Ontario Province",
+      image: "/ontario.png",
     },
-
-    "designated-learning-institution": {
-      text: "Designated Learning Institution (DLI)",
-      image: "/study.jpg",
+    "prince-edwardP": {
+      text: "Prince Edward Island Province",
+      image: "/novaScotia.jpg",
     },
-    "student-direct-stream": {
-      text: "Student Direct Stream (SDS)",
-      image: "/study.jpg",
+    saskatchewanP: {
+      text: "Saskatchewan Province",
+      image: "/saskatchewan.jpg",
+    },
+    yukonP: {
+      text: "Yukon Province",
+      image: "/yukon.jpg",
+    },
+    quebecP: {
+      text: "Quebec Province",
+      image: "/northwestterritories.png",
+    },
+    ["môi-trường-canada"]: {
+      text: "Môi trường Canada",
+      image: "/about.png",
+    },
+    ["văn-hóa-tôn-giáo"]: {
+      text: "Văn hóa & tôn giáo",
+      image: "/canada.jpg",
+    },
+    ["giáo-dục-canada"]: {
+      text: "Giáo dục Canada",
+      image: "/alberta.png",
+    },
+    ["y-tế"]: {
+      text: "Y Tế",
+      image: "/canada.jpg",
+    },
+    ["tỷ-giá-đô-canada"]: {
+      text: "Tỷ giá đô Canada",
+      image: "/about.png",
+    },
+    ["chính-sách-thuế"]: {
+      text: "Chính sách thuế",
+      image: "/saskatchewan.jpg",
+    },
+    ["câu-hỏi-thường-gặp"]: {
+      text: "Câu hỏi thường gặp",
+      image: "/about.png",
+    },
+    ["trang-web-hữu-ích"]: {
+      text: "Trang web hữu ích",
+      image: "/about.png",
+    },
+    ["thuật-ngữ-trong-di-trú"]: {
+      image: "/about.png",
+      text: "Thuật ngữ trong di trú",
+    },
+    ["CLB-là-gì"]: {
+      text: "CLB là gì? Cách quy đổi điểm đương đương?",
+      image: "/canada.jpg",
+    },
+    ["làm-việc-cho-icanpr"]: {
+      text: "Làm việc cho iCanPR",
+      image: "/about.png",
+    },
+    ["tổng-hợp-việc-làm-canada"]: {
+      text: "Tổng hợp việc làm Canada",
+      image: "/about.png",
+    },
+    ["công-nhân-trại-gà"]: {
+      text: "Công nhân trại gà",
+      image: "/about.png",
+    },
+    ["dầu-bếp-món-au"]: {
+      text: "Đầu bếp Món Âu",
+      image: "/about.png",
     },
   };
   return (

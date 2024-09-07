@@ -77,7 +77,7 @@ export default function Hero() {
               >
                 {images.map((item, index) => (
                   <SwiperSlide className="!py-0 !px-0" key={index}>
-                    <img src={`${item}`} alt="" className="w-full  h-full " />
+                    <img src={`${item}`} alt="" className="w-full h-full " />
                   </SwiperSlide>
                 ))}
               </Swiper>

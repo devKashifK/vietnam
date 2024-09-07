@@ -123,7 +123,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                       </NavigationMenuTrigger>
                     )}
                     {navItem.children && (
-                      <NavigationMenuContent className="absolute bg-background border-none  rounded-none  left-0 px-0 z-[10000000] h-56 overflow-y-scroll pretty-scroll">
+                      <NavigationMenuContent className="absolute bg-background border-none  rounded-none  left-0 px-0 z-[10000000] h-max max-h-56 overflow-y-auto pretty-scroll">
                         <div className="w-[200px] py-2">
                           {renderSubmenus(navItem.children)}
                         </div>
@@ -149,7 +149,7 @@ const renderSubmenus = (submenus) => {
       {submenus.map((subPage) => (
         <li
           key={subPage.path}
-          className="flex text-left w-full px-3 py-1 border-white/10 border-b last:border-b-0 relative "
+          className="flex text-left w-full  border-white/10 border-b last:border-b-0 relative "
           onMouseEnter={() => setHoveredPath(subPage.path)}
           onMouseLeave={() => setHoveredPath(null)}
         >
@@ -653,25 +653,26 @@ const router = [
   {
     path: "Canada Immigration",
     // path: "Định cư Canada",
+
     children: [
       {
         path: "Express Entry",
         element: `Express Entry`,
         children: [
           {
-            path: "/canada-immigration/express-entry/federal-skilled-worker",
+            path: "/immigration/express-entry/federal-skilled-worker",
             element: "Fedral Skilled Worker (FSW)",
           },
           {
-            path: "/canada-immigration/express-entry/federal-skilled-trade",
+            path: "/immigration/express-entry/federal-skilled-trade",
             element: "Fedral Skilled Trade (FST)",
           },
           {
-            path: "/canada-immigration/express-entry/canadian-experience-class",
+            path: "/immigration/express-entry/canadian-experience-class",
             element: "Canadian Experience Class (CEC)",
           },
           {
-            path: "/canada-immigration/express-entry/crs-score-calculation",
+            path: "/immigration/express-entry/crs-score-calculation",
             element: "CRS Score Calculation",
           },
         ],
@@ -721,6 +722,10 @@ const router = [
         path: "/dề-cử-tỉnh-bang-pnp/british-columbia-bcpnp",
         element: "British Colombia (BC PNP)",
       },
+      {
+        path: "/dề-cử-tỉnh-bang-pnp/ontario-oinp",
+        element: "Ontario (OINP)",
+      },
 
       {
         path: "/dề-cử-tỉnh-bang-pnp/manitoba-mpnp",
@@ -730,27 +735,24 @@ const router = [
         path: "/dề-cử-tỉnh-bang-pnp/new-brunswick-nbpnp",
         element: "New Brunswick (NBPNP)",
       },
-      {
-        path: "/dề-cử-tỉnh-bang-pnp/newfoundland-and-labrador",
-        element: "Newfoundland and Labrador",
-      },
+      // {
+      //   path: "/dề-cử-tỉnh-bang-pnp/newfoundland-and-labrador",
+      //   element: "Newfoundland and Labrador",
+      // },
 
-      {
-        path: "/dề-cử-tỉnh-bang-pnp/northwest-territories",
-        element: "Northwest Territories",
-      },
+      // {
+      //   path: "/dề-cử-tỉnh-bang-pnp/northwest-territories",
+      //   element: "Northwest Territories",
+      // },
       {
         path: "/dề-cử-tỉnh-bang-pnp/nova-scotia-nsnp",
         element: "Nova Scotia (NSNP)",
       },
-      {
-        path: "/dề-cử-tỉnh-bang-pnp/nanuvut",
-        element: "Nanuvut",
-      },
-      {
-        path: "/dề-cử-tỉnh-bang-pnp/ontario-oinp",
-        element: "Ontario (OINP)",
-      },
+      // {
+      //   path: "/dề-cử-tỉnh-bang-pnp/nanuvut",
+      //   element: "Nanuvut",
+      // },
+
       {
         path: "/dề-cử-tỉnh-bang-pnp/prince-edward-island-peipnp",
         element: "Prince Edward Island (PEI PNP)",
@@ -778,58 +780,58 @@ const router = [
         // path: "Các tỉnh bang Canada",
         children: [
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/alberta-immigration-aaip",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/albertaP",
             element: "Alberta (AAIP)",
           },
 
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/british-columbia-bcpnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/brcolumbiaP",
             element: "British Colombia (BC PNP)",
           },
 
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/manitoba-mpnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/manitobaP",
             element: "Manitoba (MPNP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/new-brunswick-nbpnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/new-brunswickP",
             element: "New Brunswick (NBPNP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/newfoundland-and-labrador",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/newfoundland-labradorP",
             element: "Newfoundland and Labrador",
           },
 
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/northwest-territories",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/northwest-territoriesP",
             element: "Northwest Territories",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nova-scotia-nsnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nova-scotiaP",
             element: "Nova Scotia (NSNP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nanuvut",
-            element: "Nanuvut",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nunavutP",
+            element: "Nunavut",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/ontario-oinp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/ontarioP",
             element: "Ontario (OINP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/prince-edward-island-peipnp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/prince-edwardP",
             element: "Prince Edward Island (PEI PNP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/quebec",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/quebecP",
             element: "Quebec",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/saskatchewan-sinp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/saskatchewanP",
             element: "Saskatchewan (SINP)",
           },
           {
-            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/yukon-ynp",
+            path: "/cuộc-sống-canada/các-tỉnh-bang-canada/yukonP",
             element: "Yukon (YNP)",
           },
         ],
@@ -903,7 +905,7 @@ const router = [
     children: [
       {
         path: "/tuyển-dụng/làm-việc-cho-icanpr",
-        // element: " Làm việc cho iCanPR",
+        // element: "Làm việc cho iCanPR",
         element: "Work for ICanPR",
       },
       {
