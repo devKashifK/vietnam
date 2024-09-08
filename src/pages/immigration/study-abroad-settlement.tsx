@@ -7,7 +7,7 @@ import React from "react";
 
 export default function StudyAbroadSettlement() {
   return (
-    <div>
+    <div className="flex flex-col gap-10 py-8">
       <Container>
         <Title
           title="Vì sao bạn nên đi du học định cư ở Canada?"
@@ -50,7 +50,7 @@ export default function StudyAbroadSettlement() {
         />
 
         <div className="grid grid-cols-2 gap-8">
-          {studyAbroad2.map((item, index) => (
+          {studyAbroad3.map((item, index) => (
             <ServicesCard
               id={item.id}
               title={item.title}
@@ -138,14 +138,20 @@ const studyAbroad3 = [
   },
   {
     id: 2,
-    title: "Federal Skilled Worker Program (Tay nghề kỹ năng Liên bang)",
+    title: "Chính sách định cư diện du học bang Saskatchewan",
     description:
-      "Chương trình dành cho những lao động lành nghề có kinh nghiệm làm việc ở nước ngoài muốn nhập cư vào Canada lâu dài.",
+      "Saskatchewan là một trong những tỉnh bang tại Canada có chính sách định cư hấp dẫn, điển hình là Chương trình đề cử nhập cư Saskatchewan (SINP). Chương trình này dành cho những ứng viên tiềm năng có kinh nghiệm và tay nghề cao nộp đơn xin thường trú nhân tại Canada. Thời gian và tỉ lệ xét duyệt hồ sơ cũng cao hơn so với những chương trình khác.",
   },
   {
     id: 3,
-    title: "Federal Skilled Trades Program (Tay nghề nhóm thợ Liên bang)",
+    title: "Chính sách định cư diện du học bang Ontario",
     description:
-      "Chương trình dành cho những công dân lao động tay nghề cao trong một ngành thương mại lành nghề mong muốn trở thành thường trú nhân tại Canada.",
+      "Chương trình nhập cư Alberta Advantage Immigration Program (AAIP) là một chương trình đề cử định cư cho những cá nhân thường trú tại Alberta. Cũng như các tỉnh bang khác, Alberta mong muốn thu hút nguồn nhân lực từ nhiều quốc gia khác và cả du học sinh quốc tế nhằm đáp ứng nhu cầu phát triển kinh tế của tỉnh bang.",
+  },
+  {
+    id: 4,
+    title: "Chương trình nhập cư Đại tây dương (Atlantic Immigration Program)",
+    description:
+      "Chương trình Nhập cư Đại Tây Dương (Atlantic Immigration Program) dành cho những người lao động nước ngoài có tay nghề cao và sinh viên quốc tế tốt nghiệp từ một trường Đại học tại 4 tỉnh New Brunswick, Nova Scotia, Prince Edward Island và Newfoundland - Labrador.",
   },
 ];
