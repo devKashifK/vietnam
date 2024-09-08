@@ -30,7 +30,7 @@ export default function Title({
         <div className="flex flex-col gap-3 w-full">
           {typeof title === "string" ? (
             <div className="relative flex flex-col justify-center items-center gap-1">
-              <h2 className="text-2xl md:text-4xl tracking-wider text-black/50">
+              <h2 className="text-2xl text-center md:text-4xl tracking-wider text-black/50">
                 {title}
                 <span className="block h-0.5 bg-highlight mt-2"></span>
               </h2>

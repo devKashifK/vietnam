@@ -1,6 +1,6 @@
 import { Feature } from "@/components/ui/cards-set";
 import Container from "@/components/ui/container";
-import { FAQ, SingleFaq } from "@/components/ui/faq";
+import { FAQ } from "@/components/ui/faq";
 import { FeatureSection } from "@/components/ui/feature";
 import HoverCard from "@/components/ui/hover-card";
 import { truncateTextHeading } from "@/components/ui/newsCard";
@@ -144,16 +144,13 @@ export default function StartUpVisa() {
           }
         />
 
-        <FAQ className="flex gap-2">
+        <div className="flex gap-2">
           <div className="flex flex-col gap-2 flex-1">
             {visaFAQ.map((item) => (
-              <SingleFaq
-                description={item.description()}
-                title={item.question}
-              />
+              <FAQ description={item.description()} title={item.question} />
             ))}
           </div>
-        </FAQ>
+        </div>
       </div>
       <div className="">
         <Title
