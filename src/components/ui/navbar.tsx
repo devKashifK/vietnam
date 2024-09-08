@@ -38,53 +38,46 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/10 px-16">
             <Link
-              to={""}
+              unstable_viewTransition
+              to={"/ve-icanpr"}
               className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>
-                About Us
-                {/* Việc Làm */}
-              </span>
+              <span className={"text-white"}>About Us</span>
               <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={"/du-học"}
+              unstable_viewTransition
+              to={"/lien-he"}
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>
-                Contact Us
-                {/* Du Học */}
-              </span>
+              <span className={"text-white"}>Contact Us</span>
               <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
+              unstable_viewTransition
               to={"/doanh-nghiệp"}
               className="text-xs flex font-light flex-col gap-0.5 group"
             >
               <span className={"text-white"}>
                 Free phone consultation +84 869967809
-                {/* Doanh Nghiệp */}
               </span>
               <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
-              to={""}
+              to={"/immigration/khách-hàng-thành-công"}
+              unstable_viewTransition
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>
-                Guarantee
-                {/* Bảo lãnh */}
-              </span>
+              <span className={"text-white"}>Guarantee</span>
               <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
             </Link>
 
             <a
-              href="https://api.whatsapp.com/send?phone=16476197975"
+              href="https://api.whatsapp.com/send?phone=84869967809"
               target="_blank"
               className="text-xs bg-green-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
             >
               <Icon icon={"mdi:whatsapp"} className="text-xl" />
-              {/* </span> */}
             </a>
           </div>
 
@@ -154,7 +147,7 @@ const renderSubmenus = (submenus) => {
           onMouseLeave={() => setHoveredPath(null)}
         >
           {subPage.children ? (
-            <div className="relative w-full">
+            <div className="relative w-full z-[10000]">
               <div
                 className={cn(
                   "flex justify-between cursor-pointer items-center text-left text-sm px-2 w-full text-white rounded-md py-1"
@@ -164,17 +157,12 @@ const renderSubmenus = (submenus) => {
                 <Icon icon={"zondicons:cheveron-right"} />
               </div>
               <div
-                className={`absolute top-0 left-[188px] w-[300px] bg-background overflow-visible text-left py-0.5 flex flex-col z-10 
-                  transition-all duration-300 transform ease-out ${
-                    hoveredPath === subPage.path
-                      ? "opacity-100 translate-x-0"
-                      : "opacity-0 translate-x-4 pointer-events-none"
-                  }`}
+                className={`absolute top-0 left-[188px] z-[10000] w-[300px] bg-background overflow-visible text-left py-0.5 flex flex-col transition-all duration-300 transform ease-out`}
               >
                 {subPage.children.map((item) => (
                   <Link
                     key={item.path}
-                    className="group border-white/10 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
+                    className="group relative z-[10000] border-white/10 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
                     to={item.path}
                     unstable_viewTransition
                   >

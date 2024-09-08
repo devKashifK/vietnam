@@ -58,15 +58,26 @@
     --chart-5: 340 75% 55%;
   }
 }
-@layer components {
+
+@layer utilities {
+  .pretty-scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+
   .pretty-scroll::-webkit-scrollbar-track {
-    @apply bg-white/80 rounded-sm p-0.5
-  
-    /* border: 1px solid #cacaca; */;
+    border-radius: 100vh;
+    background: #0d2d2a;
   }
 
   .pretty-scroll::-webkit-scrollbar-thumb {
-    @apply bg-black rounded-sm w-[6px];
+    background: #0d2d2a;
+    border-radius: 10vh;
+    border: 2px solid #c2191b;
+  }
+
+  .pretty-scroll::-webkit-scrollbar-thumb:hover {
+    background: #0d2d2a;
   }
 }
 

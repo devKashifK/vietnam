@@ -6,13 +6,17 @@ export const ServicesCard = ({
   title,
   description,
 }: {
-  title?: string;
+  title?: string | React.ReactNode;
   description?: string;
 }) => {
   return (
     <Glass className="flex flex-col px-10 gap-3 ">
       <div className="flex flex-col ">
-        <h5 className="text-2xl text-left text-highlight">{title}</h5>
+        {typeof title === "string" ? (
+          <h5 className="text-2xl text-left text-highlight">{title}</h5>
+        ) : (
+          title
+        )}
         {/* <p className="text-sm text-left text-black/70">
             {truncateTextHeading(item.subtitle)}
           </p> */}
