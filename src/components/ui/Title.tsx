@@ -43,7 +43,7 @@ export default function Title({
 
         {description &&
           (typeof description === "string" ? (
-            <p className="text-left text-black/50 w-[70%]">{description}</p>
+            <p className="text-center text-black/50 w-[70%]">{description}</p>
           ) : (
             description
           ))}

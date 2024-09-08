@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
               </p>
               <p className="text-sm text-black/60 text-left">
                 Established in 2016, GreenTech Resource Worldwide Canada has its
-                headquarters based in Regina, Saskatchewan, Canada.{" "}
+                headquarters based in Regina, Saskatchewan, Canada.
               </p>
               <Title
                 subtitle="Head Office:
