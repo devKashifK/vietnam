@@ -24,7 +24,7 @@ export const NewsFeedCard = ({
   id?: string;
 }) => {
   return (
-    <div className="">
+    <div className="w-full h-full">
       <div className="flex flex-col hover:shadow-xl transition-all duration-150 ease-in-out border border-slate-400 cursor-pointer">
         <div className="relative ">
           <img

@@ -1,6 +1,7 @@
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/custom";
 import MovingCardBorder from "@/components/ui/moving-card-border";
+import TitleWithDoubleBorder from "@/components/ui/title-with-double-border";
 import Glass from "@/lib/helpers";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -11,57 +12,51 @@ export default function About() {
     <div>
       <Container>
         <Glass className="flex gap-2 px-10 py-10">
-          <div className="flex-1 flex flex-col gap-2">
-            <div className="relative w-max">
-              <div className="absolute top-0 left-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute top-[12px] transform rotate-90 -left-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
+          <div className="flex-1 flex flex-col md:flex-row gap-2">
+            <div className="relative flex-1">
+              <TitleWithDoubleBorder>Our team</TitleWithDoubleBorder>
 
-              <div className="px-3 py-1.5">
-                <h5 className="tracking-widest text-xl">Our team</h5>
+              <div className="flex flex-col justify-start gap-6">
+                <h3 className="tracking-wide text-left text-4xl text-black/70">
+                  The minds behind the magic.
+                </h3>
+                <p className="text-sm text-black/60 text-left">
+                  We take immense pride in our collaboration with licensed
+                  immigration experts certified by RCIC, under the experienced
+                  and passionate leadership of Mr. Manoj Goswami – Regulated
+                  Canadian Immigration Consultant (RCIC), Founder, CEO of
+                  GreenTech Resource Worldwide Canada. Mr. Manoj Goswami is a
+                  licensed and registered Regulated Canadian Immigration
+                  Consultant (RCIC) with over a decade of experience in
+                  recruitment, consulting, and immigration file support.
+                </p>
+                <p className="text-sm text-black/60 text-left">
+                  Manoj Goswami, an immigrant to Canada since the early 2000s,
+                  brings nearly two decades of experience to his role. He holds
+                  an Executive Master of Business Administration from the
+                  University of Regina’s Levin School of Business and has
+                  studied at prestigious institutions such as the University of
+                  Toronto and Ashton College in British Columbia. Manoj boasts a
+                  rich portfolio of designations, including P.Ag, PMP, SCMP,
+                  CPSM, and CRM, which paved the way for his career as an
+                  Immigration Consultant and Foreign Worker Recruiter since
+                  2016. He is a Registered Canadian Immigration Consultant
+                  (RCIC) and a proud member of professional organizations like
+                  CICC and CAPIC.
+                </p>
+                <p className="text-sm text-black/60 text-left">
+                  In addition to fluent English, Manoj is proficient in nine
+                  languages, including Hindi, Urdu, Nepali, and Bengali. The
+                  GreenTech Resources Worldwide Canada team serves clients from
+                  diverse backgrounds worldwide and can provide support in
+                  languages such as Vietnamese, Tagalog, Arabic, Chinese,
+                  French, and Spanish
+                </p>
               </div>
-
-              <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute bottom-[12px] transform rotate-90 -right-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
             </div>
-            <div className="flex flex-col justify-start gap-6">
-              <h3 className="tracking-wide text-left text-4xl text-black/70">
-                The minds behind the magic.
-              </h3>
-              <p className="text-sm text-black/60 text-left">
-                We take immense pride in our collaboration with licensed
-                immigration experts certified by RCIC, under the experienced and
-                passionate leadership of Mr. Manoj Goswami – Regulated Canadian
-                Immigration Consultant (RCIC), Founder, CEO of GreenTech
-                Resource Worldwide Canada. Mr. Manoj Goswami is a licensed and
-                registered Regulated Canadian Immigration Consultant (RCIC) with
-                over a decade of experience in recruitment, consulting, and
-                immigration file support.
-              </p>
-              <p className="text-sm text-black/60 text-left">
-                Manoj Goswami, an immigrant to Canada since the early 2000s,
-                brings nearly two decades of experience to his role. He holds an
-                Executive Master of Business Administration from the University
-                of Regina’s Levin School of Business and has studied at
-                prestigious institutions such as the University of Toronto and
-                Ashton College in British Columbia. Manoj boasts a rich
-                portfolio of designations, including P.Ag, PMP, SCMP, CPSM, and
-                CRM, which paved the way for his career as an Immigration
-                Consultant and Foreign Worker Recruiter since 2016. He is a
-                Registered Canadian Immigration Consultant (RCIC) and a proud
-                member of professional organizations like CICC and CAPIC.
-              </p>
-              <p className="text-sm text-black/60 text-left">
-                In addition to fluent English, Manoj is proficient in nine
-                languages, including Hindi, Urdu, Nepali, and Bengali. The
-                GreenTech Resources Worldwide Canada team serves clients from
-                diverse backgrounds worldwide and can provide support in
-                languages such as Vietnamese, Tagalog, Arabic, Chinese, French,
-                and Spanish
-              </p>
+            <div className="flex-1 flex flex-col gap-3 justify-end items-end px-10">
+              <img src="/team.jpg" className="rounded-2xl h-[70%]" alt="" />
             </div>
-          </div>
-          <div className="flex-1 flex flex-col gap-3 justify-end items-end px-10">
-            <img src="/team.jpg" className="rounded-2xl h-[70%]" alt="" />
           </div>
         </Glass>
       </Container>

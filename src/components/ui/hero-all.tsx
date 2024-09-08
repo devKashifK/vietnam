@@ -13,20 +13,19 @@ export default function HeroDefault({
 }) {
   return (
     <div
-      className="flex flex-col gap-2 mx-auto rounded-2xl bg-center relative bg-cover w-[97%] h-[85vh]"
+      className="flex flex-col gap-2 mx-auto bg-center relative bg-cover w-full h-[85vh]"
       style={{ backgroundImage: `url(${img})` }}
     >
-      <div className="bg-black bg-clip-padding  backdrop-filter backdrop-blur-md bg-opacity-20 rounded-2xl h-full absolute top-0 left-0 w-full"></div>
       <div className="relative z-10">
         <Navbar defaultStyle={true} />
-        <div className="flex justify-center items-center w-full h-full mt-10 ">
+        <div className="flex justify-center items-center w-full h-full mt-10">
           <div
-            className="text-6xl h-full flex justify-center items-center font-primary tracking-widest text-white md:mt-0 mt-40"
+            className=" bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 h-max px-6 text-6xl py-6 flex justify-center items-center font-primary tracking-widest text-white md:mt-0 mt-40"
             dangerouslySetInnerHTML={{ __html: text }}
           />
         </div>
       </div>
-      <div className="absolute bottom-8 px-12 z-10 flex justify-start items-center gap-2 cursor-pointer">
+      <div className="absolute bg-background bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 w-full py-1 bottom-0 px-12 z-10 flex justify-start items-center gap-2 cursor-pointer">
         <Link
           to={"/"}
           className="text-white/60 uppercase font-primary tracking-widest"

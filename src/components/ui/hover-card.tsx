@@ -29,15 +29,14 @@ export default function HoverCard({
     >
       <span
         className={cn(
-          "absolute left-[40px] top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[10]",
-          color
+          "absolute bg-highlight left-[40px] top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[10]"
         )}
       ></span>
       <div className="relative z-10 mx-auto max-w-md">
         <div
           className={cn(
             "grid h-20 w-20 place-items-center rounded-full transition-all duration-300 ",
-            isHovered && color
+            isHovered && "bg-highlight"
           )}
         >
           {typeof icon === "string" ? (

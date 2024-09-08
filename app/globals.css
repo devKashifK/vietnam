@@ -58,19 +58,17 @@
     --chart-5: 340 75% 55%;
   }
 }
-@layer components{
+@layer components {
   .pretty-scroll::-webkit-scrollbar-track {
     @apply bg-white/80 rounded-sm p-0.5
   
     /* border: 1px solid #cacaca; */;
   }
-  
+
   .pretty-scroll::-webkit-scrollbar-thumb {
     @apply bg-black rounded-sm w-[6px];
   }
 }
-
-
 
 @layer base {
   * {

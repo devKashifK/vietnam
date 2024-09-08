@@ -16,11 +16,10 @@ export default function NewsShowcase() {
   return (
     <Swiper
       spaceBetween={30}
-      slidesPerView={"auto"}
+      slidesPerView={2}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
-      className="flex gap-2 overflow-hidden"
+      className="flex flex-row"
       style={{ width: "100%" }}
-      modules={[Autoplay]}
       // breakpoints={{
       //   768: {
       //     slidesPerView: 2,
@@ -43,7 +42,7 @@ export default function NewsShowcase() {
             }
           );
           return (
-            <SwiperSlide key={index} className="w-full md:flex-[480px]">
+            <SwiperSlide key={index} className="w-[480px]">
               <NewsFeedCard
                 title={item.title}
                 subTitle={item.subTitle}

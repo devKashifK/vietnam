@@ -88,7 +88,7 @@ function App() {
           </div>
         </Glass>
       </Container>
-      <Container effect="slide-up" className="flex gap-10">
+      <Container effect="slide-up" className="flex flex-col gap-10">
         <Title
           cta="All News & Events"
           subtitle="Canada Immigration News"
@@ -111,7 +111,31 @@ function App() {
 
       <InfiniteMovingCardsDemo />
 
-      <CTAWithImage />
+      <CTAWithImage
+        flip={true}
+        title={"Chúng tôi luôn sẵn sàng hiện thực hóa giấc mở nhập cư của bạn"}
+        subtitle={"Hãy tin tưởng công ty chúng tôi"}
+        description={
+          <div className="flex flex-col gap-2 justify-start items-start">
+            <p className="text-left">
+              Cùng ICanPR hành trình định cư Canada của gia đình bạn sẽ trở nên
+              dễ dàng hơn.
+            </p>
+            <p className="text-left">
+              Đội ngũ chuyên gia kinh nghiệm của chúng tôi cam kết đồng hành
+              cùng sự thành công của bạn. Chúng tôi cung cấp hướng dẫn theo từng
+              hồ sơ, cập nhật thông tin và hỗ trợ không ngừng trong suốt quá
+              trình di trú của bạn. Với bề dầy kinh nghiệm, chúng tôi đảm bảo
+              cho bạn một hành trình di trú nhanh chóng, thuận lợi và thành công
+              đưa bạn đến cuộc sống mới tại Canada..
+            </p>
+          </div>
+        }
+        image="/aaa.jpg"
+        ctaAction={
+          "Hãy cùng bắt đầu hành trình thay đổi cuộc sống này cùng nhau nào!"
+        }
+      />
       {/* <Jobs /> */}
     </div>
   );

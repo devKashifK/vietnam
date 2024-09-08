@@ -1,6 +1,6 @@
 import { Feature } from "@/components/ui/cards-set";
 import Container from "@/components/ui/container";
-import { FAQ } from "@/components/ui/faq";
+import { FAQ, SingleFaq } from "@/components/ui/faq";
 import { FeatureSection } from "@/components/ui/feature";
 import HoverCard from "@/components/ui/hover-card";
 import { truncateTextHeading } from "@/components/ui/newsCard";
@@ -118,7 +118,7 @@ export default function StartUpVisa() {
         <FeatureSection title="SUV ROADMAP" subtitle="RoadMap">
           {features.map((item, index) => (
             <div className="max-w-md sm:mx-auto sm:text-center flex flex-col justify-center items-center">
-              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 sm:mx-auto sm:w-24 sm:h-24">
+              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-background sm:mx-auto sm:w-24 sm:h-24 text-white">
                 {item.icon}
               </div>
               <h6 className="mb-3 text-xl font-bold leading-5">{item.title}</h6>
@@ -128,7 +128,7 @@ export default function StartUpVisa() {
               <a
                 href="/"
                 aria-label=""
-                className="inline-flex bg-green-400 px-4 rounded-full font-light items-center transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="inline-flex bg-background text-white px-4 rounded-full font-light items-center transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
                 Learn more
               </a>
@@ -136,7 +136,7 @@ export default function StartUpVisa() {
           ))}
         </FeatureSection>
       </div>
-      <div>
+      <div className="flex flex-col gap-10">
         <Title
           title={"List of Designated Organization"}
           description={
@@ -144,11 +144,16 @@ export default function StartUpVisa() {
           }
         />
 
-        <div className="flex flex-col gap-2">
-          {visaFAQ.map((item) => (
-            <FAQ description={item.description()} title={item.question} />
-          ))}
-        </div>
+        <FAQ className="flex gap-2">
+          <div className="flex flex-col gap-2 flex-1">
+            {visaFAQ.map((item) => (
+              <SingleFaq
+                description={item.description()}
+                title={item.question}
+              />
+            ))}
+          </div>
+        </FAQ>
       </div>
       <div className="">
         <Title
