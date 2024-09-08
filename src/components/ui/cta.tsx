@@ -272,7 +272,7 @@ export const CTAWithImage = ({
   description: string | React.ReactNode;
   ctaAction: string | React.ReactNode;
   image: string;
-  flip?: string;
+  flip?: boolean;
 }) => {
   return (
     <Container

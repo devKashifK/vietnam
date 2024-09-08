@@ -9,6 +9,8 @@ import NewsShowcase from "./pages/news/news-showcase";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Glass from "./lib/helpers";
 import CountUp, { useCountUp } from "react-countup";
+import { CardWithImage } from "./components/ui/card-with-image";
+import HoverCard from "./components/ui/hover-card";
 
 function App() {
   // useEffect(() => {
@@ -18,7 +20,58 @@ function App() {
   return (
     <div className="py-10 flex flex-col gap-12">
       <CTA />
+      {/* <Container>
+        <Glass>
+          <Title title={"Vì sao nhiều người chọn Canada?"} />
+          <div>
+            <HoverCard
+              icon={""}
+              description="Bạn có biết bao nhiêu người nhập cư Canada mỗi năm? Canada đã luôn là 1 quốc gia nổi tiếng trong việc chào đón người nhập cư, tị nạn khi thường xuyên chào đón hơn 200.000 người nhập cư mỗi năm kể từ năm 1988 và con số vẫn tiếp tục tăng lên từ đó. Vào năm 2024, quốc gia này dự kiến tiếp nhận khoảng 500.000 người nhập cư mới. Trong số đó, nhiều người có xuất thân từ các quốc gia đang phát triển thuộc châu Á như Việt Nam, etc..."
+              title="Quốc gia chào đón người nhập cư trên khắp thế giới"
+            />
+          </div>
+        </Glass>
+      </Container> */}
       <WhyChooseUs />
+
+      <Container className="gap-10">
+        <Title
+          subtitle="Chúng tôi tự tin có thể giúp giấc mơ Canada của gia đình bạn thành sự thật"
+          title="Các chương trình định cư phù hợp cho người Việt"
+          description={
+            <div className="flex flex-col gap-3 mt-2">
+              <p className="text-black/50">
+                Canada có nhiều chương trình định cư, nhưng phù hợp và lộ trình
+                nhanh nhất cho người Việt là các chương trình AINP (Alberta
+                Immigrant Nominee Program) của tỉnh bang Alberta và SINP
+                (Saskatchewan Immigrant Nominee Program) của tỉnh bang
+                Saskatchewan dành cho lao động lành nghề.
+              </p>
+              <p className="text-black/50">
+                Bên cạnh đó, chương trình C11 mở ra cánh cửa nhập cư cho doanh
+                nhân, chủ doanh nghiệp với vốn đầu tư tối thiểu chỉ CAD 100.000.
+              </p>
+            </div>
+          }
+        />
+        <div className="flex gap-5">
+          <CardWithImage
+            image="/alberta.png"
+            title="Alberta"
+            description="Nổi bật với chương trình Alberta Rural Renewal, mang lại cơ hội xin PR trực tiếp từ Việt Nam cho lao động lành nghề"
+          />
+          <CardWithImage
+            image="/saskatchewan.jpg"
+            title="Saskatchewan"
+            description="Lộ trình Saskatchewan Experience cho phép người lao động xin đề cử tỉnh bang & PR sau 6 tháng làm việc. Xin PR từ Việt Nam với JAL"
+          />
+          <CardWithImage
+            image="/ontario.png"
+            title="Visa C11"
+            description="Cùng gia đình sống, làm việc, học tập tại Canada với Visa C11 dành cho chủ doanh nghiệp chưa có tiếng "
+          />
+        </div>
+      </Container>
       <Container>
         <Glass
           className="flex-col  gap-8 py-20 justify-center items-center bg-cover bg-center relative"
@@ -88,29 +141,6 @@ function App() {
           </div>
         </Glass>
       </Container>
-      <Container effect="slide-up" className="flex flex-col gap-10">
-        <Title
-          cta="All News & Events"
-          subtitle="Canada Immigration News"
-          title="Latest News & Events"
-          to="/news"
-        />
-        <NewsShowcase />
-      </Container>
-      <CTADefault
-        title="Empowering Your Canadian Dream"
-        subtitle={
-          <p className="text-xl text-white/90">
-            Take the first step towards your family’s Canadian dream. Book a
-            consultation today to explore <br />
-            immigration options and secure your family’s future in Canada.
-          </p>
-        }
-        image={"/immigrate.jpg"}
-      />
-
-      <InfiniteMovingCardsDemo />
-
       <CTAWithImage
         flip={true}
         title={"Chúng tôi luôn sẵn sàng hiện thực hóa giấc mở nhập cư của bạn"}
@@ -136,6 +166,30 @@ function App() {
           "Hãy cùng bắt đầu hành trình thay đổi cuộc sống này cùng nhau nào!"
         }
       />
+
+      <Container effect="slide-up" className="flex flex-col gap-10">
+        <Title
+          cta="All News & Events"
+          subtitle="Canada Immigration News"
+          title="Latest News & Events"
+          to="/news"
+        />
+        <NewsShowcase />
+      </Container>
+      <CTADefault
+        title="Empowering Your Canadian Dream"
+        subtitle={
+          <p className="text-xl text-white/90">
+            Take the first step towards your family’s Canadian dream. Book a
+            consultation today to explore <br />
+            immigration options and secure your family’s future in Canada.
+          </p>
+        }
+        image={"/immigrate.jpg"}
+      />
+
+      <InfiniteMovingCardsDemo />
+
       {/* <Jobs /> */}
     </div>
   );

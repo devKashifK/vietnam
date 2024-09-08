@@ -4,6 +4,7 @@ import { supabase } from "./../../supabaseClient";
 import { Autoplay } from "swiper/modules";
 import { NewsFeedCard } from "@/components/ui/newsCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function NewsShowcase() {
   const { data } = useQuery({
