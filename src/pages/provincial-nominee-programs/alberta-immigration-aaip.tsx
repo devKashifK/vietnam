@@ -2,375 +2,241 @@ import { albertaImmigrationAAIP } from "@/assets/data/alberta-immigration-aaip";
 import { FeatureSection, FeatureSection2 } from "@/components/ui/feature";
 import { Feature } from "@/components/ui/cards-set";
 import Container from "@/components/ui/container";
-import { truncateTextHeading } from "@/components/ui/cta";
+import {
+  CTADefault,
+  CTAWithImage,
+  truncateTextHeading,
+} from "@/components/ui/cta";
 import Title from "@/components/ui/Title";
 import Glass from "@/lib/helpers";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { FAQ } from "../immigration/express-entry/federal-skilled-worker";
+import TitleWithDoubleBorder from "@/components/ui/title-with-double-border";
+import TitleWithBottomBorder from "@/components/ui/title-with-bottom-border";
+import { ServicesCard } from "@/components/ui/services-card";
 
 export default function Alberta() {
   return (
-    <>
+    <div className="flex flex-col gap-20 py-10">
       <Container>
         <Glass className="flex gap-2 px-10 py-10">
           <div className="flex-1 flex flex-col gap-2">
             <div className="relative w-max">
-              <div className="absolute top-0 left-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute top-[12px] transform rotate-90 -left-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
-
               <div className="px-3 py-1.5">
-                <h5 className="tracking-widest text-xl">
-                  Canada Provincial Nomination Program
-                  {/* {albertaImmigrationAAIP[language].title} */}
-                </h5>
+                <TitleWithDoubleBorder>
+                  {pageData[0].section}
+                </TitleWithDoubleBorder>
               </div>
-
-              <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute bottom-[12px] transform rotate-90 -right-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
             </div>
             <div className="flex flex-col justify-start gap-6">
               <h3 className="tracking-wide text-left text-4xl text-black/70">
-                Alberta Advantage Immigrant Program (AAIP)
+                {pageData[0].title}
               </h3>
 
               <p className="text-sm text-black/60 text-left">
-                Starting from March 16, 2022, the Alberta Immigrant Nominee
-                Program (AINP) has been renamed the Alberta Advantage
-                Immigration Program (AAIP). The Alberta Advantage Immigration
-                Program (AAIP) encompasses various smaller programs
+                {pageData[0].content}
               </p>
             </div>
           </div>
         </Glass>
       </Container>
-      {/* <FeatureSection
-        subtitle={"Express Entry"}
-        title={"How can we help you?"}
-        description={
-          "GTR Worldwide can assist you in increasing your Comprehensive Ranking System (CRS) score for Express Entry in several ways:"
-        }
-      >
-        {features.map((item, index) => (
-          <div className="max-w-md sm:mx-auto sm:text-center">
-            <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 sm:mx-auto sm:w-24 sm:h-24">
-              {item.icon}
-            </div>
-            <h6 className="mb-3 text-xl font-bold leading-5">{item.title}</h6>
-            <p className="mb-3 text-sm text-gray-900">
-              {truncateTextHeading(item.description, 14)}
-            </p>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex bg-green-400 px-4 rounded-full font-light items-center transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-            >
-              Learn more
-            </a>
-          </div>
-        ))}
-      </FeatureSection>
-      <FeatureSection2
-        title={"How can we help you?"}
-        description={
-          "GTR Worldwide can assist you in increasing your Comprehensive Ranking System (CRS) score for Express Entry in several ways:"
-        }
-      >
-        {features.map((item) => (
-          <div className="space-y-3 flex justify-start items-start flex-col">
-            {item.icon}
-            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
-              {item.title}
-            </h1>
-            <p className="text-gray-500 text-left dark:text-gray-300">
-              {truncateTextHeading(item.description, 18)}
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center -mx-1 text-sm text-highlight capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span className="mx-1">read more</span>
-              <svg
-                className="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        ))}
-      </FeatureSection2> */}
-      <Container className="flex flex-col gap-5">
-        <Title
-          subtitle="Roadmap"
-          title={
-            <p className="text-4xl text-black/50 w-full text-left pt-3">
-              How to participate ?
-            </p>
-          }
-        />
-        <div className="py-6 ">
-          {faqAlberta.map((item) => {
+      <Container className="flex flex-col gap-5 px-10">
+        <TitleWithDoubleBorder>{pageData[1].section}</TitleWithDoubleBorder>
+        <TitleWithBottomBorder>{pageData[1].title}</TitleWithBottomBorder>
+        <div className="py-6 grid grid-cols-3 gap-6">
+          {pageData[1]?.subsections.map((item) => {
             return (
-              <FAQ
-                title={item.title}
-                id={item.id}
-                description={item.description()}
-              />
+              <ServicesCard title={item.title} description={item.description} />
             );
           })}
         </div>
       </Container>
-      <Container>
-        <Title
-          subtitle="Benefits"
-          title={
-            <p className="text-4xl text-black/50 w-full text-left pt-3">
-              Benefits for your family
-            </p>
-          }
-        />
-        <p className="text-sm text-black/60 text-left">
-          With provincial nomination, your entire family, including your spouse
-          and children under 22 years of age (at the time of submitting the
-          provincial nomination application), can submit for Canada Permanent
-          Resident to enjoy most of the benefits like Canadian citizen
-        </p>
-        <p className="text-sm text-black/60 text-left ">
-          During the wait for permanent residency, your family can apply to
-          come, work and study in Canada
-          <ul className="pl-6 list-disc">
-            <li>Free access to elementary and highschool</li>
-            <li>Legal protection under Canadian laws</li>
-          </ul>
-        </p>
-        <p className="text-sm text-black/60 text-left ">
-          When you become Canada Permanent Resident
-          <ul className="pl-6 list-disc">
-            <li>
-              Freedom to live, study, and work across the entire Canadian
-              territor
-            </li>
-            <li>Access to social welfare</li>
-            <li>
-              Eligibility to apply for Canadian citizenship after the waiting
-              period. Qualify to apply forCanadian citizenship, own the 6th
-              strongest passport globally, enjoy visa-free or direct ETA access
-              to 185 countries
-            </li>
-            <li>
-              With PR, university tuition fees are only one-third of what
-              international students pay, with no restrictions on schools and
-              programs
-            </li>
-          </ul>
-        </p>
-      </Container>
-      <Container>
-        <div className="flex-1 flex flex-col gap-4">
-          <Title
-            subtitle="Express Entry"
-            title={
-              <p className="text-4xl text-black/50 w-full text-left pt-3">
-                What can we help you?
-              </p>
-            }
-          />
-
-          <div className="flex flex-col justify-start gap-6">
-            <p className="text-sm text-black/60 text-left">
-              GreenTech Resources Worldwide Canada can assist you in increasing
-              your Comprehensive Ranking System (CRS) score for Express Entry in
-              several ways:
-            </p>
+      <Container className="flex flex-col gap-5">
+        <Glass className="px-10 py-8 flex flex-col gap-10">
+          <div className="flex flex-col gap-4">
+            <TitleWithDoubleBorder>{pageData[2].section}</TitleWithDoubleBorder>
+            <TitleWithBottomBorder>{pageData[2].title}</TitleWithBottomBorder>
           </div>
-        </div>
-      </Container>
-      <Container>
-        <Glass>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-2 max-w-7xl mx-auto">
-            {featuresPage.map((feature, index) => (
-              <Feature key={feature.title} {...feature} index={index} />
-            ))}
+          <div className="py-6 grid grid-cols-3 gap-6">
+            {pageData[2]?.subsections.map((item) => {
+              return (
+                <ServicesCard
+                  title={item.title}
+                  description={item.description}
+                />
+              );
+            })}
           </div>
         </Glass>
       </Container>
-    </>
+      <Container className="flex flex-col gap-5">
+        <Glass className="px-10 py-6 flex flex-col gap-10">
+          <div className="flex flex-col gap-4">
+            <TitleWithDoubleBorder>{pageData[3].section}</TitleWithDoubleBorder>
+            <TitleWithBottomBorder>{pageData[3].title}</TitleWithBottomBorder>
+          </div>
+          <div className="py-6 grid grid-cols-3 gap-6">
+            {pageData[3]?.subsections.map((item, index) => {
+              return (
+                <Feature
+                  index={index}
+                  icon={
+                    <Icon
+                      icon="maki:religious-buddhist-11"
+                      className="text-6xl"
+                    />
+                  }
+                  title={item.title}
+                  description={item.description}
+                />
+              );
+            })}
+          </div>
+        </Glass>
+      </Container>
+
+      <CTAWithImage
+        image="/canada.jpg"
+        title={pageData[4].title}
+        description={pageData[4].content}
+        subtitle={pageData[4].section}
+        ctaAction="Xem thêm"
+      />
+      <CTAWithImage
+        flip
+        image="/canada.jpg"
+        title={pageData[5].title}
+        description={pageData[5].content}
+        subtitle={pageData[5].section}
+        ctaAction="Xem thêm"
+      />
+
+      <CTADefault
+        image="/business.jpg"
+        subtitle="Chúng tôi có thể giúp bạn"
+        description={
+          <div className="flex flex-col gap-2 mt-4">
+            <p className="text-lg text-white">
+              iCan PR hiểu rằng di trú/ định cư tại Canada là một hành trình
+              nhiều thay đổi và thách thức. Mục tiêu và nhiệm vụ của chúng tôi
+              trở thành đối tác đáng tin cậy của bạn trong hành trình này.
+            </p>
+            <p className="text-lg text-white">
+              Chúng tôi mong muốn giúp bạn hiện thực hóa ước mơ định cư Canada,
+              sẳn sàng chào đón những cơ hội mới tại đây.
+            </p>
+          </div>
+        }
+      />
+    </div>
   );
 }
 
-const faqAlberta = [
+const pageData = [
   {
-    id: 1,
-    title: "Alberta Opportunity Stream",
-    description: () => (
-      <ul className="pl-6 list-disc">
-        <li>
-          Eligibility Check: Ensure you meet Alberta’s eligibility criteria,
-          including work experience, language proficiency, and occupation. A
-          full-time job in Alberta is mandatory.
-        </li>
-        <li>
-          Submit Expression of Interest (EOI): Create an EOI profile online,
-          detailing your qualifications.
-        </li>
-        <li>
-          Receive Notification of Interest (NOI): If selected, you’ll receive an
-          NOI from Alberta, inviting you to apply for provincial nomination.
-        </li>
-        <li>
-          Apply for Nomination: Submit a comprehensive application to AINP, and
-          if approved, you’ll receive a provincial nomination certificate.
-        </li>
-        <li>
-          Apply for Permanent Residency: Use the certificate to apply for
-          permanent residency.
-        </li>
-      </ul>
-    ),
+    section: "Overview",
+    title: "TỔNG QUAN CHƯƠNG TRÌNH",
+    content: [
+      "Chương Trình Di Trú Lợi Thế Alberta của tỉnh bang Alberta (Alberta Advantage Immigration Program AAIP) – trước đây được gọi là Chương trình Đề cử Nhập cư Alberta (AINP) – đã trở thành một trong những chương trình lao động định cư phổ biến nhất của Canada, cung cấp quyền thường trú nhân Canada cho các công nhân và doanh nhân nước ngoài có tay nghề cao.",
+      "Thời gian xét duyệt đơn cũng đã giảm xuống đáng kể, chỉ còn 4 đến 6 tháng dưới hình thức nộp đơn thông qua cổng thông tin trực tuyến mới.",
+      "Vào năm 2023, tỉnh bang Alberta có tỷ lệ có công ăn việc làm cao nhất trong số các tỉnh bang đồng thời việc làm toàn thời gian chiếm hơn 80% tổng số việc làm ở Alberta. Tình trạng thiếu hụt lao động vẫn còn tồn tại ở một số ngành và Chương Trình Di Trú Lợi Thế Alberta sẽ giúp hãng sở tìm được những người lao động mà họ cần.",
+    ],
   },
   {
-    id: 2,
-    title: "Alberta express entry",
-    description: () => (
-      <ul className="pl-6 list-disc">
-        <li>
-          Eligibility Check: Ensure you meet Alberta’s eligibility criteria,
-          including work experience, language proficiency, and occupation. A
-          full-time job in Alberta is mandatory.
-        </li>
-        <li>
-          Submit Expression of Interest (EOI): Create an EOI profile online,
-          detailing your qualifications.
-        </li>
-        <li>
-          Receive Notification of Interest (NOI): If selected, you’ll receive an
-          NOI from Alberta, inviting you to apply for provincial nomination.
-        </li>
-        <li>
-          Apply for Nomination: Submit a comprehensive application to AINP, and
-          if approved, you’ll receive a provincial nomination certificate.
-        </li>
-        <li>
-          Apply for Permanent Residency: Use the certificate to apply for
-          permanent residency.
-        </li>
-      </ul>
-    ),
+    section: "Skilled Immigration",
+    title: "Các dòng nhập cư diện tay nghề",
+    subsections: [
+      {
+        title: "Chương trình nhập cư ngành Du lịch và Dịch vụ",
+        description:
+          "Dành cho các ứng viên trong nhóm ngành Du lịch và Dịch vụ có lời mời làm việc và đang sinh sống tại tỉnh bang có thể nộp đơn xin để cử AAIP.",
+      },
+      {
+        title: "Chương trình cơ hội nhập cư tại Alberta",
+        description:
+          "Ứng viên đủ tiêu chuẩn sống và làm việc tại Alberta và nhận được lời mời làm việc từ một chủ lao động ở Alberta có thể nộp đơn xin đề cử AAIP.",
+      },
+      {
+        title: "Chương trình nhập cư Alberta thông qua Express Entry",
+        description:
+          "Chương trình này cho phép tỉnh bang Alberta đề cử một số lượng hạn chế các ứng cử viên từ hệ thống Express Entry Liên bang, phù hợp với các yêu cầu tối thiểu, các yếu tố làm tăng cơ hội lựa chọn và các ưu tiên về kinh tế, ngành và nghề nghiệp của tỉnh.",
+      },
+      {
+        title: "Chương trình Đổi mới nông thôn",
+        description:
+          "Những người lao động nước ngoài tạm thời có lời mời làm việc từ một chủ lao động ở Alberta trong một cộng đồng được chỉ định và thư chứng thực từ một cộng đồng được chỉ định có thể nộp đơn xin đề cử AAIP.",
+      },
+    ],
   },
   {
-    id: 3,
-    title: "Alberta Business Immigration Program for Entrepreneur",
-    description: () => (
-      <>
-        <p>
-          In general, the pathways of Alberta Business Immigration Nominee
-          Programs for Entrepreneurs include the following steps:
-        </p>
-        <ul className="pl-6 list-disc">
-          <li>
-            Expression of Interest (EOI) Submission: You start by submitting
-            your Expression of Interest to the program.
-          </li>
-          <li>
-            EOI Selection and Invitation: The program officials evaluate your
-            EOI based on specific criteria, and if you are selected, you receive
-            an Invitation to Apply.
-          </li>
-          <li>
-            Business Establishment: After being invited, you work on
-            establishing your business in Alberta.
-          </li>
-          <li>
-            Nomination: Once your business is established and meeting program
-            requirements, you seek nomination from Alberta.
-          </li>
-          <li>
-            Post-Nomination Application: You then submit your permanent
-            residence application, and upon approval, you and your family can
-            enjoy the benefits of permanent residency in Canada.
-          </li>
-        </ul>
-      </>
-    ),
+    section: "Business Immigration",
+    title: "Các dòng nhập cư diện doanh nhân đầu tư",
+    subsections: [
+      {
+        title: "Chương trình doanh nhân nông thôn",
+        description:
+          "Các doanh nhân muốn bắt đầu kinh doanh hoặc mua một doanh nghiệp hiện có ở cộng đồng nông thôn ở Alberta có thể gửi Biểu hiện quan tâm – Expression of Interest (EOI).",
+      },
+      {
+        title: "Chương trình doanh nhân tốt nghiệp",
+        description:
+          "Sinh viên tốt nghiệp quốc tế của các tổ chức sau trung học ở Alberta muốn bắt đầu kinh doanh hoặc mua một doanh nghiệp hiện có có thể gửi Biểu hiện quan tâm – Expression of Interest (EOI).",
+      },
+      {
+        title: "Chương trình trang trại",
+        description:
+          "Những nông dân có kinh nghiệm dự định mua hoặc mở trang trại ở Alberta có thể nộp đơn xin đề cử.",
+      },
+      {
+        title: "Chương trình doanh nhân tốt nghiệp nước ngoài",
+        description:
+          "Sinh viên tốt nghiệp nước ngoài có bằng cấp của một tổ chức sau trung học bên ngoài Canada và muốn thành lập một doanh nghiệp khởi nghiệp và kinh doanh đổi mới có thể làm việc với một cơ quan được chỉ định để gửi Biểu hiện quan tâm – Expression of Interest (EOI).",
+      },
+    ],
   },
   {
-    id: 4,
-    title: "Alberta express entry",
-    description: () => (
-      <ul className="pl-6 list-disc">
-        <li>
-          Eligibility Check: Ensure you meet Alberta’s eligibility criteria,
-          including work experience, language proficiency, and occupation. A
-          full-time job in Alberta is mandatory.
-        </li>
-        <li>
-          Submit Expression of Interest (EOI): Create an EOI profile online,
-          detailing your qualifications.
-        </li>
-        <li>
-          Receive Notification of Interest (NOI): If selected, you’ll receive an
-          NOI from Alberta, inviting you to apply for provincial nomination.
-        </li>
-        <li>
-          Apply for Nomination: Submit a comprehensive application to AINP, and
-          if approved, you’ll receive a provincial nomination certificate.
-        </li>
-        <li>
-          Apply for Permanent Residency: Use the certificate to apply for
-          permanent residency.
-        </li>
-      </ul>
-    ),
+    section: "Eligibility",
+    title: "Điều Kiện Tham Gia Chương Trình",
+    subsections: [
+      {
+        title: "Diện Cơ hội Alberta",
+        description:
+          "Có giấy phép lao động hợp lệ; Làm việc trong một ngành nghề đủ điều kiện ở Alberta phù hợp với kinh nghiệm làm việc của bạn; Điểm benchmark ngôn ngữ CLB tối thiểu 4.0 hoặc 5.0 tùy thuộc vào nghề nghiệp.",
+      },
+      {
+        title: "Diện Express Entry Alberta",
+        description:
+          "Bạn phải thuộc hệ thống Express Entry; Thể hiện sự quan tâm đến việc nhập cư vĩnh viễn vào Alberta; Làm việc trong một ngành nghề hỗ trợ sự phát triển và đa dạng hóa kinh tế của Alberta; Điểm CRS tối thiểu là 300.",
+      },
+      {
+        title: "Diện Công Nghệ Tăng Tốc của Alberta",
+        description:
+          "Bạn phải có hồ sơ trong hệ thống Express Entry; Thể hiện sự quan tâm đến việc nhập cư vĩnh viễn vào Alberta; Điểm CRS tối thiểu là 300.",
+      },
+      {
+        title: "Diện Đổi Mới Nông Thôn",
+        description:
+          "Có lời mời làm việc toàn thời gian hợp lệ hoặc hợp đồng lao động từ một chủ lao động ở Alberta để làm việc trong một nghề nghiệp đủ điều kiện trong một cộng đồng được chỉ định.",
+      },
+    ],
+  },
+  {
+    section: "Why Alberta",
+    title: "Vì sao Alberta là điểm đến lý tưởng cho gia đình bạn?",
+    content: [
+      "Alberta là một điểm đến lý tưởng cho dân nhập cư nhờ vào nền kinh tế phát triển mạnh mẽ, chất lượng cuộc sống cao và cảnh quan thiên nhiên tuyệt đẹp.",
+      "Với các ngành công nghiệp chủ chốt như dầu mỏ, khí đốt, nông nghiệp và công nghệ, Alberta cung cấp nhiều cơ hội việc làm hấp dẫn.",
+      "Các thành phố lớn như Calgary và Edmonton có cơ sở hạ tầng hiện đại, hệ thống giáo dục và y tế chất lượng, cùng với môi trường sống an toàn và thân thiện.",
+    ],
+  },
+  {
+    section: "Program Suitability",
+    title: "Chương trình Alberta nào phù hợp cho gia đình bạn?",
+    content: [
+      "Tùy thuộc vào hoàn cảnh cụ thể, chúng tôi sẽ giúp bạn lựa chọn chương trình phù hợp nhất để đảm bảo một tương lai tốt đẹp tại Alberta.",
+      "Nhìn chung, bạn cần đáp ứng các điều kiện tối thiểu tùy từng chương trình: Diện tay nghề: tối thiểu 1 năm kinh nghiệm, tiếng Anh CLB 4 trở lên. Diện doanh nghiệp đầu tư: đầu tư tối thiểu CAD 100K, có ít nhất 1 năm ở vị trí quản lý/ chủ doanh nghiệp.",
+    ],
   },
 ];
-export const featuresPage = [
-  {
-    id: 1,
-    title: "Profile Assessment",
-    description:
-      "Our RCIC and expert team can evaluate your qualifications, work experience, and personal circumstances to identify your potential jobs and employers in Canada.",
-    icon: (
-      <Icon
-        icon="material-symbols:person-apron"
-        className="text-6xl w-[50px]"
-      />
-    ),
-  },
-  {
-    id: 2,
-    title: "Provincial Nominee Programs (PNPs)",
-    description:
-      "We can advise on PNPs and help you prepare for provincial nominations, which is suitable with your experiences.",
-    icon: (
-      <Icon
-        icon="material-symbols-light:qr-code-2-rounded"
-        className="text-6xl w-[50px]"
-      />
-    ),
-  },
-  {
-    id: 3,
-    title: "Secure a Job Offers",
-    description:
-      "We can assist in searching for job in Canada. We can also help you understand the requirements for a valid job offer, resume preparation and interview coaching.",
-    icon: <Icon icon="oui:ml-regression-job" className="text-6xl w-[50px]" />,
-  },
-  {
-    id: 4,
-    title: "Educational credential assessment",
-    description:
-      "We can help you navigate the process of obtaining an ECA for your foreign educational credentials,",
-    icon: (
-      <Icon
-        icon="streamline:quality-education-solid"
-        className="text-6xl w-[50px]"
-      />
-    ),
-  },
-];
+
+export const featuresPage = [];

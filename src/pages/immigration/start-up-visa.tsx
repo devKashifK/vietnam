@@ -13,89 +13,85 @@ export default function StartUpVisa() {
   return (
     <Container className="flex flex-col gap-10">
       <Title
-        title={"Benefits of SUV Program"}
+        title={"Lợi ích của Chương trình SUV"}
         description={
-          "The Start-Up Visa (SUV) program in Canada offers several benefits to entrepreneurs and innovative start-ups looking to establish themselves in Canada with key benefits"
+          "Chương trình Visa Khởi Nghiệp (SUV) tại Canada mang lại nhiều lợi ích cho các doanh nhân và các doanh nghiệp khởi nghiệp sáng tạo muốn thiết lập hoạt động tại Canada với những lợi ích chính."
         }
       />
       <div className="flex gap-6 md:flex-row flex-col">
         <HoverCard
-          title={"DIRECT PATH TO PERMANENT RESIDENCE (PR CanADA)"}
+          title={"LỘ TRÌNH TRỰC TIẾP ĐẾN CƯ TRÚ VĨNH VIỄN (PR CANADA)"}
           color="bg-yellow-400"
           icon={"iconamoon:delivery-free-light"}
           description={
-            "Up to 5 families can live, study and work while PR in process with 1 single business"
+            "Tối đa 5 gia đình có thể sống, học tập và làm việc trong khi PR đang trong quá trình xử lý chỉ với một doanh nghiệp duy nhất."
           }
         />
         <HoverCard
           color="bg-green-400"
-          title={"Hassle-free Path"}
+          title={"Con Đường Không Rắc Rối"}
           icon={"arcticons:netbenefits"}
           description={
-            "No minimum investment required No exploratory trip required No requirement to invest your own money in the business No net worth verification"
+            "Không yêu cầu đầu tư tối thiểu, không cần chuyến đi khảo sát, không yêu cầu đầu tư tiền của bạn vào doanh nghiệp, không kiểm tra giá trị tài sản ròng."
           }
         />
         <HoverCard
           color="bg-sky-400"
-          title={"A SECURE CHOICE"}
+          title={"LỰA CHỌN AN TOÀN"}
           icon={"material-symbols:lock-reset"}
           description={
-            "Retain permanent residency status even in the event of business failure"
+            "Duy trì trạng thái thường trú ngay cả trong trường hợp doanh nghiệp thất bại."
           }
         />
       </div>
 
       <Glass className="px-8 flex flex-col gap-8">
         <Title
-          title={"Benefits for your family"}
+          title={"Lợi ích cho gia đình bạn"}
           description={
-            "Your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), will receive a Permanent Resident Card in Canada and enjoy most of the benefits like Canadian citizens."
+            "Toàn bộ gia đình của bạn, bao gồm vợ/chồng và con dưới 22 tuổi (vào thời điểm nộp đơn xin đề cử tỉnh bang), sẽ nhận được thẻ thường trú tại Canada và được hưởng hầu hết các quyền lợi giống như công dân Canada."
           }
         />
 
         <div className="px-6 py-4 rounded-md flex flex-col gap-4">
           <Title
-            subtitle="Work"
+            subtitle="Làm việc"
             title={
               <p className="text-4xl text-black/50 w-full text-left pt-3">
-                While waiting for permanent residency, your family can apply to
-                come, work and study in Canada
+                Trong khi chờ thường trú, gia đình bạn có thể nộp đơn đến, làm
+                việc và học tập tại Canada
               </p>
             }
           />
           <p className="text-sm text-black/60 text-left">
-            With provincial nomination, your entire family, including your
-            spouse and children under 22 years of age (at the time of submitting
-            the provincial nomination application), can submit for Canada
-            Permanent Resident to enjoy most of the benefits like Canadian
-            citizen
+            Với đề cử tỉnh bang, toàn bộ gia đình của bạn, bao gồm vợ/chồng và
+            con dưới 22 tuổi (vào thời điểm nộp đơn xin đề cử tỉnh bang), có thể
+            nộp đơn xin Thường Trú tại Canada để được hưởng hầu hết các quyền
+            lợi như công dân Canada.
           </p>
           <p className="text-sm text-black/60 text-left ">
-            During the wait for permanent residency, your family can apply to
-            come, work and study in Canada
+            Trong thời gian chờ thường trú, gia đình bạn có thể nộp đơn đến, làm
+            việc và học tập tại Canada
             <ul className="pl-6 list-disc">
-              <li>Free access to elementary and highschool</li>
-              <li>Legal protection under Canadian laws</li>
+              <li>Miễn phí học tiểu học và trung học</li>
+              <li>Được bảo vệ pháp lý dưới luật pháp Canada</li>
             </ul>
           </p>
           <p className="text-sm text-black/60 text-left ">
-            When you become Canada Permanent Resident
+            Khi bạn trở thành Thường Trú Nhân Canada
             <ul className="pl-6 list-disc">
               <li>
-                Freedom to live, study, and work across the entire Canadian
-                territor
+                Tự do sống, học tập, và làm việc trên toàn lãnh thổ Canada
               </li>
-              <li>Access to social welfare</li>
+              <li>Tiếp cận các chính sách an sinh xã hội</li>
               <li>
-                Eligibility to apply for Canadian citizenship after the waiting
-                period. Qualify to apply forCanadian citizenship, own the 6th
-                strongest passport globally, enjoy visa-free or direct ETA
-                access to 185 countries
+                Đủ điều kiện để nộp đơn xin quốc tịch Canada sau thời gian chờ.
+                Sở hữu hộ chiếu mạnh thứ 6 trên thế giới, được hưởng chế độ miễn
+                thị thực hoặc ETA trực tiếp tới 185 quốc gia.
               </li>
               <li>
-                With PR, university tuition fees are only one-third of what
-                international students pay, with no restrictions on schools and
-                programs
+                Khi có PR, học phí đại học chỉ bằng một phần ba so với sinh viên
+                quốc tế, không bị hạn chế về trường học và chương trình.
               </li>
             </ul>
           </p>
@@ -103,9 +99,9 @@ export default function StartUpVisa() {
       </Glass>
 
       <Title
-        title={"Eligibility"}
+        title={"Điều kiện"}
         description={
-          "Meeting the program's eligibility criteria and demonstrating the potential for business success in Canada are key factors in the selection process"
+          "Đáp ứng các tiêu chí đủ điều kiện của chương trình và chứng minh tiềm năng thành công của doanh nghiệp tại Canada là các yếu tố quan trọng trong quá trình lựa chọn."
         }
       />
       <div className="flex flex-col gap-2">
@@ -115,7 +111,7 @@ export default function StartUpVisa() {
       </div>
 
       <div>
-        <FeatureSection title="SUV ROADMAP" subtitle="RoadMap">
+        <FeatureSection title="LỘ TRÌNH SUV" subtitle="Lộ Trình">
           {features.map((item, index) => (
             <div className="max-w-md sm:mx-auto sm:text-center flex flex-col justify-center items-center">
               <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-background sm:mx-auto sm:w-24 sm:h-24 text-white">
@@ -130,7 +126,7 @@ export default function StartUpVisa() {
                 aria-label=""
                 className="inline-flex bg-background text-white px-4 rounded-full font-light items-center transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                Learn more
+                Tìm hiểu thêm
               </a>
             </div>
           ))}
@@ -138,9 +134,9 @@ export default function StartUpVisa() {
       </div>
       <div className="flex flex-col gap-10">
         <Title
-          title={"List of Designated Organization"}
+          title={"Danh Sách Tổ Chức Được Chỉ Định"}
           description={
-            "The list is subjected to be updated without prior notification. Please contact us for consultant."
+            "Danh sách có thể được cập nhật mà không có thông báo trước. Vui lòng liên hệ với chúng tôi để được tư vấn."
           }
         />
 
@@ -154,9 +150,9 @@ export default function StartUpVisa() {
       </div>
       <div className="">
         <Title
-          title={"What can we help you?"}
-          subtitle="START-UP VISA PROGRAM"
-          description="It’s important to choose a reputable and licensed immigration agent or consultant who is knowledgeable about the Start-Up Visa business immigration programs to ensure that applicants receive accurate and up-to-date information and guidance throughout the process. "
+          title={"Chúng tôi có thể giúp bạn gì?"}
+          subtitle="CHƯƠNG TRÌNH VISA KHỞI NGHIỆP"
+          description="Điều quan trọng là chọn một đại lý hoặc tư vấn di trú uy tín và được cấp phép, người am hiểu về các chương trình di trú kinh doanh Start-Up Visa để đảm bảo rằng người nộp đơn nhận được thông tin và hướng dẫn chính xác và cập nhật trong suốt quá trình."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
           {featuresBottom.map((feature, index) => (
@@ -171,9 +167,9 @@ export default function StartUpVisa() {
 const featuresBottom = [
   {
     id: 1,
-    title: "Eligibility Assessment",
+    title: "Đánh giá Điều kiện",
     description:
-      "Our experts evaluate your eligibility, ensuring you meet program requirements.",
+      "Các chuyên gia của chúng tôi đánh giá điều kiện của bạn, đảm bảo bạn đáp ứng các yêu cầu của chương trình.",
     icon: (
       <Icon
         icon="material-symbols:person-apron"
@@ -183,10 +179,9 @@ const featuresBottom = [
   },
   {
     id: 2,
-    title: "Business Plan Development",
+    title: "Phát triển Kế hoạch Kinh doanh",
     description:
-      "Our experts in Business Immigration Team can assist in developing a strong and comprehensive business plan. A well-prepared business plan is a crucial component for the success of Start Up Visa program. We assist you in crafting a strong business plan and provide presentation coaching to help applicants perform well during the pitching with the incubator.",
-
+      "Các chuyên gia trong nhóm Di trú Kinh doanh của chúng tôi có thể hỗ trợ phát triển một kế hoạch kinh doanh mạnh mẽ và toàn diện. Kế hoạch kinh doanh chuẩn bị kỹ lưỡng là một yếu tố quan trọng cho sự thành công của chương trình Start Up Visa. Chúng tôi giúp bạn soạn thảo kế hoạch kinh doanh mạnh mẽ và cung cấp huấn luyện thuyết trình để giúp ứng viên thể hiện tốt trong buổi thuyết trình với tổ chức hỗ trợ.",
     icon: (
       <Icon
         icon="material-symbols-light:qr-code-2-rounded"
@@ -197,16 +192,16 @@ const featuresBottom = [
   {
     id: 3,
     title:
-      "Connecting with Designed Organization and providing guidance on Start Up Visa Program",
+      "Kết nối với Tổ chức Thiết kế và cung cấp hướng dẫn về Chương trình Start Up Visa",
     description:
-      "We connect you with organizations that can support your business We can provide guidance on how to fulfill these requirements, refine presentation deck and interview coaching to increase the chance of receiving Letter of Support",
+      "Chúng tôi kết nối bạn với các tổ chức có thể hỗ trợ doanh nghiệp của bạn. Chúng tôi cũng cung cấp hướng dẫn về cách đáp ứng các yêu cầu, cải thiện bài thuyết trình và huấn luyện phỏng vấn để tăng khả năng nhận được Thư Hỗ trợ.",
     icon: <Icon icon="oui:ml-regression-job" className="text-6xl w-[50px]" />,
   },
   {
     id: 4,
-    title: "Application Completion",
+    title: "Hoàn thành Hồ sơ",
     description:
-      "Our RCIC can help applicants navigate the application process, ensuring that all required documentation is correctly completed and submitted. We also provide ongoing support and guidance throughout the application process, ensuring that applicants are well-prepared and informed at every stage",
+      "RCIC của chúng tôi có thể giúp các ứng viên điều hướng quá trình nộp hồ sơ, đảm bảo tất cả các tài liệu cần thiết được hoàn thành chính xác và nộp đúng hạn. Chúng tôi cũng cung cấp hỗ trợ và hướng dẫn liên tục trong suốt quá trình nộp hồ sơ, đảm bảo ứng viên được chuẩn bị và thông báo kỹ lưỡng ở mọi giai đoạn.",
     icon: (
       <Icon
         icon="streamline:quality-education-solid"
@@ -219,9 +214,9 @@ const featuresBottom = [
 const features = [
   {
     id: 1,
-    title: "Assessment & Intake",
+    title: "Đánh giá và Tiếp nhận",
     description:
-      "Conduct an initial assessment based on the intake criteria with Business Immigration experts of GreenTech Resources Worldwide Canada",
+      "Thực hiện đánh giá ban đầu dựa trên các tiêu chí tiếp nhận với các chuyên gia Di trú Kinh doanh của GreenTech Resources Worldwide Canada.",
     icon: (
       <Icon
         icon="material-symbols:person-apron"
@@ -231,10 +226,9 @@ const features = [
   },
   {
     id: 2,
-    title: "Business Concept & Incubator selection",
+    title: "Phát triển Ý tưởng Kinh doanh & Lựa chọn Vườn ươm",
     description:
-      "Develop and refine the innovative business concepts. Select suitable incubator and prepare Pitch deck",
-
+      "Phát triển và cải tiến các ý tưởng kinh doanh sáng tạo. Chọn vườn ươm phù hợp và chuẩn bị bài thuyết trình.",
     icon: (
       <Icon
         icon="material-symbols-light:qr-code-2-rounded"
@@ -244,16 +238,16 @@ const features = [
   },
   {
     id: 3,
-    title: "Designated Institution Pitch",
+    title: "Thuyết trình tại Tổ chức Được chỉ định",
     description:
-      "Present and obtain a commitment – Letter of Support from a designated Canadian organization.",
+      "Thuyết trình và nhận cam kết – Thư Hỗ trợ từ một tổ chức Canada được chỉ định.",
     icon: <Icon icon="oui:ml-regression-job" className="text-6xl w-[50px]" />,
   },
   {
     id: 4,
-    title: "Apply TR and PR",
+    title: "Nộp hồ sơ TR và PR",
     description:
-      "Meet eligibility requirements to submit SUV program application for temporarily residency (TR) and permanent residency (PR)",
+      "Đáp ứng các yêu cầu điều kiện để nộp hồ sơ chương trình Start-Up Visa để xin cư trú tạm thời (TR) và cư trú vĩnh viễn (PR).",
     icon: (
       <Icon
         icon="streamline:quality-education-solid"
@@ -261,24 +255,12 @@ const features = [
       />
     ),
   },
-  //   {
-  //     id: 5,
-  //     title: "Start your journey in Canada",
-  //     description:
-  //       "Personalize the settings as you wish with intuitive instructions & helpful guides.",
-  //     icon: (
-  //       <Icon
-  //         icon="streamline:quality-education-solid"
-  //         className="text-6xl w-[50px]"
-  //       />
-  //     ),
-  //   },
 ];
 
 const visaFAQ = [
   {
     id: 1,
-    question: "Venture Capital Funds",
+    question: "Quỹ Đầu tư Mạo hiểm",
     description: () => (
       <ul className="list-disc px-6">
         <li>7 Gate Ventures</li>
@@ -291,45 +273,45 @@ const visaFAQ = [
         <li>Innovation Platform Capital International LP</li>
         <li>iNovia Capital Inc.</li>
         <li>Lumira Ventures</li>
-        <li>Nova Scotia Innovation Corporation (o/a Innovacorp)</li>
+        <li>Tập đoàn Đổi mới Nova Scotia (o/a Innovacorp)</li>
       </ul>
     ),
   },
   {
     id: 2,
-    question: "Angel Investor Groups",
+    question: "Nhóm Nhà đầu tư Thiên thần",
     description: () => (
       <ul className="list-disc px-6">
-        <li>Canadian International Angel Investors</li>
+        <li>Nhà đầu tư Thiên thần Quốc tế Canada</li>
         <li>Ekagrata Inc.</li>
-        <li>Golden Triangle Angel Network</li>
-        <li> Golden Triangle Angel Network</li>
-        <li> Keiretsu Forum Canada</li>
+        <li>Mạng lưới Nhà đầu tư Thiên thần Golden Triangle</li>
+        <li>Mạng lưới Nhà đầu tư Thiên thần Golden Triangle</li>
+        <li>Keiretsu Forum Canada</li>
         <li>Oak Mason Investments Inc.</li>
-        <li> Southeastern Ontario Angel Network</li>
-        <li> TenX Angel Investors Inc.</li>
-        <li> VANTEC Angel Network Inc.</li>
-        <li>York Angel Investors Inc.</li>
+        <li>Mạng lưới Nhà đầu tư Thiên thần Đông Nam Ontario</li>
+        <li>Nhà đầu tư Thiên thần TenX</li>
+        <li>Mạng lưới Nhà đầu tư Thiên thần VANTEC</li>
+        <li>Nhà đầu tư Thiên thần York</li>
       </ul>
     ),
   },
   {
     id: 3,
-    question: "Business Incubators",
+    question: "Vườn ươm Doanh nghiệp",
     description: () => (
       <ul className="list-disc px-6">
-        <li>Alacrity Foundation</li>
-        <li>Alberta Agriculture and Forestry</li>
-        <li>Agrivalue Processing Business Incubator</li>
-        <li>Food Processing Development Centre</li>
+        <li>Quỹ Alacrity</li>
+        <li>Bộ Nông nghiệp và Lâm nghiệp Alberta</li>
+        <li>Vườn ươm Chế biến Nông sản</li>
+        <li>Trung tâm Phát triển Chế biến Thực phẩm</li>
         <li>
-          Biomedical Commercialization Canada Inc. (operating as Manitoba
-          Technology Accelerator)
+          Canada Thương mại Sinh học (hoạt động như Máy gia tốc Công nghệ
+          Manitoba)
         </li>
         <li>Creative Destruction Lab</li>
         <li>Empowered Startups Ltd.</li>
         <li>Extreme Innovations</li>
-        <li>Genesis Centre</li>
+        <li>Trung tâm Genesis</li>
         <li>Highline BETA Inc.</li>
         <li>Innovacorp</li>
         <li>Interactive Niagara Media Cluster o/a Innovate Niagara</li>
@@ -344,34 +326,34 @@ const visaFAQ = [
 const startUpFAQ = [
   {
     id: 1,
-    question: "Qualifying Business",
+    question: "Doanh nghiệp Đủ Điều kiện",
     description: () => (
       <ul className="list-disc px-6">
-        <li>When committing: Each applicant owns 10%+ voting rights.</li>
+        <li>Khi cam kết: Mỗi ứng viên sở hữu hơn 10% quyền biểu quyết.</li>
         <li>
-          When granted permanent residence: Actively manage business in Canada,
-          essential operations and incorporated in Canada.
+          Khi được cấp quyền cư trú vĩnh viễn: Quản lý tích cực doanh nghiệp tại
+          Canada, các hoạt động thiết yếu và thành lập doanh nghiệp tại Canada.
         </li>
       </ul>
     ),
   },
   {
     id: 2,
-    question: "Letter of Support",
+    question: "Thư Hỗ trợ",
     description: () => (
       <p>
-        Obtain a support letter from designated organization: Start-up
-        Incubators, Angel Investor Group or Venture Capital Funds
+        Nhận thư hỗ trợ từ tổ chức được chỉ định: Vườn ươm Doanh nghiệp, Nhóm
+        Nhà đầu tư Thiên thần hoặc Quỹ Đầu tư Mạo hiểm.
       </p>
     ),
   },
   {
     id: 3,
-    question: "Language Proficiency",
+    question: "Trình độ Ngôn ngữ",
     description: () => (
       <p>
-        Meet the minimum CLB 5 in either English or French in all 4 skills
-        listening,reading,writing and speaking
+        Đạt trình độ CLB 5 tối thiểu trong tiếng Anh hoặc tiếng Pháp ở cả 4 kỹ
+        năng nghe, đọc, viết và nói.
       </p>
     ),
   },

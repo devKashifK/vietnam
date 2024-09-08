@@ -253,10 +253,6 @@ export const CTADefault = ({
             }
           >
             <span className="text-[10px] relative flex gap-1 justify-start items-center">
-              <Icon
-                icon={"teenyicons:appointments-outline"}
-                className="-mt-0.5"
-              />
               Đặt lịch hẹn tư vấn miễn phí
             </span>
           </Button>
@@ -273,13 +269,15 @@ export const CTAWithImage = ({
   ctaAction,
   image,
   flip,
+  desClassName,
 }: {
   subtitle: string | React.ReactNode;
   title: string | React.ReactNode;
   description: string | React.ReactNode;
-  ctaAction: string | React.ReactNode;
+  ctaAction?: string | React.ReactNode;
   image: string;
   flip?: boolean;
+  desClassName?: string;
 }) => {
   return (
     <Container
@@ -310,15 +308,22 @@ export const CTAWithImage = ({
         {typeof description === "string" ? (
           <p className="text-left">{description}</p>
         ) : (
-          <div className="h-64 overflow-y-auto pretty-scroll">
+          <div
+            className={cn(
+              "h-64 overflow-y-auto text-left pretty-scroll",
+              desClassName
+            )}
+          >
             {description}
           </div>
         )}
 
-        <button className="flex gap-2 bg-highlight text-white w-max justify-center items-center rounded-none">
-          {ctaAction}
-          <Icon icon={"simple-icons:aircanada"} className="" />
-        </button>
+        {ctaAction && (
+          <button className="flex gap-2 bg-highlight text-white w-max justify-center items-center rounded-none">
+            {ctaAction}
+            <Icon icon={"simple-icons:aircanada"} className="" />
+          </button>
+        )}
       </div>
     </Container>
   );

@@ -7,7 +7,7 @@ export default function HoverCard({
   title,
   description,
   cta,
-  color,
+  color = "bg-highlight",
   className,
 }: {
   icon?: string | React.ReactNode;
@@ -29,14 +29,15 @@ export default function HoverCard({
     >
       <span
         className={cn(
-          "absolute bg-highlight left-[40px] top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[10]"
+          "absolute  left-[40px] top-10 z-0 h-20 w-20 rounded-full transition-all duration-300 group-hover:scale-[10]",
+          color
         )}
       ></span>
       <div className="relative z-10 mx-auto max-w-md">
         <div
           className={cn(
             "grid h-20 w-20 place-items-center rounded-full transition-all duration-300 ",
-            isHovered && "bg-highlight"
+            isHovered && color
           )}
         >
           {typeof icon === "string" ? (
