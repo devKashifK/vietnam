@@ -69,14 +69,14 @@ export const CtaCard = ({ item }) => {
         </div>
         <p className="text-xs text-left text-black/80 group-hover:text-white">
           {truncateText(item.description)}...{" "}
-          <span className="text-black group-hover:text-white">Read More</span>
+          <span className="text-black group-hover:text-white">Đọc thêm</span>
         </p>
         <div className="w-full flex justify-end items-end mt-4">
           <Link
             to={item.href}
             className="bg-highlight text-white  py-1 shadow-xl px-4  text-sm w-max"
           >
-            Know More
+            Tìm hiểu thêm
           </Link>
         </div>
       </div>
@@ -145,69 +145,69 @@ const CtaDetails = [
   {
     id: 1,
     image: "/immigrate.jpg",
-    title: "Immigrate",
+    title: "Nhập cư",
     subtitle:
       "Exploring Canada for immigration is an exciting and life-altering choice.",
     labels: ["Express Entry Program", "Family Sponsorship"],
     description:
-      "With immigration to Canada at an all-time high, now is the perfect time to start your immigration journey. There are numerous pathways to immigrate to Canada and attain permanent residency. While immigration to Canada requires significant financial and emotional investment, the ultimate results are well worth it. Canada consistently ranks among the top countries for quality of life and is known for its positive attitude toward immigration.",
+      "Với việc định cư tại Canada đạt mức cao kỷ lục, bây giờ là thời điểm lý tưởng để bắt đầu hành trình di cư của bạn. Có nhiều con đường để nhập cư vào Canada và đạt được quyền cư trú lâu dài. Mặc dù việc nhập cư vào Canada yêu cầu... ",
     href: "/immigration/express-entry/federal-skilled-worker",
   },
   {
     id: 2,
     image: "/work.jpg",
-    title: "Work",
+    title: "Làm việc",
     subtitle:
       "Working in Canada offers a wide array of opportunities for skilled workers from around the world.",
     labels: ["Express Entry", "PR eligibility"],
     description:
-      "Canada with strong economy, quality of life, and inclusive society make it an appealing destination for those seeking career growth and a high standard of living for their family. However, navigating the immigration process and meeting language requirements are essential aspects.",
+      "Canada với nền kinh tế mạnh mẽ, chất lượng cuộc sống cao và xã hội hòa nhập, là điểm đến hấp dẫn cho những ai tìm kiếm sự phát triển nghề nghiệp và tiêu chuẩn sống cao cho gia đình của mình. Tuy nhiên, việc điều hướng quy trình nhập cư và.",
     href: "work-and-jobs/work-permit",
   },
   {
     id: 3,
-    title: "Business",
+    title: "Kinh doanh",
     image: "/business.jpg",
     subtitle:
-      "Invest and build your business while ensuring Canadian permanent residency for your family. ",
+      "Đầu tư và xây dựng doanh nghiệp của bạn trong khi đảm bảo quyền thường trú cho gia đình tại Canada. ",
     labels: ["Quebec Investor", "Start Up Visa"],
     description:
-      "The business immigration visa programs in Canada are designed for individuals who wish to immigrate to Canada to start, invest in, or manage a business. These programs aim to promote economic growth and job creation in Canada.",
+      "Các chương trình visa nhập cư doanh nghiệp tại Canada được thiết kế cho những cá nhân mong muốn nhập cư vào Canada để bắt đầu, đầu tư vào hoặc quản lý một doanh nghiệp. Các chương trình này nhằm thúc đẩy tăng trưởng kinh tế và tạo ra việc làm tại Canada.",
     href: "business/federal-programs/self-employed-person",
   },
   {
     id: 4,
-    title: "Study",
+    title: "Học tập",
     image: "/study.jpg",
     subtitle:
-      "Studying in Canada offers a world-class education, diverse cultural experiences, and excellent opportunities for personal and professional growth.",
+      "Học tập tại Canada mang đến nền giáo dục hàng đầu, trải nghiệm văn hóa đa dạng và cơ hội tuyệt vời cho sự phát triển cá nhân và nghề nghiệp.",
     labels: ["High Quality Education", "Diverse Campuses and Programs"],
     description:
-      "Canada is known for its top-notch educational institutions. Many universities and colleges consistently rank among the best globally. Canadian degrees and diplomas are recognized and respected worldwide..",
+      "Canada nổi tiếng với các cơ sở giáo dục hàng đầu. Nhiều trường đại học và cao đẳng của Canada liên tục đứng trong danh sách những cơ sở giáo dục tốt nhất toàn cầu. Các bằng cấp và chứng chỉ của Canada được công nhận và tôn trọng trên toàn thế giới.",
     href: "study/study-in-canada",
   },
 
   {
     id: 5,
-    title: "Family Sponsor",
+    title: "Bảo lãnh gia đình",
     image: "/family.jpg",
     subtitle:
-      "The program allows eligible individuals to sponsor their close family members for permanent residency in Canada.",
+      "Chương trình cho phép các cá nhân đủ điều kiện bảo lãnh người thân gần gũi của họ để định cư lâu dài tại Canada.",
     labels: ["Sponsoring a spouse or partner", "Sponsoring dependent children"],
     description:
-      "Other than the regular visa application programs, people can also apply for a visa or even permanent residence under certain sponsorship programs which allow eligible individuals to sponsor their close family members for permanent residency in Canada.",
+      "Ngoài các chương trình xin visa thông thường, mọi người cũng có thể nộp đơn xin visa hoặc thậm chí định cư vĩnh viễn dưới các chương trình bảo lãnh nhất định, cho phép các cá nhân đủ điều kiện bảo lãnh các thành viên gia đình gần gũi của họ để được định cư vĩnh viễn tại Canada.",
     href: "/family-sponsorship",
   },
 
   {
     id: 6,
     image: "/doubt.jpg",
-    title: "Not Sure",
+    title: "Chưa chắc chắn?",
     subtitle:
-      "Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!",
+      "Cảm thấy không chắc chắn về hành trình di cư của bạn? Đội ngũ dày dạn kinh nghiệm của ICAN sẵn sàng cung cấp hướng dẫn và hỗ trợ chuyên môn cho bạn!",
     labels: ["Why GTR Immigration?", "Reasonable cost guaranteed quality"],
     description:
-      "Saskatchewan stands out as a province in Canada with open immigration schemes that are suitable for many individuals seeking to establish themselves in the country.",
+      "Saskatchewan nổi bật là một tỉnh ở Canada với các chương trình di cư mở, phù hợp với nhiều cá nhân đang tìm kiếm cơ hội định cư tại quốc gia này..",
     href: "/about",
   },
 ];
