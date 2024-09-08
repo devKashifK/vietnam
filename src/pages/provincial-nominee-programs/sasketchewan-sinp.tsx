@@ -3,7 +3,7 @@ import Glass from "@/lib/helpers";
 import { featuresPage } from "./alberta-immigration-aaip";
 import { Feature } from "@/components/ui/cards-set";
 import Title from "@/components/ui/Title";
-import { FAQ } from "../express-entry/federal-skilled-worker";
+import { FAQ } from "../immigration/express-entry/federal-skilled-worker";
 
 export default function Saskatchewan() {
   return (

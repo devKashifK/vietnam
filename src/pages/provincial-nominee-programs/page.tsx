@@ -1,6 +1,6 @@
 import Container from "@/components/ui/container";
 import Glass from "@/lib/helpers";
-import { features } from "../express-entry/page";
+import { features } from "../immigration/express-entry/page";
 import { Feature } from "@/components/ui/cards-set";
 import Title from "@/components/ui/Title";
 import { Icon } from "@iconify/react/dist/iconify.js";

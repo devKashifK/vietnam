@@ -20,9 +20,12 @@ export function List({
   className?: string;
 }) {
   return (
-    <li className={cn("flex gap-2", className)}>
-      <Icon icon="simple-icons:aircanada" className="text-highlight" />
-      {children}
+    <li className={cn("flex justify-start items-start w-full ", className)}>
+      <Icon
+        icon="simple-icons:aircanada"
+        className="text-highlight w-[10%] mt-1"
+      />
+      <span className="relative w-[90%]">{children}</span>
     </li>
   );
 }

@@ -253,6 +253,10 @@ export const CTADefault = ({
             }
           >
             <span className="text-[10px] relative flex gap-1 justify-start items-center">
+              <Icon
+                icon={"teenyicons:appointments-outline"}
+                className="-mt-0.5"
+              />
               Đặt lịch hẹn tư vấn miễn phí
             </span>
           </Button>
@@ -292,7 +296,7 @@ export const CTAWithImage = ({
         //   backgroundPosition: "center",
         // }}
       >
-        <div className="bg-background/60 absolute top-0 left-0 z-10 w-full bg-opacity-80 h-[590px]"></div>
+        <div className="bg-background/40 absolute top-0 left-0 z-10 w-full bg-opacity-80 h-[590px]"></div>
         <img
           src={image}
           className="relative w-full object-cover h-full"
@@ -306,7 +310,7 @@ export const CTAWithImage = ({
         {typeof description === "string" ? (
           <p className="text-left">{description}</p>
         ) : (
-          <div className="h-56 overflow-y-auto pretty-scroll">
+          <div className="h-64 overflow-y-auto pretty-scroll">
             {description}
           </div>
         )}

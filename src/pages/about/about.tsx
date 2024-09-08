@@ -1,7 +1,8 @@
 import Container from "@/components/ui/container";
-import { CTADefault } from "@/components/ui/cta";
+import { CTADefault, CTAWithImage } from "@/components/ui/cta";
 import { Button } from "@/components/ui/custom";
 import HoverCard from "@/components/ui/hover-card";
+import { List, UL } from "@/components/ui/list";
 import MovingCardBorder from "@/components/ui/moving-card-border";
 import Title from "@/components/ui/Title";
 import TitleWithBottomBorder from "@/components/ui/title-with-bottom-border";
@@ -94,6 +95,83 @@ export default function About() {
           </div>
         </Glass>
       </Container>
+      <Container>
+        <Title title={"ICANPR"} subtitle="Các chương trình định cư phổ biến" />
+      </Container>
+      <div className=" flex flex-col gap-10">
+        <CTAWithImage
+          title={"Chương TRÌNH đề cử tỉnh bang"}
+          subtitle={"Alberta"}
+          description={
+            <div className="flex flex-col gap-2 justify-start items-start">
+              <p className="text-left">
+                Chương trình Ưu tiên đề cử tỉnh bang của Alberta (AAIP) – trước
+                đây được gọi là Chương trình Đề cử Nhập cư Alberta (AINP) – đã
+                trở thành một trong những chương trình lao động định cư phổ biến
+                nhất của Canada, cung cấp quyền thường trú nhân Canada cho các
+                công nhân và doanh nhân nước ngoài có tay nghề cao.
+              </p>
+              <p className="text-left">
+                <UL>
+                  <List>
+                    Chương trình nhập cư ngành Du lịch và Dịch vụ – Alberta
+                    Tourism & Hospitality Stream (THS).
+                  </List>
+                  <List>
+                    Chương trình cơ hội nhập cư tại Alberta (Alberta Opportunity
+                    Stream).
+                  </List>
+                  <List>
+                    Chương trình nhập cư Alberta thông qua Express Entry
+                    (Alberta Express Entry Stream).
+                  </List>
+                  <List>
+                    Chương trình Đổi mới nông thôn ( Rural Renewal Stream).
+                  </List>
+                </UL>
+              </p>
+            </div>
+          }
+          image="/alberta.png"
+          ctaAction={"Xem thêm chương trình AAIP"}
+        />
+        <CTAWithImage
+          flip={true}
+          title={"Chương TRÌNH đề cử tỉnh bang"}
+          subtitle={"Saskatchewan"}
+          description={
+            <div className="flex flex-col gap-2 justify-start items-start">
+              <p className="text-left">
+                Chương trình đề cử của tỉnh bang Saskatchewan (SINP) mở ra cơ
+                hội cho công dân quốc tế nộp đơn xin thường trú (PR) tại Canada
+                với thời gian xét duyệt nhanh hơn các chương trình nhập cư khác,
+                bao gồm:
+              </p>
+              <p className="text-left">
+                <UL>
+                  <List>
+                    Saskatchewan International Skilled Worker: dành cho đối
+                    tượng lao động lành nghề muốn sinh sống, làm việc ở
+                    Saskatchewan.
+                  </List>
+                  <List>
+                    Saskatchewan Experience: dành cho người lao động có giấy
+                    phép làm việc và sinh viên tốt nghiệp quốc tế đang sống và
+                    làm việc tại Saskatchewan.
+                  </List>
+                  <List>
+                    Saskatchewan Entrepreneur and Farm: Dành cho doanh nhân, nhà
+                    đầu tư có kế hoạch khởi nghiệp hoặc mua lại một trang trại ở
+                    Saskatchewan.
+                  </List>
+                </UL>
+              </p>
+            </div>
+          }
+          image="/saskatchewan.jpg"
+          ctaAction={"Xem thêm về SINP"}
+        />
+      </div>
       <CTADefault
         title="Chúng tôi có thể giúp bạn
 "

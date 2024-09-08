@@ -4,7 +4,7 @@ import Glass from "@/lib/helpers";
 import { featuresPage } from "./alberta-immigration-aaip";
 import { Feature } from "@/components/ui/cards-set";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { FAQ } from "../express-entry/federal-skilled-worker";
+import { FAQ } from "../immigration/express-entry/federal-skilled-worker";
 
 export default function BritishColumbia() {
   return (
