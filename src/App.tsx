@@ -96,7 +96,7 @@ function App() {
                 <span className="text-4xl">+</span>
               </div>
               <span className="uppercase text-lg font-primary tracking-widest">
-                successful visas in 2023
+                Visa Thành Công Năm 2023
               </span>
             </div>
             <div className="flex w-full md:flex-1 justify-center items-center  flex-col gap-4 text-white/60 bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border-gray-100 px-6 py-4 h-56">
@@ -109,7 +109,7 @@ function App() {
                 <CountUp enableScrollSpy={true} end={14} className="text-6xl" />
               </div>
               <span className="uppercase text-lg font-primary tracking-widest">
-                Success Start Up Visa
+                Visa Khởi Nghiệp Thành Công
               </span>
             </div>
             <div className="flex w-full md:flex-1 justify-center items-center  flex-col gap-4 text-white/60 bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border-gray-100 px-6 py-4 h-56">
@@ -123,7 +123,7 @@ function App() {
               </div>
 
               <span className="uppercase text-lg font-primary tracking-widest">
-                happy clients
+                Khách hàng hài lòng
               </span>
             </div>
             <div className="flex w-full md:flex-1 justify-center items-center  flex-col gap-4 text-white/60 bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border-gray-100 px-6 py-4 h-56">
@@ -135,7 +135,7 @@ function App() {
                 <CountUp enableScrollSpy={true} end={3} className="text-6xl" />
               </div>
               <span className="uppercase text-lg font-primary tracking-widest">
-                Consultants
+                Nhà tư vấn
               </span>
             </div>
           </div>
@@ -170,22 +170,28 @@ function App() {
       <Container effect="slide-up" className="flex flex-col gap-10">
         <Title
           cta="All News & Events"
-          subtitle="Canada Immigration News"
-          title="Latest News & Events"
+          subtitle="Tin Tức Di Trú Canada"
+          title="Tin Tức & Sự Kiện Mới Nhất"
           to="/news"
         />
         <NewsShowcase />
       </Container>
       <CTADefault
-        title="Empowering Your Canadian Dream"
-        subtitle={
-          <p className="text-xl text-white/90">
-            Take the first step towards your family’s Canadian dream. Book a
-            consultation today to explore <br />
-            immigration options and secure your family’s future in Canada.
-          </p>
+        image="/service.jpg"
+        subtitle="Chúng tôi có thể giúp bạn"
+        description={
+          <div className="flex flex-col gap-2 mt-4">
+            <p className="text-lg text-white">
+              iCan PR hiểu rằng di trú/ định cư tại Canada là một hành trình
+              nhiều thay đổi và thách thức. Mục tiêu và nhiệm vụ của chúng tôi
+              trở thành đối tác đáng tin cậy của bạn trong hành trình này.
+            </p>
+            <p className="text-lg text-white">
+              Chúng tôi mong muốn giúp bạn hiện thực hóa ước mơ định cư Canada,
+              sẳn sàng chào đón những cơ hội mới tại đây.
+            </p>
+          </div>
         }
-        image={"/immigrate.jpg"}
       />
 
       <InfiniteMovingCardsDemo />

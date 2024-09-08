@@ -10,8 +10,8 @@ export function InfiniteMovingCardsDemo() {
   return (
     <Container effect="slide-left">
       <Title
-        subtitle="What Happy Client Say"
-        title="Real Stories"
+        subtitle="Khách Hàng Hạnh Phúc Nói Gì"
+        title="Câu Chuyện Thực Tế"
         cta="All Stories"
         to="/customer-testimonials"
       />
@@ -27,37 +27,37 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "Green Tech Resources are quite professional and helpful. They provided excellent Immigration Consulting required for our smooth processing of Canadian PR. Thank you so much Manoj and team for your great support and counselling.",
+      "Green Tech Resources rất chuyên nghiệp và hữu ích. Họ đã cung cấp dịch vụ tư vấn di trú tuyệt vời cần thiết cho quá trình xử lý PR Canada của chúng tôi. Cảm ơn rất nhiều Manoj và đội ngũ của bạn vì sự hỗ trợ và tư vấn tuyệt vời.",
     name: "Aditi Joshi",
-    title: "feedback published in our google page by customer",
+    title: "phản hồi đăng trên trang Google của chúng tôi bởi khách hàng",
     image: "/customer/aditi.png",
   },
   {
     quote:
-      "Work with Gtr resources is the best decision that i could took. They helped me with all the process until i got my Pr approved a couple of days ago, me and all my family are so grateful with them. I know that all this process could be scary but they are the best option.",
+      "Làm việc với GTR Resources là quyết định tốt nhất mà tôi có thể đưa ra. Họ đã giúp tôi trong toàn bộ quá trình cho đến khi PR của tôi được phê duyệt cách đây vài ngày, tôi và gia đình tôi đều rất biết ơn họ. Tôi biết rằng toàn bộ quá trình này có thể đáng sợ nhưng họ là lựa chọn tốt nhất.",
     name: "Viky Díaz",
-    title: "feedback published in our google page by customer",
+    title: "phản hồi đăng trên trang Google của chúng tôi bởi khách hàng",
     image: "/customer/viky.png",
   },
   {
     quote:
-      "It's been an amazing journey, a friend refered me to Mr Manoj Goswam a very welcoming and patient man.He got me to send my credentials ,I had not done my IELTS test yet and he recommended I do the test,very patient he was all took time but he never gave up on me.Later he introduced me to Ms Zinal I love how transparent they are good bussiness ethics.",
+      "Đây là một hành trình tuyệt vời, một người bạn đã giới thiệu tôi đến ông Manoj Goswami, một người rất thân thiện và kiên nhẫn. Ông đã yêu cầu tôi gửi thông tin, tôi chưa làm bài kiểm tra IELTS và ông đã khuyên tôi nên làm bài kiểm tra. Ông rất kiên nhẫn, tất cả đều mất thời gian nhưng ông không từ bỏ tôi. Sau đó, ông giới thiệu tôi đến cô Zinal, tôi yêu cách họ minh bạch và có đạo đức kinh doanh tốt.",
     name: "Freeman Chinonzwa",
-    title: "feedback published in our google page by customer",
+    title: "phản hồi đăng trên trang Google của chúng tôi bởi khách hàng",
     image: "/customer/freeman.jpg",
   },
   {
     quote:
-      "This is Manaswi Chakma from Bangladesh.I am very pleased to work with Mr. Manoj Goswami the way he consult me to reach here in Canada. Specially mention to Mrs. Zinal who was very professional,reliable and smart in each and every step.Finally I will suggest to work with GTR Immigration who is really trying to move in Canada.",
+      "Tôi là Manaswi Chakma từ Bangladesh. Tôi rất vui khi làm việc với ông Manoj Goswami về cách ông tư vấn để tôi đến Canada. Đặc biệt là cô Zinal, người rất chuyên nghiệp, đáng tin cậy và thông minh ở từng bước. Cuối cùng, tôi sẽ gợi ý làm việc với GTR Immigration, họ thực sự đang cố gắng giúp đỡ để đến Canada.",
     name: "Manaswi Chakma",
-    title: "feedback published in our google page by customer",
+    title: "phản hồi đăng trên trang Google của chúng tôi bởi khách hàng",
     image: "/customer/manmasi.png",
   },
   {
     quote:
-      "Would like to thank Mr. Manoj Goswami of GTR immigration to get my visitor visa approved in less than a month’s time.  He and his team are very efficient, prompt, and professional.  They know how to get things done.  They assisted me with all the documentation and i had to only sign the documents.",
+      "Xin cảm ơn ông Manoj Goswami của GTR Immigration đã giúp tôi được phê duyệt visa du lịch trong thời gian chưa đầy một tháng. Ông và đội ngũ của ông rất hiệu quả, nhanh chóng và chuyên nghiệp. Họ biết cách hoàn thành công việc. Họ đã hỗ trợ tôi trong tất cả các tài liệu và tôi chỉ cần ký vào các tài liệu.",
     name: "Sumita Kolte",
-    title: "feedback published in our google page by customer",
+    title: "phản hồi đăng trên trang Google của chúng tôi bởi khách hàng",
     image: "/customer/sumita.png",
   },
 ];
