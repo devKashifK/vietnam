@@ -216,10 +216,12 @@ export const CTADefault = ({
   title,
   subtitle,
   image,
+  description,
 }: {
-  title: string;
-  subtitle: string | React.ReactNode;
-  image: string;
+  title?: string;
+  subtitle?: string | React.ReactNode;
+  image?: string;
+  description?: string | React.ReactNode;
 }) => {
   return (
     <Container>
@@ -235,6 +237,11 @@ export const CTADefault = ({
             <p className="text-4xl text-white/90">{subtitle}</p>
           ) : (
             subtitle
+          )}
+          {typeof description === "string" ? (
+            <p className="text-sm">{description}</p>
+          ) : (
+            description
           )}
           <Button
             className="py-3 w-[190px]"
