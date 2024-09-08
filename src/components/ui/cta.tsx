@@ -248,16 +248,12 @@ export const CTADefault = ({
             icon={
               <div className="flex gap-2 text-[10px] justify-center items-center">
                 <Icon icon={"mdi:phone"} />
-                <span>+1855 477 9797</span>
+                <span>+84 869967809</span>
               </div>
             }
           >
             <span className="text-[10px] relative flex gap-1 justify-start items-center">
-              <Icon
-                icon={"teenyicons:appointments-outline"}
-                className="-mt-0.5"
-              />
-              BOOK AN APPOINTMENT
+              Đặt lịch hẹn tư vấn miễn phí
             </span>
           </Button>
         </div>
