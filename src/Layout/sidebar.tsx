@@ -55,7 +55,7 @@ export default function Sidebar() {
         </Link>
         <Link
           unstable_viewTransition
-          to=""
+          to="/tin-tức"
           className="flex py-2  flex-1 flex-col gap-2 justify-center items-center px-5 border-b border-white/10"
         >
           <Icon

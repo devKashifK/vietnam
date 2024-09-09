@@ -33,7 +33,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
         )}
       >
         <div className="h-full flex justify-center w-[400px] items-center px-8 border-r border-white/10">
-          <img src="/logo-white.png" alt="" className="" />
+          <img src="/logonew.webp" alt="" className="" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/10 px-16">
