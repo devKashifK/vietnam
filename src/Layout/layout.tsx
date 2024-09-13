@@ -212,7 +212,7 @@ const Layout = () => {
       image: "/newbrunswick.png",
     },
     "newfoundland-labradorP": {
-      text: "Newfoundland and Labrador Province",
+      text: "Newfoundland and Labrador",
       image: "/newbrunswick.png",
     },
     "northwest-territoriesP": {
