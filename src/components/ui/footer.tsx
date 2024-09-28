@@ -8,7 +8,7 @@ export default function Footer() {
     <div className="flex flex-col w-full  mx-auto bg-background shadow-2xl">
       <div className="bg-secondary/20 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-t-2xl h-max md:h-[500px] flex  flex-col md:flex-row gap-10 px-12 py-16 items-center justify-center text-white">
         <div className="flex flex-col gap-10 flex-1 text-white/50 pt-10  justify-start items-start">
-          <img src="/logonew.webp" alt="" className="w-[70%]  md:pl-10" />
+          <img src="/logo.png" alt="" className="w-[60%]  md:pl-10" />
 
           <div className="flex flex-col gap-2 text-white font-normal justify-start items-start w-full cursor-pointer pl-0 md:pl-10 text-sm">
             <Link

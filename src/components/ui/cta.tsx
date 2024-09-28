@@ -56,9 +56,9 @@ export default function CTA() {
 
 export const CtaCard = ({ item }) => {
   return (
-    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] h-[517px] justify-start items-center transition-all duration-100 ease-in-out">
-      <div className="">
-        <img src={item.image} alt="" className="" />
+    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
+      <div className="w-full">
+        <img src={item.image} alt="" className="w-full" />
       </div>
       <div className="px-8 flex flex-col gap-2 py-5">
         <div className="flex flex-col gap-0">
@@ -229,8 +229,9 @@ export const CTADefault = ({
         className="flex-col  gap-8 py-20 justify-center items-center bg-cover bg-center relative"
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className="flex flex-col gap-8 md:gap-3 relative z-10  bg-clip-padding justify-center items-center py-10 backdrop-filter backdrop-blur-md bg-opacity-20 px-8">
-          <h4 className="text-4xl tracking-wider text-center text-white">
+        <div className="flex absolute left-0 top-0 w-full h-full bg-black/60"></div>
+        <div className="flex flex-col justify-center items-center gap-8 md:gap-3 relative z-10 px-8">
+          <h4 className="text-4xl tracking-wider text-center text-white ">
             {title}
           </h4>
           {typeof subtitle === "string" ? (

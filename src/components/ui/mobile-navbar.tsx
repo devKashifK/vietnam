@@ -14,7 +14,7 @@ export default function MobileNavbar({ isOpen, setIsOpen, config }) {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="z-[100000] h-full" asChild>
         <div className="flex w-full justify-between items-center">
-          <img src="/gt-removebg.png" alt="" className="h-8" />
+          <img src="/logo.png" alt="" className="h-8" />
           <Icon
             icon={"solar:hamburger-menu-broken"}
             className="text-white text-scale-1200 cursor-pointer px-0 py-2 text-4xl"

@@ -32,11 +32,11 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
           "bg-background text-white"
         )}
       >
-        <div className="h-full flex justify-center w-[400px] items-center px-8 border-r border-white/10">
-          <img src="/logonew.webp" alt="" className="" />
+        <div className="h-full flex justify-center w-[400px] items-center px-8 border-r border-white/40">
+          <img src="/logo.png" alt="" className="w-[60%]" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
-          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/10 px-16">
+          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/40 px-16">
             <Link
               unstable_viewTransition
               to={"/ve-icanpr"}
@@ -109,7 +109,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                     ) : (
                       <NavigationMenuTrigger
                         className={cn(
-                          "bg-transparent text-xs font-light data-[state=open]:text-white data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/10  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 "
+                          "bg-transparent text-xs font-light data-[state=open]:text-white data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/40  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 "
                         )}
                       >
                         {navItem.path}
@@ -142,7 +142,7 @@ const renderSubmenus = (submenus) => {
       {submenus.map((subPage) => (
         <li
           key={subPage.path}
-          className="flex text-left w-full  border-white/10 border-b last:border-b-0 relative "
+          className="flex text-left w-full  border-highlight border-b last:border-b-0 relative "
           onMouseEnter={() => setHoveredPath(subPage.path)}
           onMouseLeave={() => setHoveredPath(null)}
         >
@@ -162,7 +162,7 @@ const renderSubmenus = (submenus) => {
                 {subPage.children.map((item) => (
                   <Link
                     key={item.path}
-                    className="group relative z-[10000] border-white/10 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
+                    className="group relative z-[10000] border-white/40 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
                     to={item.path}
                     unstable_viewTransition
                   >
@@ -639,7 +639,7 @@ const router = [
   },
 
   {
-    path: "Canada Immigration",
+    path: "Nhập cư Canada",
     // path: "Định cư Canada",
 
     children: [
@@ -668,37 +668,37 @@ const router = [
 
       {
         path: "/immigration/việc-làm-định-cư",
-        // element: "Việc làm định cư",
-        element: "Immigration work",
+        element: "Việc làm định cư",
+        // element: "Immigration work",
       },
       {
         path: "/immigration/du-hoc-dinh-cu",
-        // element: "Du học – định cư",
-        element: "Study abroad - settlement",
+        element: "Du học – định cư",
+        // element: "Study abroad - settlement",
       },
       {
         path: "/immigration/doanh-nghiệp-C11-visa",
-        // element: "Doanh nghiệp C11 Visa",
-        element: "C11 Visa Business",
+        element: "Doanh nghiệp C11 Visa",
+        // element: "C11 Visa Business",
       },
       {
         path: "/immigration/start-up-visa",
-        element: "Start Up Visa",
+        element: "Visa khởi nghiệp",
       },
       {
         path: "/immigration/bảo-lãnh-gia-đình",
-        // element: "Bảo lãnh gia đình",
-        element: "Family sponsorship",
+        element: "Bảo lãnh gia đình",
+        // element: "Family sponsorship",
       },
       {
         path: "/immigration/khách-hàng-thành-công",
-        // element: "Khách hàng thành công",
-        element: "Customer Success",
+        element: "Khách hàng thành công",
+        // element: "Customer Success",
       },
     ],
   },
   {
-    path: "Provincial Nominee Programs",
+    path: "Chương trình đề cử cấp tỉnh",
     // path: "Đề cử tỉnh bang PNP"
     children: [
       {
@@ -760,7 +760,7 @@ const router = [
     ],
   },
   {
-    path: "Canadian Life",
+    path: "Cuộc sống Canada",
     // path: "Cuộc sống Canada",
     children: [
       {
@@ -826,28 +826,28 @@ const router = [
       },
       {
         path: "/cuộc-sống-canada/môi-trường-canada",
-        element: "Environment Canada",
-        // element:"Môi Trường Canada",
+        // element: "Environment Canada",
+        element: "Môi Trường Canada",
       },
       {
         path: "/cuộc-sống-canada/văn-hóa-tôn-giáo",
-        element: "Culture & Education",
-        // element:"Văn hóa & tôn giáo"
+        // element: "Culture & Education",
+        element: "Văn hóa & tôn giáo",
       },
       {
         path: "/cuộc-sống-canada/y-tế",
-        element: "Medical",
-        // element:"Y Tế",
+        // element: "Medical",
+        element: "Y Tế",
       },
       {
         path: "/cuộc-sống-canada/giáo-dục-canada",
-        element: "Canadian Education",
-        // element : "Giáo dục Canada",
+        // element: "Canadian Education",
+        element: "Giáo dục Canada",
       },
       {
         path: "/cuộc-sống-canada/tỷ-giá-đô-canada",
-        element: "Canadian Dollar Exchange Rate",
-        // element: " Tỷ giá đô Canada",
+        // element: "Canadian Dollar Exchange Rate",
+        element: " Tỷ giá đô Canada",
       },
 
       {
@@ -859,57 +859,57 @@ const router = [
   },
 
   {
-    path: "Useful Information",
+    path: "Thông tin hữu ích",
     // path: "Thông tin hữu ích",
     children: [
       {
         path: "/thông-tin-hữu-ích/câu-hỏi-thường-gặp",
-        // element:"Câu hỏi thường gặp",
-        element: "FAQ",
+        element: "Câu hỏi thường gặp",
+        // element: "FAQ",
       },
 
       {
         path: "/thông-tin-hữu-ích/trang-web-hữu-ích",
-        // element: "Trang web hữu ích",
-        element: "Useful Website",
+        element: "Trang web hữu ích",
+        // element: "Useful Website",
       },
 
       {
         path: "/thông-tin-hữu-ích/thuật-ngữ-trong-di-trú",
-        // element: "Thuật ngữ trong di trú",
-        element: "Immigration terminology",
+        element: "Thuật ngữ trong di trú",
+        // element: "Immigration terminology",
       },
 
       {
         path: "/thông-tin-hữu-ích/CLB-là-gì",
-        // element:"CLB là gì? Cách quy đổi điểm đương đương?",
-        element: "What is CLB? How to convert equivalent points?",
+        element: "CLB là gì? Cách quy đổi điểm đương đương?",
+        // element: "What is CLB? How to convert equivalent points?",
       },
     ],
   },
   {
-    path: "Recriutment",
+    path: "tuyển dụng",
     // path:"Tuyển dụng",
     children: [
       {
         path: "/tuyển-dụng/làm-việc-cho-icanpr",
-        // element: "Làm việc cho iCanPR",
-        element: "Work for ICanPR",
+        element: "Làm việc cho iCanPR",
+        // element: "Work for ICanPR",
       },
       {
         path: "/tuyển-dụng/tổng-hợp-việc-làm-canada",
-        // element: "Tổng hợp việc làm Canada",
-        element: "Canada Jobs Summary",
+        element: "Tổng hợp việc làm Canada",
+        // element: "Canada Jobs Summary",
       },
       {
         path: "/tuyển-dụng/công-nhân-trại-gà",
-        // element: "Công nhân trại gà",
-        element: "Chicken farm Worker",
+        element: "Công nhân trại gà",
+        // element: "Chicken farm Worker",
       },
       {
         path: "/tuyển-dụng/dầu-bếp-món-au",
-        // element: "Đầu bếp Món Âu",
-        element: "European Chef",
+        element: "Đầu bếp Món Âu",
+        // element: "European Chef",
       },
     ],
   },

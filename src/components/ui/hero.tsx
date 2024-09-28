@@ -25,6 +25,8 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  console.log(images);
+
   return (
     <div className="flex flex-col gap-2 w-full">
       <div className="w-full mx-auto  h-[600px] md:h-[500px] shadow-2xl flex justify-start items-start flex-col overflow-hidden relative">
@@ -94,7 +96,7 @@ export default function Hero() {
                   <br />
                 </p>
 
-                <div className="md:block hidden absolute right-40 -bottom-8 w-64 h-10">
+                {/* <div className="md:block hidden absolute right-40 -bottom-8 w-64 h-10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="100%"
@@ -109,7 +111,7 @@ export default function Hero() {
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
 
               <p className="text-left w-full text-black">
