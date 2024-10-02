@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./custom";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -29,47 +29,47 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
       <div
         className={cn(
           "hidden md:flex shadow-lg h-24 justify-start items-center",
-          "bg-background text-white"
+          "bg-white text-black"
         )}
       >
-        <div className="h-full flex justify-center w-[400px] items-center px-8 border-r border-white/40">
+        <div className="h-full flex justify-center w-[400px] !bg-white items-center px-8 border-r border-background">
           <img src="/logo.png" alt="" className="w-[60%]" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
-          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-white/40 px-16">
+          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-background/40 px-16">
             <Link
               unstable_viewTransition
               to={"/ve-icanpr"}
               className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>About Us</span>
-              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
+              <span className={"text-background font-bold"}>About Us</span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               unstable_viewTransition
               to={"/lien-he"}
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>Contact Us</span>
-              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
+              <span className={"text-background font-bold"}>Contact Us</span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               unstable_viewTransition
               to={"/doanh-nghiệp"}
               className="text-xs flex font-light flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>
+              <span className={"text-background font-bold"}>
                 Free phone consultation +84 869967809
               </span>
-              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
               to={"/immigration/khách-hàng-thành-công"}
               unstable_viewTransition
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-white"}>Guarantee</span>
-              <div className="group-hover:bg-highlight w-full border border-transparent ease-out duration-150"></div>
+              <span className={"text-background font-bold"}>Guarantee</span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
 
             <a
@@ -92,13 +92,13 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                     {navItem.element ? (
                       <NavigationMenuLink
                         className={cn(
-                          "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-white focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-highlight data-[state=open]:bg-highlight hover:bg-[#b33d3d] relative group bg-transparent "
+                          "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-background focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-highlight data-[state=open]:bg-highlight hover:bg-[#b33d3d] relative group bg-transparent "
                         )}
                       >
                         <Link
                           className={cn(
                             type === "default" &&
-                              "text-white  group-hover:text-white"
+                              "text-white  group-hover:text-background"
                           )}
                           to={navItem.path}
                           unstable_viewTransition
@@ -109,7 +109,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                     ) : (
                       <NavigationMenuTrigger
                         className={cn(
-                          "bg-transparent text-xs font-light data-[state=open]:text-white data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/40  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 "
+                          "bg-transparent text-xs data-[state=open]:text-background data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/40  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 font-bold"
                         )}
                       >
                         {navItem.path}
@@ -162,7 +162,7 @@ const renderSubmenus = (submenus) => {
                 {subPage.children.map((item) => (
                   <Link
                     key={item.path}
-                    className="group relative z-[10000] border-white/40 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-white"
+                    className="group relative z-[10000] border-white/40 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-background"
                     to={item.path}
                     unstable_viewTransition
                   >
@@ -183,7 +183,7 @@ const renderSubmenus = (submenus) => {
             </div>
           ) : (
             <Link
-              className="text-left hover:bg-[#b33d3d] text-white py-1  text-sm border-b last:border-b-0 px-2 w-full"
+              className="text-left hover:bg-[#b33d3d] text-highlight py-1  text-sm border-b last:border-b-0 px-2 w-full"
               to={subPage.path}
               unstable_viewTransition
             >

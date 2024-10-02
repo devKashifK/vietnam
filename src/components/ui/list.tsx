@@ -28,7 +28,7 @@ export function List({
     >
       <Icon
         icon="simple-icons:aircanada"
-        className="text-highlight w-[40px] mt-1"
+        className="text-background w-[40px] mt-1"
       />
       <span className="relative w-[90%]">{children}</span>
     </li>

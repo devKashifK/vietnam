@@ -20,7 +20,7 @@ export default function TitleWithBottomBorder({
       >
         {children}
         <span
-          className={cn("block h-0.5 bg-highlight mt-2", borderClass)}
+          className={cn("block h-0.5 bg-background mt-2", borderClass)}
         ></span>
       </h2>
     </div>

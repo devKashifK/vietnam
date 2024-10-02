@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
         </div>
         <div className="w-full  md:flex-1 flex flex-col gap-3 justify-center items-center h-max">
           <ul className="flex gap-6 flex-wrap justify-center cursor-pointer ">
-            <li className="text-center flex gap-1 justify-center bg-highlight/80 font-primary tracking-widest px-8 w-full md:w-[200px]  flex-col items-center text-white/90 py-6">
+            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8 w-full md:w-[200px]  flex-col items-center text-white/90 py-6">
               <Icon icon={"iconamoon:profile-light"} className="text-4xl" />
               Đội ngũ tư vấn chuyên nghiệp
             </li>
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
               <Icon icon={"solar:hand-money-linear"} className="text-4xl" />
               Chi phí hợp lý
             </li>
-            <li className="text-center flex gap-1 justify-center bg-highlight/80 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
               <Icon icon={"ph:chalkboard-teacher-bold"} className="text-4xl" />
               Hơn 10 năm kinh nghiệm
             </li>

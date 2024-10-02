@@ -62,7 +62,9 @@ export const CtaCard = ({ item }) => {
       </div>
       <div className="px-8 flex flex-col gap-2 py-5">
         <div className="flex flex-col gap-0">
-          <h5 className="text-4xl text-left text-highlight">{item.title}</h5>
+          <h5 className="text-4xl text-left text-background group-hover:text-highlight">
+            {item.title}
+          </h5>
           {/* <p className="text-sm text-left text-black/70">
             {truncateTextHeading(item.subtitle)}
           </p> */}
@@ -74,7 +76,7 @@ export const CtaCard = ({ item }) => {
         <div className="w-full flex justify-end items-end mt-4">
           <Link
             to={item.href}
-            className="bg-highlight text-white  py-1 shadow-xl px-4  text-sm w-max"
+            className="bg-background group-hover:bg-highlight group-hover:text-background text-white  py-1 shadow-xl px-4  text-sm w-max"
           >
             Tìm hiểu thêm
           </Link>
@@ -320,7 +322,7 @@ export const CTAWithImage = ({
         )}
 
         {ctaAction && (
-          <button className="flex gap-2 bg-highlight text-white w-max justify-center items-center rounded-none">
+          <button className="flex gap-2 bg-background text-highlight w-max justify-center items-center rounded-none">
             {ctaAction}
             <Icon icon={"simple-icons:aircanada"} className="" />
           </button>

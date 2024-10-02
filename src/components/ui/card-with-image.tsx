@@ -33,7 +33,7 @@ export function CardWithImage({
           </TitleWithBottomBorder>
           <div className="group-hover/card:flex hidden transition-all duration-150 ease-linear">
             {typeof description === "string" ? (
-              <p className="font-normal text-left text-sm text-gray-50 relative z-10 my-4">
+              <p className="font-normal text-left  text-sm text-gray-50 relative z-10 my-4">
                 {description}
               </p>
             ) : (
@@ -42,7 +42,7 @@ export function CardWithImage({
           </div>
           <Link
             to={to}
-            className="bg-highlight px-3 py-1 group-hover/card:flex hidden text-white rounded-none relative transition-all duration-150 z-10 ease-linear"
+            className="group-hover/card:bg-background px-3 py-1 group-hover/card:flex  hidden text-white rounded-none relative transition-all duration-150 z-10 ease-linear"
           >
             Xem thêm
           </Link>

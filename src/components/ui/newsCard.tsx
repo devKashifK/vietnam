@@ -70,7 +70,7 @@ export const NewsFeedCard = ({
           <div className="pb-6">
             <Link
               to={`/news/${id}`}
-              className="bg-highlight flex justify-center items-center text-slate-50 px-3 py-1 text-sm text-left w-[50%]"
+              className="bg-background flex justify-center items-center text-slate-50 px-3 py-1 text-sm text-left w-[50%]"
             >
               Read More
             </Link>

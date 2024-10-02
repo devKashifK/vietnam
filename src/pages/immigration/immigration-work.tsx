@@ -16,8 +16,8 @@ export default function ImmigrationWork() {
         <Glass className="flex gap-2 px-10 py-10">
           <div className="flex-1 flex flex-col gap-2">
             <div className="relative w-max">
-              <div className="absolute top-0 left-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute top-[12px] transform rotate-90 -left-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
+              <div className="absolute top-0 left-0 w-6 h-0.5 bg-background rounded-md"></div>
+              <div className="absolute top-[12px] transform rotate-90 -left-[12px] w-6 h-0.5 bg-background rounded-md"></div>
 
               <div className="px-3 py-1.5">
                 <h5 className="tracking-widest text-xl">
@@ -25,8 +25,8 @@ export default function ImmigrationWork() {
                 </h5>
               </div>
 
-              <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-highlight rounded-md"></div>
-              <div className="absolute bottom-[12px] transform rotate-90 -right-[12px] w-6 h-0.5 bg-highlight rounded-md"></div>
+              <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-background rounded-md"></div>
+              <div className="absolute bottom-[12px] transform rotate-90 -right-[12px] w-6 h-0.5 bg-background rounded-md"></div>
             </div>
             <div className="flex flex-col justify-start gap-6">
               <h3 className="tracking-wide text-left text-4xl text-black/70">

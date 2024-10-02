@@ -13,8 +13,10 @@ export default function Sidebar() {
       <Link
         unstable_viewTransition
         to="/"
-        className={`flex py-5 flex-col gap-2 justify-center items-center shadow-xl ${
-          location.pathname === "/" ? "bg-highlight" : ""
+        className={`flex py-5 flex-col gap-2 justify-center items-center  ${
+          location.pathname === "/"
+            ? "bg-highlight  text-background  shadow-xl"
+            : ""
         }`}
       >
         <Icon
@@ -27,7 +29,9 @@ export default function Sidebar() {
       <div className="flex flex-col h-[85%]  py-2">
         <div
           className={`flex-1 border-b flex  flex-col gap-2 justify-center items-center border-white/10 ${
-            isActive("việc-làm-định-cư") ? "bg-highlight flex-1" : ""
+            isActive("việc-làm-định-cư")
+              ? "bg-highlight  text-background  shadow-xlflex-1"
+              : ""
           }`}
         >
           <Link
@@ -44,7 +48,7 @@ export default function Sidebar() {
         </div>
         <div
           className={`flex border-b border-white/10  flex-1 flex-col gap-2 justify-center items-center ${
-            isActive("du-hoc-dinh-cu") ? "bg-highlight" : ""
+            isActive("du-hoc-dinh-cu") ? "bg-highlight  text-background" : ""
           }`}
         >
           <Link
@@ -64,7 +68,9 @@ export default function Sidebar() {
 
         <div
           className={`flex flex-1 flex-col gap-2 justify-center items-center px-5 border-b border-white/10 ${
-            isActive("doanh-nghiệp-C11-visa") ? "bg-highlight" : ""
+            isActive("doanh-nghiệp-C11-visa")
+              ? "bg-highlight  text-background"
+              : ""
           }`}
         >
           <Link
@@ -82,7 +88,7 @@ export default function Sidebar() {
 
         <div
           className={`flex flex-1 flex-col gap-2 justify-center items-center px-5 border-b border-white/10  ${
-            isActive("tin-tức") ? "bg-highlight" : ""
+            isActive("tin-tức") ? "bg-highlight  text-background" : ""
           }`}
         >
           <Link
@@ -100,7 +106,9 @@ export default function Sidebar() {
 
         <div
           className={`flex flex-1 flex-col gap-2 justify-center items-center px-5 border-b border-white/10  ${
-            isActive("câu-hỏi-thường-gặp") ? "bg-highlight" : ""
+            isActive("câu-hỏi-thường-gặp")
+              ? "bg-highlight  text-background"
+              : ""
           }`}
         >
           <Link
