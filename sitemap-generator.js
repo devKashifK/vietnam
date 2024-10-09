@@ -3,7 +3,7 @@ import { createWriteStream } from 'fs';
 
 // Determine the hostname dynamically based on environment (Node.js)
 const hostname = process.env.NODE_ENV === 'production'
-  ? 'https://www.yourproductionwebsite.com'  // Production URL
+  ? 'https://vietnam-ten.vercel.app'  // Production URL
   : 'http://localhost:5173';  // Development URL
 
 // Define the URLs for your routes
