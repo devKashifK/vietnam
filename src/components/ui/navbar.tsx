@@ -45,22 +45,14 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               <span className={"text-background font-bold"}>About Us</span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
-            <Link
-              unstable_viewTransition
-              to={"/lmia-map"}
-              className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
-            >
-              <span className={"text-background font-bold"}>LMIA Map</span>
-              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
-            </Link>
-            <Link
+            {/* <Link
               unstable_viewTransition
               to={"/lien-he"}
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
               <span className={"text-background font-bold"}>Contact Us</span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
-            </Link>
+            </Link> */}
             <Link
               unstable_viewTransition
               to={"/doanh-nghiệp"}
@@ -68,6 +60,16 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
             >
               <span className={"text-background font-bold"}>
                 Free phone consultation +84 869967809
+              </span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
+            </Link>
+            <Link
+              unstable_viewTransition
+              to={"mailto:tuvan@icanpr.vn"}
+              className="text-xs flex font-light flex-col gap-0.5 group"
+            >
+              <span className={"text-background font-bold"}>
+                tuvan@icanpr.vn
               </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
@@ -86,6 +88,13 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               className="text-xs bg-green-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
             >
               <Icon icon={"mdi:whatsapp"} className="text-xl" />
+            </a>
+            <a
+              href="https://zalo.me/84869967809"
+              target="_blank"
+              className="text-xs bg-blue-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
+            >
+              <Icon icon={"simple-icons:zalo"} className="text-xl" />
             </a>
           </div>
 

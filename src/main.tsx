@@ -113,10 +113,10 @@ const router = createBrowserRouter([
         path: "doi-tac-icanpr",
         element: <Partners />,
       },
-      {
-        path: "lien-he",
-        element: <Contact />,
-      },
+      // {
+      //   path: "lien-he",
+      //   element: <Contact />,
+      // },
     ],
   },
   {
@@ -411,17 +411,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
-  {
-    path: "/lmia-map",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Lmia />,
-      },
-    ],
-  },
   {
     path: "/tin-tức",
     element: <Layout />,
@@ -443,8 +432,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <RouterProvider router={router} />
   </QueryClientProvider>
 );
-
-// Book Appointment
-// why choose us fix
-// contact
-// start reviewing from immigration
