@@ -411,6 +411,17 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+    path: "/lmia-map",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Lmia />,
+      },
+    ],
+  },
   {
     path: "/tin-tức",
     element: <Layout />,

@@ -303,6 +303,10 @@ const Layout = () => {
       text: "Đầu bếp Món Âu",
       image: "/about.png",
     },
+    ["lmia-map"]: {
+      text: "LMIA Map",
+      image: "/lmia.jpg",
+    },
   };
   return (
     <>

@@ -47,6 +47,14 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
             </Link>
             <Link
               unstable_viewTransition
+              to={"/lmia-map"}
+              className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
+            >
+              <span className={"text-background font-bold"}>LMIA Map</span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
+            </Link>
+            <Link
+              unstable_viewTransition
               to={"/lien-he"}
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
