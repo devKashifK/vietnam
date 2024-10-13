@@ -29,44 +29,13 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="w-full mx-auto  h-[600px] md:h-[500px] shadow-2xl flex justify-start items-start flex-col overflow-hidden relative">
-        {/* Current Image */}
-        {/* <div
-          className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out ${
-            slide ? "translate-x-0" : "-translate-x-full"
-          }`}
-          style={{
-            backgroundImage: `url(${images[currentImageIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div> */}
-
-        {/* Next Image */}
-        {/* <div
-          className={`absolute top-0 left-full w-full h-full transition-transform duration-500 ease-in-out ${
-            slide ? "-translate-x-full" : "translate-x-0"
-          }`}
-          style={{
-            backgroundImage: `url(${images[nextImageIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div> */}
-
+      <div className="w-full mx-auto   md:h-[500px] shadow-2xl flex justify-start items-start flex-col overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-full bg-black  bg-opacity-60"></div>
 
-        <div className="flex flex-col w-full h-full relative ">
+        <div className="flex flex-col w-full  h-full relative ">
           <Navbar type={"hero"} />
-          <div className="flex h-full">
-            <div
-              className="w-[45%]"
-              // style={{
-              //   backgroundImage: `url(/hero-3.jpg)`,
-              //   backgroundSize: "cover",
-              //   backgroundPosition: "center",
-              // }}
-            >
+          <div className="flex flex-col  md:flex-row  h-full">
+            <div className="md:w-[45%] w-[100%]">
               <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
@@ -86,7 +55,7 @@ export default function Hero() {
             </div>
             <div className="px-20 pb-20 pt-10 flex-1 h-full bg-content flex gap-8 flex-col justify-center items-center">
               <div className="flex gap-1 flex-col justify-center items-start w-full relative">
-                <p className="text-4xl text-left text-black">
+                <p className="lg:text-4xl text-3xl text-left text-black">
                   {/* Achieve your family Canada */}
                   Đạt được gia đình của bạn Canada <br />
                   <strong className="text-background ">
@@ -95,29 +64,9 @@ export default function Hero() {
                   </strong>
                   <br />
                 </p>
-
-                {/* <div className="md:block hidden absolute right-40 -bottom-8 w-64 h-10">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 252 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M1.3606 6.99989C21.2036 4.49991 189.869 -0.362312 249.002 6.99999C218.307 6.99999 178.315 5.24446 152.565 13"
-                      stroke="#0D2D2A"
-                      stroke-width="6"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </div> */}
               </div>
 
               <p className="text-left w-full text-black">
-                {/* We support companies in their digital transformation by <br />
-              creating internal tools and providing software <br /> development
-              consulting. */}
                 Chúng tôi hỗ trợ các công ty trong quá trình chuyển đổi kỹ thuật{" "}
                 <br /> số bằng cách tạo ra các công cụ nội bộ và cung cấp tư vấn{" "}
                 <br /> phát triển phần mềm.
@@ -137,7 +86,6 @@ export default function Hero() {
                       icon={"teenyicons:appointments-outline"}
                       className="-mt-0.5"
                     />
-                    {/* BOOK AN APPOINTMENT */}
                     Đặt một cuộc hẹn
                   </span>
                 </Button>
@@ -150,4 +98,36 @@ export default function Hero() {
       </div>
     </div>
   );
+}
+
+{
+  /* Current Image */
+}
+{
+  /* <div
+          className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out ${
+            slide ? "translate-x-0" : "-translate-x-full"
+          }`}
+          style={{
+            backgroundImage: `url(${images[currentImageIndex]})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div> */
+}
+
+{
+  /* Next Image */
+}
+{
+  /* <div
+          className={`absolute top-0 left-full w-full h-full transition-transform duration-500 ease-in-out ${
+            slide ? "-translate-x-full" : "translate-x-0"
+          }`}
+          style={{
+            backgroundImage: `url(${images[nextImageIndex]})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></div> */
 }

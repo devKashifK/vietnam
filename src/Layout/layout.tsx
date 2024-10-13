@@ -185,25 +185,25 @@ const Layout = () => {
       image: "/saskatchewan.jpg",
     },
 
-    quebec: {
+    "quebec": {
       text: "Quebec (PNP)",
       image: "/northwestterritories.png",
     },
-    path: "các-tỉnh-bang-canada",
+    // path: "các-tỉnh-bang-canada",
 
     "yukon-ynp": {
       text: "Yukon (YNP)",
       image: "/yukon.jpg",
     },
-    albertaP: {
+    "albertaP": {
       text: "Alberta Province",
       image: "/alberta.png",
     },
-    brcolumbiaP: {
+    "brcolumbiaP": {
       text: "British Colombia (BC PNP)",
       image: "/british.jpg",
     },
-    manitobaP: {
+    "manitobaP": {
       text: "Manitoba Province",
       image: "/manitoba.png",
     },

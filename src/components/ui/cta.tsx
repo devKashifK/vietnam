@@ -13,7 +13,7 @@ export default function CTA() {
     <>
       <Container
         effect="slide-left"
-        className="hidden md:flex relative z-[10000]"
+        className="flex flex-col mx-auto  md:flex-row relative z-[10000]"
       >
         {/* <Title
           title={
@@ -24,14 +24,14 @@ export default function CTA() {
           cta={"All Solutions"}
         /> */}
         <div className="flex gap-4 min-h-screen  mx-auto">
-          <div className="flex-1 items-center justify-center grid grid-cols-2 gap-10 -mt-24 relative z-50">
+          <div className="flex-1 items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-10 md:-mt-24 -mt-12 relative z-50">
             {CtaDetails.map((item, index) => (
               <CtaCard item={item} key={item.id} />
             ))}
           </div>
         </div>
       </Container>
-      <Container effect="slide-left" className="flex md:hidden">
+      <Container effect="slide-left" className="flex md:hidden mx-auto">
         <Title
           title={
             <p className="text-2xl md:text-5xl  text-black/50 w-full text-left">
@@ -56,7 +56,7 @@ export default function CTA() {
 
 export const CtaCard = ({ item }) => {
   return (
-    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
+    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl  sm:w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
       <div className="w-full">
         <img src={item.image} alt="" className="w-full" />
       </div>
@@ -124,7 +124,7 @@ export const CtaCard2 = ({ item, flip }) => {
         <div className="w-full flex justify-end items-end mt-4">
           <Link
             to={item.href}
-            className="bg-highlight text-white py-1 shadow-xl px-4 rounded-md text-sm w-max"
+            className="bg-background text-white py-1 shadow-xl px-4 rounded-md text-sm w-max"
           >
             Know More
           </Link>

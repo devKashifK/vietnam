@@ -266,8 +266,8 @@ const renderSubmenus = (submenus, hoveredPath, setHoveredPath) => {
 
 export const mobileConfig = [
   {
-    name: "Home",
-    // name: "Trang chủ",
+    // name: "Home",
+    name: "Trang chủ",
     icon: "mdi:home",
     heading: "font-semibold text-green-800",
     pointer: "bg-green-700",
@@ -277,15 +277,15 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "Home",
-        // name: "Trang chủ",
+        // name: "Home",
+        name: "Trang chủ",
 
         path: "/",
       },
     ],
   },
   {
-    name: "About",
+    name: "ICANPR",
     icon: "mdi:information-outline",
     heading: "font-semibold text-blue-800",
     pointer: "bg-blue-700",
@@ -295,33 +295,18 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "About",
-        path: "/about",
+        name: "Về iCanPR",
+        path: "/ve-icanpr",
       },
       {
         provider: "internal",
-        name: "Our Service",
-        path: "/our-service",
+        name: "Đối tác iCanPR",
+        path: "/doi-tac-icanpr",
       },
       {
         provider: "internal",
-        name: "Certificate Membership",
-        path: "/certificate-membership",
-      },
-      {
-        provider: "internal",
-        name: "Customer Testimonials",
-        path: "/customer-testimonials",
-      },
-      {
-        provider: "internal",
-        name: "Book Appointment",
-        path: "/book-appointment",
-      },
-      {
-        provider: "internal",
-        name: "Why Choose Us",
-        path: "/why-choose-us",
+        name: "Liên hệ",
+        path: "/lien-he",
       },
     ],
   },
@@ -349,6 +334,11 @@ export const mobileConfig = [
         name: "Canadian Experience Class",
         path: "/immigration/express-entry/canadian-experience-class",
       },
+      {
+        provider: "internal",
+        name: "CRS Score Calculation",
+        path: "/immigration/express-entry/crs-score-calculation",
+      },
     ],
   },
   {
@@ -363,72 +353,57 @@ export const mobileConfig = [
       {
         provider: "internal",
         name: "Alberta (AAIP)",
-        path: "/immigration/provincial-nominee-programs/alberta-immigration-aaip",
-      },
-      {
-        provider: "internal",
-        name: "Atlantic Immigration (AIPP)",
-        path: "/immigration/provincial-nominee-programs/atlantic-immigration-aipp",
+        path: "/dề-cử-tỉnh-bang-pnp/alberta-immigration-aaip",
       },
       {
         provider: "internal",
         name: "British Columbia (BC PNP)",
-        path: "/immigration/provincial-nominee-programs/british-columbia-bcpnp",
+        path: "/dề-cử-tỉnh-bang-pnp/british-columbia-bcpnp",
       },
       {
         provider: "internal",
         name: "Ontario (OINP)",
-        path: "/immigration/provincial-nominee-programs/ontario-oinp",
+        path: "/dề-cử-tỉnh-bang-pnp/ontario-oinp",
       },
       {
         provider: "internal",
         name: "Manitoba (MPNP)",
-        path: "/immigration/provincial-nominee-programs/manitoba-mpnp",
+        path: "/dề-cử-tỉnh-bang-pnp/manitoba-mpnp",
       },
       {
         provider: "internal",
-        name: "New Brunswick (NBPNP)",
-        path: "/immigration/provincial-nominee-programs/new-brunswick-nbpnp",
-      },
-      {
-        provider: "internal",
-        name: "Newfoundland and Labrador",
-        path: "/immigration/provincial-nominee-programs/newfoundland-and-labrador",
-      },
-      {
-        provider: "internal",
-        name: "Saskatchewan (SINP)",
-        path: "/immigration/provincial-nominee-programs/saskatchewan-sinp",
-      },
-      {
-        provider: "internal",
-        name: "Northwest Territories",
-        path: "/immigration/provincial-nominee-programs/northwest-territories",
+        name: "New Brunswick (NB PNP)",
+        path: "/dề-cử-tỉnh-bang-pnp/new-brunswick-nbpnp",
       },
       {
         provider: "internal",
         name: "Nova Scotia (NSNP)",
-        path: "/immigration/provincial-nominee-programs/nova-scotia-nsnp",
+        path: "/dề-cử-tỉnh-bang-pnp/nova-scotia-nsnp",
       },
       {
         provider: "internal",
         name: "Prince Edward Island (PEI PNP)",
-        path: "/immigration/provincial-nominee-programs/prince-edward-island-peipnp",
+        path: "/dề-cử-tỉnh-bang-pnp/prince-edward-island-peipnp",
       },
       {
         provider: "internal",
-        name: "Rural & Northern Immigration Pilot (RNIP)",
-        path: "/immigration/provincial-nominee-programs/rural-and-northern-immigration-pilot-rnip",
+        name: "Saskatchewan (SINP)",
+        path: "/dề-cử-tỉnh-bang-pnp/saskatchewan-sinp",
+      },
+      {
+        provider: "internal",
+        name: "Quebec (PNP)",
+        path: "/dề-cử-tỉnh-bang-pnp/quebec",
       },
       {
         provider: "internal",
         name: "Yukon (YNP)",
-        path: "/immigration/provincial-nominee-programs/yukon-ynp",
+        path: "/dề-cử-tỉnh-bang-pnp/yukon-ynp",
       },
     ],
   },
   {
-    name: "Immigration Challenges",
+    name: "Immigration",
     icon: "mdi:account-question-outline",
     heading: "font-semibold text-red-800",
     pointer: "bg-red-700",
@@ -438,13 +413,38 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "Immigration Challenges",
-        path: "/immigration/immigration-challenges",
+        name: "Việc làm định cư",
+        path: "/immigration/việc-làm-định-cư",
+      },
+      {
+        provider: "internal",
+        name: "Du học - định cư",
+        path: "/immigration/du-hoc-dinh-cu",
+      },
+      {
+        provider: "internal",
+        name: "Doanh nghiệp C11 Visa",
+        path: "/immigration/doanh-nghiệp-C11-visa",
+      },
+      {
+        provider: "internal",
+        name: "Start Up Visa",
+        path: "/immigration/start-up-visa",
+      },
+      {
+        provider: "internal",
+        name: "Bảo lãnh gia đình",
+        path: "/immigration/bảo-lãnh-gia-đình",
+      },
+      {
+        provider: "internal",
+        name: "Khách hàng thành công",
+        path: "/immigration/khách-hàng-thành-công",
       },
     ],
   },
   {
-    name: "Business",
+    name: "Các-tỉnh-bang-canada",
     icon: "mdi:briefcase-outline",
     heading: "font-semibold text-brown-800",
     pointer: "bg-brown-700",
@@ -454,23 +454,109 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "Quebec Investor",
-        path: "/business/quebec/quebec-investor",
+        name: "Alberta Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/albertaP",
       },
       {
         provider: "internal",
-        name: "Quebec Entrepreneur",
-        path: "/business/quebec/quebec-entrepreneur",
+        name: "British Colombia (BC PNP)",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/brcolumbiaP",
       },
       {
         provider: "internal",
-        name: "Quebec Self Employed",
-        path: "/business/quebec/quebec-self-employed",
+        name: "Manitoba Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/manitobaP",
+      },
+      {
+        provider: "internal",
+        name: "New Brunswick Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/new-brunswickP",
+      },
+      {
+        provider: "internal",
+        name: "Newfoundland and Labrador",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/newfoundland-labradorP",
+      },
+      {
+        provider: "internal",
+        name: "Northwest Territories Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/northwest-territoriesP",
+      },
+      {
+        provider: "internal",
+        name: "Nova Scotia Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nova-scotiaP",
+      },
+      {
+        provider: "internal",
+        name: "Nunavut Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/nunavutP",
+      },
+      {
+        provider: "internal",
+        name: "Ontario Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/ontarioP",
+      },
+      {
+        provider: "internal",
+        name: "Prince Edward Island Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/prince-edwardP",
+      },
+      {
+        provider: "internal",
+        name: "Saskatchewan Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/ saskatchewanP",
+      },
+      {
+        provider: "internal",
+        name: "Yukon Province",
+        path: "/cuộc-sống-canada/các-tỉnh-bang-canada/yukonP",
       },
     ],
   },
   {
-    name: "Federal Programs",
+    name: "Cuộc-sống-canada",
+    icon: "mdi:briefcase-outline",
+    heading: "font-semibold text-brown-800",
+    pointer: "bg-brown-700",
+    active: "bg-brown-300 border-brown-600 text-brown-800",
+    activeIcon: "text-brown-800",
+    iconBg: "bg-brown-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Môi trường Canada",
+        path: "/cuộc-sống-canada/môi-trường-canada",
+      },
+      {
+        provider: "internal",
+        name: "Văn hóa & tôn giáo",
+        path: "/cuộc-sống-canada/văn-hóa-tôn-giáo",
+      },
+      {
+        provider: "internal",
+        name: "Giáo dục Canada",
+        path: "/cuộc-sống-canada/giáo-dục-canada",
+      },
+      {
+        provider: "internal",
+        name: "Y Tế",
+        path: "/cuộc-sống-canada/y-tế",
+      },
+      {
+        provider: "internal",
+        name: "Tỷ giá đô Canada",
+        path: "/cuộc-sống-canada/tỷ-giá-đô-canada",
+      },
+      {
+        provider: "internal",
+        name: "Chính sách thuế",
+        path: "/cuộc-sống-canada/chính-sách-thuế",
+      },
+    ],
+  },
+  {
+    name: "Thông-tin-hữu-ích",
     icon: "mdi:briefcase-outline",
     heading: "font-semibold text-teal-800",
     pointer: "bg-teal-700",
@@ -480,33 +566,28 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "Start-Up Visa (SUV)",
-        path: "/business/federal-programs/start-up-visa",
+        name: "Câu hỏi thường gặp",
+        path: "/thông-tin-hữu-ích/câu-hỏi-thường-gặp",
       },
       {
         provider: "internal",
-        name: "Intra-company transfer (ICT)",
-        path: "/business/federal-programs/intra-company-transfer",
+        name: "Trang web hữu ích",
+        path: "/thông-tin-hữu-ích/trang-web-hữu-ích",
       },
       {
         provider: "internal",
-        name: "Significant Benefit to Canada (C10)",
-        path: "/business/federal-programs/benefit-to-canada",
+        name: "Thuật ngữ trong di trú",
+        path: "/thông-tin-hữu-ích/thuật-ngữ-trong-di-trú",
       },
       {
         provider: "internal",
-        name: "Owner Operator LMIA",
-        path: "/business/federal-programs/owner-operator",
-      },
-      {
-        provider: "internal",
-        name: "Self-Employed Persons (C11)",
-        path: "/business/federal-programs/self-employed-person",
+        name: "CLB là gì?",
+        path: "/thông-tin-hữu-ích/CLB-là-gì",
       },
     ],
   },
   {
-    name: "Work And Jobs",
+    name: "Tuyển-dụng",
     icon: "mdi:briefcase-check-outline",
     heading: "font-semibold text-orange-800",
     pointer: "bg-orange-700",
@@ -516,158 +597,29 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "Work Permit",
-        path: "/work-and-jobs/work-permit",
+        name: "Làm việc cho iCanPR",
+        path: "/tuyển-dụng/làm-việc-cho-icanpr",
       },
       {
         provider: "internal",
-        name: "International Mobility Program (IMP)",
-        path: "/work-and-jobs/international-mobility-program",
+        name: "Tổng hợp việc làm Canada",
+        path: "/tuyển-dụng/tổng-hợp-việc-làm-canada",
       },
       {
         provider: "internal",
-        name: "In Demand Jobs",
-        path: "/work-and-jobs/in-demand-jobs",
+        name: "Công nhân trại gà",
+        path: "/tuyển-dụng/công-nhân-trại-gà",
       },
       {
         provider: "internal",
-        name: "Support For Employers",
-        path: "/work-and-jobs/support-for-employers",
-      },
-      {
-        provider: "internal",
-        name: "LMIA",
-        path: "/work-and-jobs/lmia",
-      },
-      {
-        provider: "internal",
-        name: "TEER Categories & NOC Codes",
-        path: "/work-and-jobs/teer-categories-and-noc",
+        name: "Đầu bếp Món Âu",
+        path: "/tuyển-dụng/dầu-bếp-món-au",
       },
     ],
   },
+
   {
-    name: "Work 2",
-    icon: "mdi:briefcase-check-outline",
-    heading: "font-semibold text-orange-800",
-    pointer: "bg-orange-700",
-    active: "bg-orange-300 border-orange-600 text-orange-800",
-    activeIcon: "text-orange-800",
-    iconBg: "bg-orange-700",
-    apis: [
-      {
-        provider: "internal",
-        name: "Work Permit",
-        path: "/work-and-jobs/work-permit",
-      },
-      {
-        provider: "internal",
-        name: "International Mobility Program (IMP)",
-        path: "/work-and-jobs/international-mobility-program",
-      },
-      {
-        provider: "internal",
-        name: "In Demand Jobs",
-        path: "/work-and-jobs/in-demand-jobs",
-      },
-      {
-        provider: "internal",
-        name: "Support For Employers",
-        path: "/work-and-jobs/support-for-employers",
-      },
-      {
-        provider: "internal",
-        name: "LMIA",
-        path: "/work-and-jobs/lmia",
-      },
-      {
-        provider: "internal",
-        name: "TEER Categories & NOC Codes",
-        path: "/work-and-jobs/teer-categories-and-noc",
-      },
-    ],
-  },
-  {
-    name: "Study",
-    icon: "mdi:school-outline",
-    heading: "font-semibold text-yellow-800",
-    pointer: "bg-yellow-700",
-    active: "bg-yellow-300 border-yellow-600 text-yellow-800",
-    activeIcon: "text-yellow-800",
-    iconBg: "bg-yellow-700",
-    apis: [
-      {
-        provider: "internal",
-        name: "Post Graduate Work Permit (PGWP)",
-        path: "/study/post-graduate-work-permit",
-      },
-      {
-        provider: "internal",
-        name: "Study In Canada",
-        path: "/study/study-in-canada",
-      },
-    ],
-  },
-  {
-    name: "Sponsorship Programs",
-    icon: "mdi:account-heart-outline",
-    heading: "font-semibold text-pink-800",
-    pointer: "bg-pink-700",
-    active: "bg-pink-300 border-pink-600 text-pink-800",
-    activeIcon: "text-pink-800",
-    iconBg: "bg-pink-700",
-    apis: [
-      {
-        provider: "internal",
-        name: "Family Sponsorship",
-        path: "/family-sponsorship",
-      },
-    ],
-  },
-  // {
-  //   name: "Residency And Citizenship",
-  //   icon: "mdi:school-outline",
-  //   heading: "font-semibold text-indigo-800",
-  //   pointer: "bg-indigo-700",
-  //   active: "bg-indigo-300 border-indigo-600 text-indigo-800",
-  //   activeIcon: "text-indigo-800",
-  //   iconBg: "bg-indigo-700",
-  //   apis: [
-  //     {
-  //       provider: "internal",
-  //       name: "Citizenship",
-  //       path: "/residency-and-citizenship/citizenship",
-  //     },
-  //     {
-  //       provider: "internal",
-  //       name: "Permanent Residency",
-  //       path: "/residency-and-citizenship/permanent-residency",
-  //     },
-  //     {
-  //       provider: "internal",
-  //       name: "Residency Obligations",
-  //       path: "/residency-and-citizenship/residency-obligations",
-  //     },
-  //   ],
-  // },
-  {
-    name: "Price Policy",
-    icon: "mdi:shield-lock-outline",
-    heading: "font-semibold text-gray-800",
-    pointer: "bg-gray-700",
-    active: "bg-gray-300 border-gray-600 text-gray-800",
-    activeIcon: "text-gray-800",
-    iconBg: "bg-gray-700",
-    apis: [
-      {
-        provider: "internal",
-        name: "Price Policy",
-        path: "/price",
-      },
-    ],
-  },
-  {
-    name: "News",
+    name: "Công Việc",
     icon: "mdi:file-document-outline",
     heading: "font-semibold text-gray-800",
     pointer: "bg-gray-700",
@@ -677,8 +629,89 @@ export const mobileConfig = [
     apis: [
       {
         provider: "internal",
-        name: "News",
-        path: "/news",
+        name: "Công Việc",
+        path: "/hot-job",
+      },
+    ],
+  },
+
+  {
+    name: "Việc kinh doanh",
+    icon: "mdi:file-document-outline",
+    heading: "font-semibold text-gray-800",
+    pointer: "bg-gray-700",
+    active: "bg-gray-300 border-gray-600 text-gray-800",
+    activeIcon: "text-gray-800",
+    iconBg: "bg-gray-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Việc kinh doanh",
+        path: "/doanh-nghiệp",
+      },
+    ],
+  },
+  {
+    name: "Bảo Lãnh",
+    icon: "mdi:file-document-outline",
+    heading: "font-semibold text-gray-800",
+    pointer: "bg-gray-700",
+    active: "bg-gray-300 border-gray-600 text-gray-800",
+    activeIcon: "text-gray-800",
+    iconBg: "bg-gray-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Bảo Lãnh",
+        path: "/bảo-lãnh",
+      },
+    ],
+  },
+  {
+    name: "Du-học",
+    icon: "mdi:file-document-outline",
+    heading: "font-semibold text-gray-800",
+    pointer: "bg-gray-700",
+    active: "bg-gray-300 border-gray-600 text-gray-800",
+    activeIcon: "text-gray-800",
+    iconBg: "bg-gray-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Du Học",
+        path: "/du-học",
+      },
+    ],
+  },
+  {
+    name: "Cau Hoi",
+    icon: "mdi:file-document-outline",
+    heading: "font-semibold text-gray-800",
+    pointer: "bg-gray-700",
+    active: "bg-gray-300 border-gray-600 text-gray-800",
+    activeIcon: "text-gray-800",
+    iconBg: "bg-gray-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Cau Hoi",
+        path: "/thông-tin-hữu-ích/câu-hỏi-thường-gặp",
+      },
+    ],
+  },
+  {
+    name: "Tin Tức",
+    icon: "mdi:file-document-outline",
+    heading: "font-semibold text-gray-800",
+    pointer: "bg-gray-700",
+    active: "bg-gray-300 border-gray-600 text-gray-800",
+    activeIcon: "text-gray-800",
+    iconBg: "bg-gray-700",
+    apis: [
+      {
+        provider: "internal",
+        name: "Tin Tức",
+        path: "/tin-tức",
       },
     ],
   },

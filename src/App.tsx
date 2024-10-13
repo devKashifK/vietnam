@@ -14,25 +14,10 @@ import HoverCard from "./components/ui/hover-card";
 import PnpProgramSlider from "./components/ui/pnpProgramSlider";
 
 function App() {
-  // useEffect(() => {
-  //   AOS.init();
-  //   AOS.refresh();
-  // }, []);
   return (
-    <div className="py-10 flex flex-col gap-12">
+    <div className="py-10 sm:py-5 flex flex-col gap-12">
       <CTA />
-      {/* <Container>
-        <Glass>
-          <Title title={"Vì sao nhiều người chọn Canada?"} />
-          <div>
-            <HoverCard
-              icon={""}
-              description="Bạn có biết bao nhiêu người nhập cư Canada mỗi năm? Canada đã luôn là 1 quốc gia nổi tiếng trong việc chào đón người nhập cư, tị nạn khi thường xuyên chào đón hơn 200.000 người nhập cư mỗi năm kể từ năm 1988 và con số vẫn tiếp tục tăng lên từ đó. Vào năm 2024, quốc gia này dự kiến tiếp nhận khoảng 500.000 người nhập cư mới. Trong số đó, nhiều người có xuất thân từ các quốc gia đang phát triển thuộc châu Á như Việt Nam, etc..."
-              title="Quốc gia chào đón người nhập cư trên khắp thế giới"
-            />
-          </div>
-        </Glass>
-      </Container> */}
+
       <WhyChooseUs />
 
       <Container className="gap-10">

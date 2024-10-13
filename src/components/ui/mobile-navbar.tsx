@@ -17,13 +17,13 @@ export default function MobileNavbar({ isOpen, setIsOpen, config }) {
           <img src="/logo.png" alt="" className="h-8" />
           <Icon
             icon={"solar:hamburger-menu-broken"}
-            className="text-white text-scale-1200 cursor-pointer px-0 py-2 text-4xl"
+            className="text-black text-scale-1200 cursor-pointer px-0 py-2 text-4xl"
           />
         </div>
       </SheetTrigger>
       <SheetContent
         position="right"
-        className="w-max h-full overflow-y-scroll flex flex-col gap-6 pretty-scroll bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 border-none justify-start items-center"
+        className="w-max h-full overflow-y-scroll flex flex-col gap-6 pretty-scroll bg-white     border-gray-100 border-none justify-start items-center"
       >
         <Link
           to={"/"}
@@ -59,7 +59,9 @@ export const SideBar = ({ group, setIsOpen }) => {
         >
           <Icon icon={group.icon} className="text-sm text-scale-1200" />
         </div>
-        <h3 className={cn("font-normal text-white text-md")}>{group.name}</h3>
+        <h3 className={cn("font-normal text-black/80 text-md")}>
+          {group.name}
+        </h3>
       </CollapsibleTrigger>
       <CollapsibleContent className="w-full flex gap-1 relative pt-1">
         <div className="flex w-full flex-col gap-1 border-scale-900">
@@ -68,7 +70,7 @@ export const SideBar = ({ group, setIsOpen }) => {
               <div
                 className={cn(
                   "top-0 left-0 w-full h-6 rounded-md border border-transparent flex justify-start items-center transition-all",
-                  `/${activeId}` === item.path ? group.active : "text-white"
+                  `/${activeId}` === item.path ? group.active : "text-black/80"
                 )}
               >
                 <button
@@ -78,7 +80,7 @@ export const SideBar = ({ group, setIsOpen }) => {
                   key={index}
                   to={`${item.path}`}
                   className={cn(
-                    "flex gap-2 px-6 w-[95%] items-center transition-all text-sm duration-200 relative ml-[26px] text-white"
+                    "flex gap-2 px-6 w-[95%] items-center transition-all text-sm duration-200 relative ml-[26px] text-black/80"
                   )}
                 >
                   <div

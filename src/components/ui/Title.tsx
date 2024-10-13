@@ -19,7 +19,7 @@ export default function Title({
   className?: string;
 }) {
   return (
-    <div className="flex w-full justify-between ">
+    <div className=" flex w-full justify-between ">
       <div
         className={cn(
           "flex flex-col w-full gap-1 justify-center items-center",
