@@ -59,7 +59,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div
             className={cn(
-              "w-full flex gap-6 py-2 justify-end items-center border-b border-background/40 px-16"
+              "w-full flex gap-5 py-2 justify-end items-center border-b border-background/40 px-16"
             )}
           >
             <Link
@@ -67,7 +67,9 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               to={"/ve-icanpr"}
               className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>About Us</span>
+              <span className={"text-background font-semibold text-xs"}>
+                Về Chúng Tôi
+              </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
@@ -75,7 +77,9 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               to={"/lmia-map"}
               className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>LMIA Map</span>
+              <span className={"text-background font-semibold text-xs"}>
+                Bản đồ LMIA
+              </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
@@ -83,7 +87,9 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               to={"/hot-job"}
               className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>Hot Job</span>
+              <span className={"text-background font-semibold text-xs"}>
+                Công Việc Nóng
+              </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
 
@@ -92,9 +98,10 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               to={"/doanh-nghiệp"}
               className="text-xs flex font-light flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>
-                Free phone consultation +84 869967809
+              <span className={"text-background font-semibold text-xs"}>
+                Tư vấn +84 869967809
               </span>
+
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
             <Link
@@ -102,7 +109,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               to={"mailto:tuvan@icanpr.vn"}
               className="text-xs flex font-light flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>
+              <span className={"text-background font-semibold text-xs"}>
                 tuvan@icanpr.vn
               </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
@@ -112,7 +119,9 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               unstable_viewTransition
               className="text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>Guarantee</span>
+              <span className={"text-background font-semibold text-xs"}>
+                Bảo đảm
+              </span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
 

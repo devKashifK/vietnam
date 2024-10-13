@@ -23,7 +23,7 @@ export default function Sidebar() {
           icon="material-symbols:android-google-home"
           className="w-10 text-2xl font-light"
         />
-        <span className="font-light text-base">HOME</span>
+        <span className="font-light text-base">TRANG CHỦ</span>
       </Link>
 
       <div className="flex flex-col h-[85%]  py-2">
@@ -37,13 +37,15 @@ export default function Sidebar() {
           <Link
             unstable_viewTransition
             to="/immigration/việc-làm-định-cư"
-            className={` px-5  `}
+            className={` px-5   flex justify-center items-center gap-2 flex-col `}
           >
             <Icon
               icon="mdi:briefcase-outline"
               className="w-10 text-xl font-light"
             />
-            <span className="font-light text-xs">JOBS</span>
+            <span className="font-light text-xs leading-none w-20">
+              CÔNG VIỆC
+            </span>
           </Link>
         </div>
         <div
@@ -60,9 +62,7 @@ export default function Sidebar() {
               icon="guidance:study-room"
               className="w-10 text-xl font-light"
             />
-            <span className="font-light text-xs leading-none">
-              STUDY ABROAD
-            </span>
+            <span className="font-light text-xs w-20 leading-none">DU HỌC</span>
           </Link>
         </div>
 
@@ -82,7 +82,9 @@ export default function Sidebar() {
               icon="streamline:money-graph-bar-increase-up-product-performance-increase-arrow-graph-business-chart"
               className="w-10 text-xl font-light"
             />
-            <span className="font-light text-xs leading-none">BUSINESS</span>
+            <span className="font-light text-xs w-20 leading-none">
+              VIỆC KINH DOANH
+            </span>
           </Link>
         </div>
 
@@ -100,7 +102,9 @@ export default function Sidebar() {
               icon="material-symbols:breaking-news-outline-sharp"
               className="w-10 text-xl font-light"
             />
-            <span className="font-light text-xs leading-none">NEWS</span>
+            <span className="font-light text-xs w-20 leading-none">
+              TIN TỨC
+            </span>
           </Link>
         </div>
 
@@ -120,7 +124,9 @@ export default function Sidebar() {
               icon="mdi:frequently-asked-questions"
               className="w-10 text-xl font-light"
             />
-            <span className="font-light text-xs leading-none">QUESTIONS</span>
+            <span className="font-light text-xs w-20 leading-none">
+              CÂU HỎI
+            </span>
           </Link>
         </div>
       </div>
