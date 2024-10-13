@@ -9,7 +9,7 @@ export default function Sidebar() {
   const isActive = (path) => path1 === path;
 
   return (
-    <div className="fixed text-white/80 z-50 top-0 right-0 w-[104px] h-screen bg-background">
+    <div className="hidden md:flex flex-col fixed text-white/80 z-50 top-0 right-0 w-[104px] h-screen bg-background">
       <Link
         unstable_viewTransition
         to="/"

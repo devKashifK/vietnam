@@ -20,8 +20,6 @@ export default function Jobs() {
           spaceBetween={50}
           slidesPerView={4}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           className="flex gap-2 overflow-hidden"
           style={{ width: "100%" }}
           modules={[Autoplay]}

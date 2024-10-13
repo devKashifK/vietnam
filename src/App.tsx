@@ -11,6 +11,7 @@ import Glass from "./lib/helpers";
 import CountUp, { useCountUp } from "react-countup";
 import { CardWithImage } from "./components/ui/card-with-image";
 import HoverCard from "./components/ui/hover-card";
+import PnpProgramSlider from "./components/ui/pnpProgramSlider";
 
 function App() {
   // useEffect(() => {
@@ -54,23 +55,7 @@ function App() {
             </div>
           }
         />
-        <div className="flex gap-5">
-          <CardWithImage
-            image="/alberta.png"
-            title="Alberta"
-            description="Nổi bật với chương trình Alberta Rural Renewal, mang lại cơ hội xin PR trực tiếp từ Việt Nam cho lao động lành nghề"
-          />
-          <CardWithImage
-            image="/saskatchewan.jpg"
-            title="Saskatchewan"
-            description="Lộ trình Saskatchewan Experience cho phép người lao động xin đề cử tỉnh bang & PR sau 6 tháng làm việc. Xin PR từ Việt Nam với JAL"
-          />
-          <CardWithImage
-            image="/ontario.png"
-            title="Visa C11"
-            description="Cùng gia đình sống, làm việc, học tập tại Canada với Visa C11 dành cho chủ doanh nghiệp chưa có tiếng "
-          />
-        </div>
+        <PnpProgramSlider />
       </Container>
       <Container>
         <Glass
@@ -265,3 +250,21 @@ export const dummyNews = [
     comments: "Space tourism is the next big thing!",
   },
 ];
+
+// Navbar fixed position --done
+// Nabvar grey color --done
+// Facbook Messenger Chat Page -- pending
+// Navbar SubMenu Fix That -- done
+// Change Everything to Vietnamese
+// try to add language switcher
+// Settlement programs suitable for Vietnamese people add all the programs from pnp
+// news Should be in descending order --done
+// fix the mobile view
+// add the contact us page add our office three office Veitnam, Canada, and India, and use google earth images --done
+// Add CICIC Logo take from mana website -- https://manaimmigration.com/our-offices/ --done
+// add hot jobs search iframe link --done
+
+// <iframe title="GTR Sask Report_V1.3" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDkwNGJlMjItODRlYi00YzExLWEwNzEtYTE4NGEwZDY2YzE1IiwidCI6Ijg5ZTUzNjdhLTQ4ZTUtNGQzYy05ZTEzLWZmNTA4OTZlNDJlMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+//Lmia
+//<iframe title="GTR Sask Report_V1.2" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOGMxMThiMGYtNDRmMi00MzU1LThiNTItYWNjNzFkYzYyOTA0IiwidCI6Ijg5ZTUzNjdhLTQ4ZTUtNGQzYy05ZTEzLWZmNTA4OTZlNDJlMCJ9" frameborder="0" allowFullScreen="true"></iframe>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./custom";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -14,9 +14,29 @@ import {
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import MobileNavbar from "./mobile-navbar";
+import { relative } from "path";
 
 export default function Navbar({ defaultStyle = false, type = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredPath, setHoveredPath] = useState(null);
+
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="md:hidden flex py-2 z-50 relative bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 rounded-t-2xl px-8">
@@ -29,14 +49,20 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
       <div
         className={cn(
           "hidden md:flex shadow-lg h-24 justify-start items-center",
-          "bg-white text-black"
+          "bg-content text-black z-[100000000]",
+          isFixed ? "fixed" : "relative"
         )}
       >
-        <div className="h-full flex justify-center w-[400px] !bg-white items-center px-8 border-r border-background">
-          <img src="/logo.png" alt="" className="w-[60%]" />
+        <div className="h-full flex justify-center w-[400px] !bg-content items-center px-8 border-r border-background ">
+          <img src="/logo.png" alt="" className="w-[95%]" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
-          <div className="w-full flex gap-10 py-2 justify-end items-center border-b border-background/40 px-16">
+          <div
+            className={cn(
+              "w-full flex gap-6 py-2 justify-end items-center border-b border-background/40 px-16",
+              isFixed ? "px-20" : "px-16"
+            )}
+          >
             <Link
               unstable_viewTransition
               to={"/ve-icanpr"}
@@ -45,14 +71,23 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               <span className={"text-background font-bold"}>About Us</span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
-            {/* <Link
+            <Link
               unstable_viewTransition
-              to={"/lien-he"}
-              className="text-xs font-light flex flex-col gap-0.5 group"
+              to={"/lmia-map"}
+              className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
             >
-              <span className={"text-background font-bold"}>Contact Us</span>
+              <span className={"text-background font-bold"}>LMIA Map</span>
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
-            </Link> */}
+            </Link>
+            <Link
+              unstable_viewTransition
+              to={"/hot-job"}
+              className="bg-transparent text-xs font-light flex flex-col gap-0.5 group"
+            >
+              <span className={"text-background font-bold"}>Hot Job</span>
+              <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
+            </Link>
+
             <Link
               unstable_viewTransition
               to={"/doanh-nghiệp"}
@@ -126,16 +161,20 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
                     ) : (
                       <NavigationMenuTrigger
                         className={cn(
-                          "bg-transparent text-xs data-[state=open]:text-background data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/40  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 font-bold"
+                          "bg-transparent text-xs data-[state=open]:text-background data-[state=open]:border-b-highlight data-[state=open]:border-b-2 py-0  border-r border-white/40  data-[state=open]:bg-transparent focus:border-highlight rounded-none h-[3.15rem] ml-0 font-bold relative"
                         )}
                       >
                         {navItem.path}
                       </NavigationMenuTrigger>
                     )}
                     {navItem.children && (
-                      <NavigationMenuContent className="absolute bg-background border-none  rounded-none  left-0 px-0 z-[10000000] h-max max-h-56 overflow-y-auto pretty-scroll">
-                        <div className="w-[200px] py-2">
-                          {renderSubmenus(navItem.children)}
+                      <NavigationMenuContent className="absolute bg-background border-none  rounded-none left-0 px-0 z-[100000000000000000000] h-max max-h-80 overflow-y-scroll overflow-visible">
+                        <div className="w-[200px] z-[100000000000000000000] py-2">
+                          {renderSubmenus(
+                            navItem.children,
+                            hoveredPath,
+                            setHoveredPath
+                          )}
                         </div>
                       </NavigationMenuContent>
                     )}
@@ -151,52 +190,52 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
   );
 }
 
-const renderSubmenus = (submenus) => {
-  const [hoveredPath, setHoveredPath] = useState(null);
-
+const renderSubmenus = (submenus, hoveredPath, setHoveredPath) => {
   return (
-    <ul className="relative z-[10000]">
+    <ul className=" z-[1000000000000000000] overflow-visible">
       {submenus.map((subPage) => (
         <li
           key={subPage.path}
-          className="flex text-left w-full  border-highlight border-b last:border-b-0 relative "
+          className="flex text-left w-full  border-highlight border-b last:border-b-0  "
           onMouseEnter={() => setHoveredPath(subPage.path)}
           onMouseLeave={() => setHoveredPath(null)}
         >
           {subPage.children ? (
-            <div className="relative w-full z-[10000]">
+            <div className="w-full z-[10000]  overflow-visible">
               <div
                 className={cn(
-                  "flex justify-between cursor-pointer items-center text-left text-sm px-2 w-full text-white rounded-md py-1"
+                  "flex justify-between cursor-pointer items-center text-left text-sm px-2 w-full text-white rounded-md py-1 relative"
                 )}
               >
                 <span className="text-white">{subPage.path}</span>
                 <Icon icon={"zondicons:cheveron-right"} />
               </div>
-              <div
-                className={`absolute top-0 left-[188px] z-[10000] w-[300px] bg-background overflow-visible text-left py-0.5 flex flex-col transition-all duration-300 transform ease-out`}
-              >
-                {subPage.children.map((item) => (
-                  <Link
-                    key={item.path}
-                    className="group relative z-[10000] border-white/40 text-left cursor-pointer text-sm border-b py-1 last:border-b-0 px-2 w-full text-background"
-                    to={item.path}
-                    unstable_viewTransition
-                  >
-                    <motion.div
-                      whileHover={{
-                        scale: 1.01,
-                        backgroundColor: "#b33d3d",
-                        color: "#fff",
-                      }}
-                      transition={{ type: "spring", stiffness: 200 }}
-                      className="px-3 py-1 "
+              {hoveredPath === subPage.path && (
+                <div
+                  className={`absolute top-0 left-[200px] z-[10000] w-[300px] bg-background text-left py-0.5 flex flex-col transition-all duration-300 transform ease-out z-1000000000`}
+                >
+                  {subPage.children.map((item) => (
+                    <Link
+                      key={item.path}
+                      className="text-left hover:bg-[#b33d3d] text-highlight py-1  text-sm border-b last:border-b-0 px-2 w-full"
+                      to={item.path}
+                      unstable_viewTransition
                     >
-                      {item.element}
-                    </motion.div>
-                  </Link>
-                ))}
-              </div>
+                      <motion.div
+                        // whileHover={{
+                        //   scale: 1.01,
+                        //   backgroundColor: "#b33d3d",
+                        //   color: "#fff",
+                        // }}
+                        transition={{ type: "spring", stiffness: 200 }}
+                        className="px-3 py-1 "
+                      >
+                        {item.element}
+                      </motion.div>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ) : (
             <Link

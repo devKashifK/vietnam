@@ -94,6 +94,7 @@ import WorkFor from "./pages/recruitment/work-for.tsx";
 import JobsSummary from "./pages/recruitment/jobs-summary.tsx";
 import ChickenFarmWorker from "./pages/recruitment/chicken-farm-worker.tsx";
 import EuropeanChef from "./pages/recruitment/european-chef.tsx";
+import HotJob from "./pages/hot-job/HotJob.tsx";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -408,6 +409,26 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <StudyAbraod />,
+      },
+    ],
+  },
+  {
+    path: "lmia-map",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Lmia />,
+      },
+    ],
+  },
+  {
+    path: "hot-job",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <HotJob />,
       },
     ],
   },

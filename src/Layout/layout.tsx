@@ -307,6 +307,10 @@ const Layout = () => {
       text: "LMIA Map",
       image: "/lmia.jpg",
     },
+    ["hot-job"]: {
+      text: "Hot JOB",
+      image: "/work.jpg",
+    },
   };
   return (
     <>
