@@ -59,8 +59,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div
             className={cn(
-              "w-full flex gap-6 py-2 justify-end items-center border-b border-background/40 px-16",
-              isFixed ? "px-20" : "px-16"
+              "w-full flex gap-6 py-2 justify-end items-center border-b border-background/40 px-16"
             )}
           >
             <Link
@@ -117,20 +116,24 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
               <div className="group-hover:bg-background w-full border border-transparent ease-out duration-150"></div>
             </Link>
 
-            <a
-              href="https://api.whatsapp.com/send?phone=84869967809"
-              target="_blank"
-              className="text-xs bg-green-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
-            >
-              <Icon icon={"mdi:whatsapp"} className="text-xl" />
-            </a>
-            <a
-              href="https://zalo.me/84869967809"
-              target="_blank"
-              className="text-xs bg-blue-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
-            >
-              <Icon icon={"simple-icons:zalo"} className="text-xl" />
-            </a>
+            {!isFixed && (
+              <>
+                <a
+                  href="https://api.whatsapp.com/send?phone=84869967809"
+                  target="_blank"
+                  className="text-xs bg-green-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max -mr-6"
+                >
+                  <Icon icon={"mdi:whatsapp"} className="text-xl" />
+                </a>
+                <a
+                  href="https://zalo.me/84869967809"
+                  target="_blank"
+                  className="text-xs bg-blue-500 text-white px-3 rounded-sm justify-center items-center py-1 flex  gap-2 group w-max  ml-2"
+                >
+                  <Icon icon={"simple-icons:zalo"} className="text-xl" />
+                </a>
+              </>
+            )}
           </div>
 
           <div className="flex justify-start gap-4 items-center px-0 w-full h-20">
