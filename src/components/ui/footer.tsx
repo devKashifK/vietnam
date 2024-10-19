@@ -170,9 +170,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex  py-5  px-12 bg-highlight  w-full text-secondary text-xs">
-        <span className="">
-          © Green Tech Resources Worldwide Canada - All rights reserved
-        </span>
+        <span className="">© ICANPR Vietnam - All rights reserved</span>
       </div>
     </div>
   );
