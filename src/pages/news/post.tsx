@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { supabase } from "./../../supabaseClient";
+import { supabase } from "../../supabaseClient";
 import Container from "@/components/ui/container";
 import "./style.css";
 import Glass from "@/lib/helpers";

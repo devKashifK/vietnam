@@ -11,7 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "./style.css";
 import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
-import { supabase } from "./../../supabaseClient";
+import { supabase } from "../../supabaseClient";
 import { title } from "process";
 import { Link } from "react-router-dom";
 

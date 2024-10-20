@@ -14,6 +14,7 @@ export function CardWithImage({
   image?: string;
   to?: string;
 }) {
+  console.log(description, "checkingDescription");
   return (
     <div className="max-w-xs w-full group/card">
       <div
@@ -21,10 +22,15 @@ export function CardWithImage({
           " cursor-pointer overflow-hidden relative card h-96  shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
           " bg-cover bg-center bg-no-repeat"
         )}
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${image})`,
+        // }}
       >
+        <img
+          src={image}
+          alt=""
+          className="absolute w-full h-full top-0 left-0"
+        />
         <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
 
         <div className="text content flex justify-end h-full items-start flex-col relative z-10">

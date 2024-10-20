@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { supabase } from "./../../supabaseClient";
+import { supabase } from "../../supabaseClient";
 import { Autoplay } from "swiper/modules";
 import { NewsFeedCard } from "@/components/ui/newsCard";
 import { Swiper, SwiperSlide } from "swiper/react";

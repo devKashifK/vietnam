@@ -58,20 +58,36 @@ export const CtaCard = ({ item }) => {
   return (
     <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
       <div className="w-full">
-        <img src={item.image} alt="" className="w-full" />
+        <img
+          src={item.image ? item.image : "/british.jpg"}
+          alt=""
+          className="w-full"
+        />
       </div>
       <div className="px-8 flex flex-col gap-2 py-5">
         <div className="flex flex-col gap-0">
           <h5 className="text-4xl text-left text-background group-hover:text-highlight">
-            {item.title}
+            {item.title ? item.title : "You need to write"}
           </h5>
           {/* <p className="text-sm text-left text-black/70">
             {truncateTextHeading(item.subtitle)}
           </p> */}
         </div>
         <p className="text-xs text-left text-black/80 group-hover:text-white">
-          {truncateText(item.description)}...{" "}
-          <span className="text-black group-hover:text-white">Đọc thêm</span>
+          {item.content
+            ? truncateText(item.content)
+            : item.description
+            ? truncateText(item.description)
+            : truncateText(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+              )}
+          ...{" "}
+          {item.content ||
+            (item.description && (
+              <span className="text-black group-hover:text-white">
+                Đọc thêm
+              </span>
+            ))}
         </p>
         <div className="w-full flex justify-end items-end mt-4">
           <Link
@@ -96,7 +112,7 @@ export const CtaCard2 = ({ item, flip }) => {
     >
       <div className="w-full md:w-[45%] rounded-l-2xl">
         <img
-          src={item.image}
+          src={item.image ? item.image : "/british.jpg"}
           alt=""
           className={cn(
             "h-[330px] w-full rounded-t-2xl md:h-[220px] bg-cover z-10 relative",
@@ -111,15 +127,23 @@ export const CtaCard2 = ({ item, flip }) => {
         )}
       >
         <div className="flex flex-col justify-center r gap-0">
-          <h5 className="text-4xl text-left text-highlight">{item.title}</h5>
+          <h5 className="text-4xl text-left text-highlight">
+            {item.title ? item.title : "You need to write"}
+          </h5>
           {/* <p className="text-sm text-left text-black/70">
             {truncateTextHeading(item.subtitle)}
           </p> */}
         </div>
 
         <p className="text-xs text-left text-black/80">
-          {truncateText(item.description)}...{" "}
-          <span className="text-black">Read More</span>
+          {item.content
+            ? truncateText(item.content)
+            : item.description
+            ? truncateText(item.description)
+            : truncateText(
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+              )}
+          ... <span className="text-black">Read More</span>
         </p>
         <div className="w-full flex justify-end items-end mt-4">
           <Link

@@ -95,6 +95,8 @@ import JobsSummary from "./pages/recruitment/jobs-summary.tsx";
 import ChickenFarmWorker from "./pages/recruitment/chicken-farm-worker.tsx";
 import EuropeanChef from "./pages/recruitment/european-chef.tsx";
 import HotJob from "./pages/hot-job/HotJob.tsx";
+import Admin from "./pages/admin/admin.tsx";
+import DynamicPage from "./pages/work-and-jobs/dynamicPage/dynamicPage.tsx";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -105,6 +107,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <App />,
+      },
+      {
+        path: "page/:slug", // This is the dynamic route where 'slug' is a dynamic parameter
+        element: <DynamicPage />, // This component will handle dynamic page rendering
       },
       {
         path: "ve-icanpr",
@@ -389,6 +395,11 @@ const router = createBrowserRouter([
         element: <JobPage />,
       },
     ],
+  },
+  {
+    path: "admin",
+    index: true,
+    element: <Admin />,
   },
 
   {

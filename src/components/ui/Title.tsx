@@ -9,6 +9,9 @@ export default function Title({
   description,
   to,
   cta,
+  subtitleClass,
+  titleClass,
+  descriptionClass,
   className,
 }: {
   title?: string | React.ReactNode;
@@ -17,6 +20,9 @@ export default function Title({
   to?: string;
   cta?: string;
   className?: string;
+  subtitleClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
 }) {
   return (
     <div className="flex w-full justify-between ">
@@ -26,11 +32,23 @@ export default function Title({
           className
         )}
       >
-        <h4 className="text-highlight text-2xl">{subtitle}</h4>
+        <h4 className={cn("text-background text-2xl", subtitleClass)}>
+          {subtitle}
+        </h4>
         <div className="flex flex-col gap-3 w-full">
           {typeof title === "string" ? (
-            <div className="relative flex flex-col justify-center items-center gap-1">
-              <h2 className="text-2xl text-center md:text-4xl tracking-wider text-black/50">
+            <div
+              className={cn(
+                "relative flex flex-col justify-center items-center gap-1",
+                titleClass
+              )}
+            >
+              <h2
+                className={cn(
+                  "text-2xl text-center md:text-4xl tracking-wider text-black/50",
+                  titleClass
+                )}
+              >
                 {title}
                 <span className="block h-0.5 bg-background mt-2"></span>
               </h2>
@@ -43,7 +61,14 @@ export default function Title({
 
         {description &&
           (typeof description === "string" ? (
-            <p className="text-center text-black/50 w-[70%]">{description}</p>
+            <p
+              className={cn(
+                "text-center text-black/50 w-[70%]",
+                descriptionClass
+              )}
+            >
+              {description}
+            </p>
           ) : (
             description
           ))}

@@ -12,12 +12,27 @@ import CountUp, { useCountUp } from "react-countup";
 import { CardWithImage } from "./components/ui/card-with-image";
 import HoverCard from "./components/ui/hover-card";
 import PnpProgramSlider from "./components/ui/pnpProgramSlider";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 function App() {
   // useEffect(() => {
   //   AOS.init();
   //   AOS.refresh();
   // }, []);
+
+  const location = useLocation();
+
+  // Initialize Google Analytics with your Measurement ID
+  useEffect(() => {
+    ReactGA.initialize("G-BRSFV6Z670");
+  }, []);
+
+  // Track page views automatically
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
   return (
     <div className="py-10 flex flex-col gap-12">
       <CTA />

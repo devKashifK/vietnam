@@ -11,7 +11,7 @@ const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
-  <Glass className="w-full h-max py-0 px-0 rounded-md my-1">
+  <Glass className="w-full h-max py-0 px-0 rounded-md shadow-none">
     <AccordionPrimitive.Item
       ref={ref}
       className={cn(
