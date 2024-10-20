@@ -38,7 +38,7 @@ export default function Ontario() {
       <Container className="flex flex-col gap-5 px-10">
         <TitleWithDoubleBorder>{pageData[1].section}</TitleWithDoubleBorder>
         <TitleWithBottomBorder>{pageData[1].title}</TitleWithBottomBorder>
-        <div className="py-6 grid grid-cols-3 gap-6">
+        <div className="py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
           {pageData[1]?.subsections.map((item) => {
             return (
               <ServicesCard title={item.title} description={item.description} />
@@ -55,7 +55,7 @@ export default function Ontario() {
               </TitleWithDoubleBorder>
               <TitleWithBottomBorder>{pageData[2].title}</TitleWithBottomBorder>
             </div>
-            <div className="py-6 grid grid-cols-3 gap-6">
+            <div className="py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
               {pageData[2]?.subsections.map((item) => {
                 return (
                   <ServicesCard
@@ -100,7 +100,7 @@ export default function Ontario() {
               </TitleWithDoubleBorder>
               <TitleWithBottomBorder>{pageData[3].title}</TitleWithBottomBorder>
             </div>
-            <div className="py-6 grid grid-cols-3 gap-6">
+            <div className="py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
               {pageData[3]?.subsections.map((item, index) => {
                 return (
                   <ServicesCard
@@ -146,7 +146,7 @@ export default function Ontario() {
               </TitleWithDoubleBorder>
               <TitleWithBottomBorder>{pageData[4].title}</TitleWithBottomBorder>
             </div>
-            <div className="py-6 grid grid-cols-3 gap-6">
+            <div className="py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
               {pageData[4]?.subsections.map((item, index) => {
                 return (
                   <Feature

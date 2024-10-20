@@ -53,9 +53,9 @@ export default function Hero() {
                 ))}
               </Swiper>
             </div>
-            <div className="px-20 pb-20 pt-10 flex-1 h-full bg-content flex gap-8 flex-col justify-center items-center">
+            <div className="pl-20  md:pr-10 lg:pr-20 md:gap-3 lg:gap-8  pb-20 pt-10 flex-1 h-full bg-content flex gap-8  flex-col justify-center items-center">
               <div className="flex gap-1 flex-col justify-center items-start w-full relative">
-                <p className="lg:text-4xl text-3xl text-left text-black">
+                <p className="lg:text-3xl xl:text-4xl text-2xl text-left text-black">
                   {/* Achieve your family Canada */}
                   Đạt được gia đình của bạn Canada <br />
                   <strong className="text-background ">
@@ -71,7 +71,7 @@ export default function Hero() {
                 <br /> số bằng cách tạo ra các công cụ nội bộ và cung cấp tư vấn{" "}
                 <br /> phát triển phần mềm.
               </p>
-              <div className="flex w-full justify-start items-start">
+              <div className="flex w-full md:mt-3 lg:mt-0 justify-start items-start">
                 <Button
                   className="py-3 -mt-4 w-[190px] bg-background"
                   icon={
@@ -92,7 +92,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="w-[104px]"></div>
+            <div className=" w-0 lg:w-[104px]"></div>
           </div>
         </div>
       </div>

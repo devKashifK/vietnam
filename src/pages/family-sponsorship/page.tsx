@@ -20,7 +20,7 @@ export default function page() {
         />
         <p className="text-center">ĐỐI VỚI NGƯỜI BẢO LÃNH</p>
 
-        <div className="grid grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
           {requirements.map((item, index) => (
             <HoverCard
               icon="mdi:star-four-points"
@@ -33,7 +33,7 @@ export default function page() {
 
       <Glass>
         <Title title="ĐỐI VỚI NGƯỜI ĐƯỢC BẢO LÃNH" />
-        <div className="grid grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 mt-10">
           {sponsorshipCategories.map((item, index) => (
             <HoverCard
               icon="mdi:star-four-points"
@@ -46,7 +46,7 @@ export default function page() {
 
       <div className="flex flex-col gap-8">
         <Title title="ĐỐI VỚI NGƯỜI ĐƯỢC BẢO LÃNH" />
-        <div className="grid grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 ">
           {immigrationConditions.map((item, index) => (
             <ServicesCard title={item.title} description={item.description} />
           ))}
@@ -56,7 +56,7 @@ export default function page() {
       <Glass>
         <Title title="Quyền lợi khi đăng ký định cư Canada theo diện bảo lãnh người thân" />
 
-        <div className="grid grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 mt-10">
           {benefitsOfPR.map((item, index) => (
             <ServicesCard title={item.title} description={item.description} />
           ))}
@@ -69,7 +69,7 @@ export default function page() {
           description="Điều kiện tài chính là một trong những yếu tố quan trọng được xem xét khi thường trú nhân muốn bảo lãnh gia đình của mình sang định cư tại Canada. Theo đó, người bảo lãnh cần phải đáp ứng các điều kiện về tài chính như sau:"
         />
 
-        <div className="grid grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 mt-10">
           {sponsorshipRequirements.map((item, index) => (
             <HoverCard
               icon="material-symbols:ac-unit-rounded"

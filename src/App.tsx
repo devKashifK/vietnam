@@ -15,7 +15,7 @@ import PnpProgramSlider from "./components/ui/pnpProgramSlider";
 
 function App() {
   return (
-    <div className="py-10 sm:py-5 flex flex-col gap-12">
+    <div className="py-10 sm:py-10 flex flex-col gap-12">
       <CTA />
 
       <WhyChooseUs />

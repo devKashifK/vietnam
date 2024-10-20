@@ -39,7 +39,7 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
 
   return (
     <>
-      <div className="md:hidden flex py-2 z-50 relative bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border-gray-100 rounded-t-2xl px-8">
+      <div className="lg:hidden flex py-2 z-50 relative bg-content bg-clip-padding backdrop-filter backdrop-blur-xl  border-gray-100  px-8">
         <MobileNavbar
           config={mobileConfig}
           isOpen={isOpen}
@@ -48,18 +48,18 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
       </div>
       <div
         className={cn(
-          "hidden md:flex shadow-lg h-24 justify-start items-center",
+          "hidden lg:flex shadow-lg h-24 justify-start items-center",
           "bg-content text-black z-[100000000]",
           isFixed ? "fixed" : "relative"
         )}
       >
-        <div className="h-full flex justify-center w-[400px] !bg-content items-center px-8 border-r border-background ">
-          <img src="/logo.png" alt="" className="w-[95%]" />
+        <div className="h-full flex justify-center w-[400px] md:w-[250px] lg:w-[400px] !bg-content items-center px-8 border-r border-background ">
+          <img src="/logo.png" alt="" className="w-[95%] " />
         </div>
-        <div className="flex flex-col w-full justify-start items-start h-24">
+        <div className="flex flex-col w-full md:w-[70%] lg:w-full justify-start items-start h-24 md:h-32 lg:h-24">
           <div
             className={cn(
-              "w-full flex gap-5 py-2 justify-end items-center border-b border-background/40 px-16"
+              "w-full flex   gap-5 md:gap-4 lg:gap-5 py-2 justify-end items-center border-b border-background/40 px-16"
             )}
           >
             <Link
@@ -145,8 +145,8 @@ export default function Navbar({ defaultStyle = false, type = "default" }) {
             )}
           </div>
 
-          <div className="flex justify-start gap-4 items-center px-0 w-full h-20">
-            <NavigationMenu>
+          <div className="flex justify-start md:gap-2 lg:gap-4 gap-4 items-center px-0   w-full h-20 ">
+            <NavigationMenu className="">
               <NavigationMenuList className="flex gap-0 py-0">
                 {router.map((navItem) => (
                   <NavigationMenuItem

@@ -72,7 +72,7 @@ export default function FedralSkilledWorker() {
               from the Canadian government to immigrate and work in the country.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {workersList.map((item, index) => (
               <ServicesCard
                 id={item.id}

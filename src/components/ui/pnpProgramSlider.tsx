@@ -7,7 +7,19 @@ export default function PnpProgramSlider() {
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={3}
+      breakpoints={{
+        // When the viewport is >= 768px
+        768: {
+          slidesPerView: 3,
+        },
+        608: {
+          slidesPerView: 2,
+        },
+        // When the viewport is >= 320px
+        320: {
+          slidesPerView: 1,
+        },
+      }}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       className="flex gap-2 overflow-hidden"
       style={{ width: "100%" }}

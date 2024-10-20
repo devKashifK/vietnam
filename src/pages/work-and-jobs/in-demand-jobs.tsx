@@ -43,7 +43,7 @@ export default function InDemandJobs() {
                 {data.map((item, index) => (
                   <CardDemo>
                     <div className="flex flex-col gap-0 w-full px-6 relative z-10">
-                      <h5 className="text-4xl text-left text-highlight">
+                      <h5 className="text-4xl text-left text-background">
                         {item.title}
                       </h5>
                       {/* <p className="text-sm text-left text-black/70">

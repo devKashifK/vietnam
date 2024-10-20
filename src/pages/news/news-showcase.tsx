@@ -17,7 +17,18 @@ export default function NewsShowcase() {
   return (
     <Swiper
       spaceBetween={30}
-      slidesPerView={2}
+      // slidesPerView={2}
+      breakpoints={{
+        // When the viewport is >= 768px
+        768: {
+          slidesPerView: 2,
+        },
+
+        // When the viewport is >= 320px
+        320: {
+          slidesPerView: 1,
+        },
+      }}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       className="flex flex-row"
       style={{ width: "100%" }}

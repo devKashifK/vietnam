@@ -11,7 +11,7 @@ export default function SuccessCustomers() {
       <Container className="flex flex-col py-10 gap-10">
         <Title title="Worker Permit" subtitle="Work in Canada" />
 
-        <div className="h-max relative p-6    grid grid-cols-3  items-center justify-center ">
+        <div className="h-max relative p-6    grid grid-cols-1  lg:grid-cols-3  items-center justify-center ">
           {dummyWorkerPermit.map((item, index) => (
             <DirectionAwareHover
               imageUrl={item.url}
@@ -28,7 +28,7 @@ export default function SuccessCustomers() {
       <Container className="flex flex-col py-10 gap-10">
         <Title title="SINP Nomination" subtitle="PNP" />
 
-        <div className="h-max relative p-6   grid grid-cols-3  items-center justify-center ">
+        <div className="h-max relative p-6   grid grid-cols-1  lg:grid-cols-3  items-center justify-center ">
           {dummysinp.map((item, index) => (
             <DirectionAwareHover
               imageUrl={item.url}
@@ -47,7 +47,7 @@ export default function SuccessCustomers() {
           subtitle="STUDY IN CANADA"
         />
 
-        <div className="h-max relative p-6   grid grid-cols-3  items-center justify-center ">
+        <div className="h-max relative p-6   grid grid-cols-1  lg:grid-cols-3  items-center justify-center ">
           {dummystudy.map((item, index) => (
             <DirectionAwareHover
               imageUrl={item.url}
@@ -66,7 +66,7 @@ export default function SuccessCustomers() {
           subtitle="PNP AND VISITOR VISA"
         />
 
-        <div className="h-max relative p-6   grid grid-cols-3  items-center justify-center ">
+        <div className="h-max relative p-6   grid grid-cols-1  lg:grid-cols-3  items-center justify-center ">
           {dummypinpVisitor.map((item, index) => (
             <DirectionAwareHover
               imageUrl={item.url}

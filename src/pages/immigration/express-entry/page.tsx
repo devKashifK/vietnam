@@ -55,7 +55,7 @@ export default function ExpressEntry() {
               </p>
             }
           />
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {expressEntry.map((item, index) => (
               <ServicesCard
                 id={item.id}

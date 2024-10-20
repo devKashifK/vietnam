@@ -30,7 +30,7 @@ export default function MobileNavbar({ isOpen, setIsOpen, config }) {
           className="flex gap-2 py-0.5 cursor-pointer justify-start items-center"
         >
           <div className="flex-col flex">
-            <img src="/gt-removebg.png" className="w-36" alt="" />
+            <img src="/logo.png" className="w-36" alt="" />
           </div>
         </Link>
         {config.map((group, index) => {

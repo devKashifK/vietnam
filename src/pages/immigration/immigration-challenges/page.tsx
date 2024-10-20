@@ -81,7 +81,7 @@ export const InfoCard = ({
   return (
     <Glass className="flex flex-col px-10 gap-3  ">
       <div className="flex flex-col ">
-        <h5 className="text-4xl text-left text-highlight">{title}</h5>
+        <h5 className="text-4xl text-left text-background">{title}</h5>
       </div>
       <p className="text-xs text-left text-black/80">
         {description}

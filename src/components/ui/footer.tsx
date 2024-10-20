@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="flex flex-col w-full  mx-auto bg-white shadow-2xl">
-      <div className="bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-t-2xl h-max md:h-[500px] flex  flex-col md:flex-row gap-10 px-12 py-16 items-center justify-center text-white">
+      <div className="bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-t-2xl h-max lg:h-[500px] flex  flex-col lg:flex-row gap-10 px-12 py-16 items-center justify-center text-white">
         <div className="flex flex-col gap-10 flex-1 text-secondary/50 pt-10  justify-start items-start">
           <img src="/logo.png" alt="" className="w-[60%]  md:pl-8" />
 
@@ -60,7 +60,7 @@ export default function Footer() {
               Work and Jobs
             </Link> */}
           </div>
-          <div className="flex flex-col gap-6 md:gap-2 md:flex-row  text-sm font-normal text-secondary pb-12 md:px-10">
+          <div className="flex flex-col gap-6 md:gap-2 lg:flex-row  text-sm font-normal text-secondary pb-12 md:px-10">
             <div className="w-[40%] text-left hover:underline">
               {/* 2124 Broad St, Regina, Saskatchewan,Canada S4P 1Y5 (Registered
               office) */}
@@ -142,7 +142,7 @@ export default function Footer() {
 
             <input
               placeholder="Email"
-              className="w-[80%] bg-[#3A3A3C]  focus:border-secondary text-secondary-none cursor-pointer outline-none px-4 py-3 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60  rounded-lg"
+              className="w-[80%] bg-contenta  focus:border-secondary text-secondary-none cursor-pointer outline-none px-4 py-3 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60  rounded-lg"
             />
 
             <div className="pt-4 mt-8 flex gap-6 relative w-full">

@@ -57,7 +57,7 @@ export default function CultureReligion() {
       <Glass className="flex flex-col gap-8 px-10">
         <h2 className="text-6xl text-background">{people[0].category}</h2>
         <Title title={people[0].title} description={people[0].content} />
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {people[0].subsections.map((item, index) => (
             <CardWithImage
               image={item.image}

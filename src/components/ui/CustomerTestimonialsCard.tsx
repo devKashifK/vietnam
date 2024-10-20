@@ -18,7 +18,7 @@ export const CustomerTestimonialsCard = ({
           <Icon icon={"carbon:quotes"} className=" text-highlight text-3xl " />
         </div>
         <div className="flex flex-row gap-1">
-          <h5 className="text-4xl text-left text-highlight pr-5">{name}</h5>
+          <h5 className="text-4xl text-left text-background pr-5">{name}</h5>
           <Icon
             icon={"carbon:star-filled"}
             className="mt-1.5 text-highlight shadow-xl "

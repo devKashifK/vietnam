@@ -24,7 +24,7 @@ export default function About() {
             "Tại iCANPR, chúng tôi tự hào về mạng lưới đối tác mạnh mẽ và đa dạng, từ các tổ chức giáo dục, nhà tuyển dụng, đến các luật sư di trú hàng đầu tại Canada. Chúng tôi tự tin cung cấp thông tin cập nhật và chính xác nhất và đảm bảo gia đình bạn nhận được sự hỗ trợ toàn diện trong suốt quá trình từ tư vấn, hoàn thiện hồ sơ đến ổn định và xây dựng cuộc sống mới tại Canada"
           }
         />
-        <div className="flex gap-6 md:flex-row flex-col">
+        <div className="flex gap-6 lg:flex-row flex-col">
           <HoverCard
             title={"Quan Hệ Chặt Chẽ với Nhà Tuyển Dụng"}
             color="bg-yellow-400"
@@ -52,7 +52,7 @@ export default function About() {
         </div>
       </Container>
       <Container effect="slide-left">
-        <Glass className="flex flex-row gap-10 md:gap-2 h-max px-10 py-10">
+        <Glass className="flex flex-col lg:flex-row gap-10 lg:gap-2 h-max px-10 py-10">
           <div className="w-full md:flex-1 flex flex-col gap-2">
             <TitleWithDoubleBorder>iCanPR</TitleWithDoubleBorder>
             <div className="flex flex-col justify-start gap-6">
@@ -71,20 +71,20 @@ export default function About() {
             </div>
           </div>
           <div className="w-full  md:flex-1 flex flex-col gap-3 justify-center items-center h-max">
-            <ul className="flex gap-6 flex-wrap justify-center cursor-pointer ">
-              <li className="text-center flex gap-1 justify-center bg-highlight/80 font-primary tracking-widest px-8 w-full md:w-[200px]  flex-col items-center text-white/90 py-6">
+            <ul className="grid grid-cols-2 gap-6 cursor-pointer ">
+              <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8   flex-col items-center text-white/90 py-6">
                 <Icon icon={"iconamoon:profile-light"} className="text-4xl" />
                 Cơ hội việc làm cho người nước ngoài
               </li>
-              <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+              <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8 py-6   flex-col items-center text-white/90">
                 <Icon icon={"hugeicons:absolute"} className="text-4xl" />
                 Thành lập doanh nghiệp tại Canada
               </li>
-              <li className="text-center flex gap-1 justify-center bg-background/80  font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+              <li className="text-center flex gap-1 justify-center bg-background/80  font-primary tracking-widest px-8 py-6   flex-col items-center text-white/90">
                 <Icon icon={"solar:hand-money-linear"} className="text-4xl" />
                 Lộ trình từ du học đến định cư Canada
               </li>
-              <li className="text-center flex gap-1 justify-center bg-highlight/80 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+              <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8 py-6   flex-col items-center text-white/90">
                 <Icon
                   icon={"ph:chalkboard-teacher-bold"}
                   className="text-4xl"

@@ -32,7 +32,7 @@ export default function StudyAbroadSettlement() {
           description="Chương trình Express Entry là một hệ thống chấm điểm định cư được sử dụng để quản lý những hồ sơ xin thường trú nhân tại Canada. Hệ thống Express Entry có 3 chương trình định cư bao gồm:"
         />
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {studyAbroad2.map((item, index) => (
             <ServicesCard
               id={item.id}

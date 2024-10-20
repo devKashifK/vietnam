@@ -16,7 +16,7 @@ export default function HeroDefault({
       className="flex flex-col gap-2 mx-auto bg-center relative bg-cover w-full h-[90vh]"
       style={{ backgroundImage: `url(${img})` }}
     >
-      <div className="relative z-10">
+      <div className="relative  z-50">
         <Navbar defaultStyle={true} />
         <div className="flex justify-center items-center w-full h-[55vh] mt-10">
           <div

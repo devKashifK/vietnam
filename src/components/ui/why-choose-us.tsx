@@ -9,8 +9,8 @@ import TitleWithBottomBorder from "./title-with-bottom-border";
 export default function WhyChooseUs() {
   return (
     <Container effect="slide-left">
-      <Glass className="flex flex-row gap-10 md:gap-2 h-max px-10 py-10">
-        <div className="w-full md:flex-1 flex flex-col gap-2">
+      <Glass className="flex md:flex-row flex-col gap-10 md:gap-2 h-max px-10 py-10">
+        <div className="w-full md:flex-1  flex flex-col gap-2">
           <TitleWithDoubleBorder>Tại sao chọn chúng tôi</TitleWithDoubleBorder>
           <div className="flex flex-col justify-start gap-6">
             <TitleWithBottomBorder titleClass="md:text-xl text-left">
@@ -32,20 +32,20 @@ export default function WhyChooseUs() {
           </div>
         </div>
         <div className="w-full  md:flex-1 flex flex-col gap-3 justify-center items-center h-max">
-          <ul className="flex gap-6 flex-wrap justify-center cursor-pointer ">
-            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8 w-full md:w-[200px]  flex-col items-center text-white/90 py-6">
+          <ul className="grid grid-cols-2 gap-6 flex-wrap justify-center cursor-pointer ">
+            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8    flex-col items-center text-white/90 py-6">
               <Icon icon={"iconamoon:profile-light"} className="text-4xl" />
               Đội ngũ tư vấn chuyên nghiệp
             </li>
-            <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+            <li className="text-center flex gap-1 justify-center bg-background/80 font-primary tracking-widest px-8 py-6    flex-col items-center text-white/90">
               <Icon icon={"hugeicons:absolute"} className="text-4xl" />
               Giải pháp cá nhân hóa
             </li>
-            <li className="text-center flex gap-1 justify-center bg-background/80  font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+            <li className="text-center flex gap-1 justify-center bg-background/80  font-primary tracking-widest px-8 py-6   flex-col items-center text-white/90">
               <Icon icon={"solar:hand-money-linear"} className="text-4xl" />
               Chi phí hợp lý
             </li>
-            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8 py-6 w-full md:w-[200px]  flex-col items-center text-white/90">
+            <li className="text-center flex gap-1 justify-center bg-background/40 font-primary tracking-widest px-8 py-6   flex-col items-center text-white/90">
               <Icon icon={"ph:chalkboard-teacher-bold"} className="text-4xl" />
               Hơn 10 năm kinh nghiệm
             </li>

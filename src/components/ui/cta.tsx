@@ -23,8 +23,8 @@ export default function CTA() {
           subtitle={"WHAT ARE YOU LOOKING FOR?"}
           cta={"All Solutions"}
         /> */}
-        <div className="flex gap-4 min-h-screen  mx-auto">
-          <div className="flex-1 items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-10 md:-mt-24 -mt-12 relative z-50">
+        <div className="flex gap-4 min-h-screen  mx-auto md:mt-0 mt-10">
+          <div className="flex-1 items-center justify-center grid grid-cols-1 md:grid-cols-2 gap-10 md:-mt-24 -mt-12  relative z-50">
             {CtaDetails.map((item, index) => (
               <CtaCard item={item} key={item.id} />
             ))}
@@ -38,11 +38,11 @@ export default function CTA() {
               Comprehensive solutions for <br /> all your needs!
             </p>
           }
-          to={""}
-          subtitle={"WHAT ARE YOU LOOKING FOR?"}
-          cta={"All Solutions"}
+          subtitle="WHAT ARE YOU LOOKING FOR?"
+          // subtitle={""}
+          // cta={"All Solutions"}
         />
-        <div className="flex gap-4 min-h-screen h-max w-[90%] mx-auto pt-96 md:py-0">
+        <div className="flex gap-2 sm:gap-4 min-h-screen h-max w-[90%] mx-auto pt-80 md:py-0">
           <div className="w-full items-center justify-center flex flex-col space-y-96">
             {CtaDetails.slice(0, CtaDetails.length - 1).map((item, index) => (
               <CtaCard2 item={item} key={item.id} flip={true} />
@@ -56,7 +56,7 @@ export default function CTA() {
 
 export const CtaCard = ({ item }) => {
   return (
-    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl  sm:w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
+    <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl  sm:w-[420px] md:w-full  sm:h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
       <div className="w-full">
         <img src={item.image} alt="" className="w-full" />
       </div>
@@ -111,7 +111,7 @@ export const CtaCard2 = ({ item, flip }) => {
         )}
       >
         <div className="flex flex-col justify-center r gap-0">
-          <h5 className="text-4xl text-left text-highlight">{item.title}</h5>
+          <h5 className="text-4xl text-left text-background">{item.title}</h5>
           {/* <p className="text-sm text-left text-black/70">
             {truncateTextHeading(item.subtitle)}
           </p> */}
@@ -286,18 +286,18 @@ export const CTAWithImage = ({
     <Container
       className={cn(
         "flex bg-content py-0 shadow-2xl  ",
-        flip ? "flex-row-reverse" : "flex-row"
+        flip ? "flex-col lg:flex-row-reverse" : " flex-col lg:flex-row"
       )}
     >
       <div
-        className="flex-1 relative h-[590px]"
+        className="flex-1 relative h-auto lg:h-[590px]"
         // style={{
         //   backgroundImage: `url(/hero-3.jpg)`,
         //   backgroundSize: "cover",
         //   backgroundPosition: "center",
         // }}
       >
-        <div className="bg-background/40 absolute top-0 left-0 z-10 w-full bg-opacity-80 h-[590px]"></div>
+        <div className="bg-background/40 absolute top-0 left-0 z-10 w-full bg-opacity-80 h-auto lg:h-[590px]"></div>
         <img
           src={image}
           className="relative w-full object-cover h-full"
@@ -322,7 +322,7 @@ export const CTAWithImage = ({
         )}
 
         {ctaAction && (
-          <button className="flex gap-2 bg-background text-highlight w-max justify-center items-center rounded-none">
+          <button className="flex gap-2 bg-background text-highlight w-full lg:w-max justify-center items-center rounded-none">
             {ctaAction}
             <Icon icon={"simple-icons:aircanada"} className="" />
           </button>
