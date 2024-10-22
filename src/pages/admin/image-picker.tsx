@@ -133,7 +133,7 @@ export function ImageUploaderAndPicker({
               Choose Image
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[725px]">
+          <DialogContent className="bg-primary sm:max-w-[725px]">
             <DialogHeader>
               <DialogTitle>Select an Image</DialogTitle>
             </DialogHeader>
@@ -159,7 +159,7 @@ export function ImageUploaderAndPicker({
                         }`}
                         onClick={() => setSelectedImage(image.url)}
                       >
-                        <CardContent className="p-2">
+                        <CardContent className="p-0">
                           <img
                             src={image.url}
                             alt={image.name}

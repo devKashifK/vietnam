@@ -31,9 +31,12 @@ export default function DynamicPage() {
     },
   });
 
+  console.log(data, "checkData2");
+
   const pageContent = useMemo(() => {
     if (data) {
       const parsedData = JSON.parse(data.content);
+      console.log(parsedData, "parsedData");
       return parsedData.map((section, index) => {
         if (section.component === "Container") {
           return renderContainerWithChildren(section, index);
@@ -48,6 +51,7 @@ export default function DynamicPage() {
 }
 
 const renderWithChildren = (section, index) => {
+  console.log(section, "sectionTest");
   const Component = componentMapping[section.component];
 
   if (Component) {
@@ -72,6 +76,7 @@ const renderContainerWithChildren = (section) => {
 
       <Wrapper>
         {section.props.children.map((child, index) => {
+          console.log(child, "childTest");
           const Component = componentMapping[child.component];
           if (Component) {
             return <Component key={index} {...child.props} />;
@@ -79,6 +84,92 @@ const renderContainerWithChildren = (section) => {
         })}
       </Wrapper>
     </Container>
+  );
+};
+
+const CustomComponent = (props) => {
+  const {
+    backgroundColor,
+    borderColor,
+    borderWidth,
+    title,
+    subtitle,
+    description,
+    imagePosition,
+    padding,
+    textColor,
+    image,
+  } = props;
+
+  const containerStyle = {
+    backgroundColor,
+    color: textColor,
+    borderColor,
+    borderWidth: `${borderWidth}px`,
+    borderStyle: "solid",
+    padding: `${padding}px`,
+  };
+
+  const imageElement = image ? (
+    <img
+      src={image}
+      alt={title}
+      className="w-full h-64 object-cover rounded-lg"
+    />
+  ) : (
+    <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+      [Image Placeholder]
+    </div>
+  );
+
+  const contentElement = (
+    <Title title={title} subtitle={subtitle} description={description} />
+  );
+
+  const renderContent = () => {
+    switch (imagePosition) {
+      case "left":
+        return (
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-1/2">{imageElement}</div>
+            <div className="w-full md:w-1/2">{contentElement}</div>
+          </div>
+        );
+      case "right":
+        return (
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-1/2">{contentElement}</div>
+            <div className="w-full md:w-1/2">{imageElement}</div>
+          </div>
+        );
+      case "top":
+        return (
+          <div className="space-y-8">
+            {imageElement}
+            {contentElement}
+          </div>
+        );
+      case "bottom":
+        return (
+          <div className="space-y-8">
+            {contentElement}
+            {imageElement}
+          </div>
+        );
+      default:
+        return (
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="w-full md:w-1/2">{imageElement}</div>
+            <div className="w-full md:w-1/2">{contentElement}</div>
+          </div>
+        );
+    }
+  };
+
+  return (
+    <section className="py-12" style={containerStyle}>
+      <div className="container mx-auto px-4">{renderContent()}</div>
+    </section>
   );
 };
 
@@ -91,4 +182,5 @@ const componentMapping = {
   CtaCard2: CtaCard2,
   Cta1: CTADefault,
   Cta2: CTAWithImage,
+  Custom: CustomComponent,
 };

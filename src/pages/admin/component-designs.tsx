@@ -180,4 +180,98 @@ export const componentDesigns = {
       ),
     },
   ],
+
+  custom: [
+    {
+      id: "custom",
+      name: "Custom",
+      component: ({
+        title,
+        subtitle,
+        description,
+        image,
+        imagePosition,
+        backgroundColor,
+        textColor,
+        borderColor,
+        borderWidth,
+        padding,
+      }) => {
+        const containerStyle = {
+          backgroundColor,
+          color: textColor,
+          borderColor,
+          borderWidth: `${borderWidth}px`,
+          borderStyle: "solid",
+          padding: `${padding}px`,
+        };
+
+        const imageElement = image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-64 object-cover rounded-lg"
+          />
+        ) : (
+          <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+            [Image Placeholder]
+          </div>
+        );
+
+        const contentElement = (
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">{title}</h2>
+            <h3 className="text-xl font-semibold">{subtitle}</h3>
+            <p>{description}</p>
+          </div>
+        );
+
+        const renderContent = () => {
+          switch (imagePosition) {
+            case "left":
+              return (
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="w-full md:w-1/2">{imageElement}</div>
+                  <div className="w-full md:w-1/2">{contentElement}</div>
+                </div>
+              );
+            case "right":
+              return (
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="w-full md:w-1/2">{contentElement}</div>
+                  <div className="w-full md:w-1/2">{imageElement}</div>
+                </div>
+              );
+            case "top":
+              return (
+                <div className="space-y-8">
+                  {imageElement}
+                  {contentElement}
+                </div>
+              );
+            case "bottom":
+              return (
+                <div className="space-y-8">
+                  {contentElement}
+                  {imageElement}
+                </div>
+              );
+            default:
+              return (
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="w-full md:w-1/2">{imageElement}</div>
+                  <div className="w-full md:w-1/2">{contentElement}</div>
+                </div>
+              );
+          }
+        };
+
+        return (
+          <section className="py-12" style={containerStyle}>
+            <div className="container mx-auto px-4">{renderContent()}</div>
+          </section>
+        );
+      },
+    },
+  ],
 };

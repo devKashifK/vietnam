@@ -33,7 +33,7 @@ export function CustomSectionForm({ onSubmit, sectionIndex }) {
   };
 
   return (
-    <div className="space-y-4 z-50 relative">
+    <div className="space-y-4 z-50 realat">
       <Input
         name="title"
         placeholder="Section Title"

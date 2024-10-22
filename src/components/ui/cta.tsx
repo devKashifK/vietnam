@@ -54,7 +54,7 @@ export default function CTA() {
   );
 }
 
-export const CtaCard = ({ item }) => {
+export const CtaCard = (item) => {
   return (
     <div className="flex hover:bg-background group flex-col  bg-[#E1E2E5] px-4 py-4 border-gray-100 shadow-2xl w-[420px] md:w-full h-[517px] md:h-max justify-start items-center transition-all duration-100 ease-in-out">
       <div className="w-full">

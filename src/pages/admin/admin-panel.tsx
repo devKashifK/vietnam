@@ -4,12 +4,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { NewPageForm } from "./new-page";
 import { PageList } from "./exsisting-page";
 import { NewsForm, NewsList } from "./news-admin";
+import Analytics from "./analytics";
 
 const Sidebar = ({ activeTab, setActiveTab, pages, news }) => (
   <div className="w-64 bg-gray-100 h-screen over p-4">
     <h2 className="text-2xl font-bold mb-4">Admin Panel</h2>
     <Tabs orientation="vertical" value={activeTab} onValueChange={setActiveTab}>
       <TabsList className="flex flex-col items-stretch h-auto">
+        <TabsTrigger value="analytics" className="justify-start">
+          <FileText className="mr-2 h-4 w-4" />
+          Analytics
+        </TabsTrigger>
         <TabsTrigger value="pages" className="justify-start">
           <FileText className="mr-2 h-4 w-4" />
           Pages
@@ -149,6 +154,10 @@ export default function AdminPanel() {
                 onDelete={handleDeleteNews}
               />
             </div>
+          </TabsContent>
+          <TabsContent value="analytics">
+            <h2 className="text-2xl font-bold mb-4">Analytics</h2>
+            <Analytics />
           </TabsContent>
         </Tabs>
       </main>

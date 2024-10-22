@@ -9,6 +9,8 @@ import {
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { ImageUploaderAndPicker } from "./image-picker";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 export const ComponentForm = ({ type, design, content, onChange }) => {
   const handleAddCard = () => {
